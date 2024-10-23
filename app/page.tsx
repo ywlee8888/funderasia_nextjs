@@ -12,7 +12,7 @@ import SpecialistConnect from "@/components/forms/specialistConnect";
 
 export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
-  const router = useRouter();
+  //const router = useRouter();
 
   // Function to toggle SpecialistConnect visibility
   const toggleSpecialistConnect = () => {

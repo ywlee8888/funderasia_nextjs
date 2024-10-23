@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 interface FlagGridProps {
   containerHeight: number;
@@ -52,7 +53,7 @@ const FlagGrid: React.FC<FlagGridProps> = ({ containerHeight, containerWidth }) 
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden flagGridContainer">
       {/* Render flags */}
       {flags.map((flag, index) => (
-        <img
+        <Image
           key={index}
           src={flag}
           alt={`Flag ${index}`}

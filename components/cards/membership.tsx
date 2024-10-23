@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './membership.module.css';
 import { IconType } from 'react-icons'; // Import IconType from react-icons
+import Image from "next/image";
 
 interface CardProps {
   imageSrc: string;
@@ -14,7 +15,7 @@ const TextIconCard: React.FC<CardProps> = ({ imageSrc, title, description, price
   return (
     <div className={styles.card}>
       <h2 className={styles.cardTitle}>{title}</h2>
-      <img src={imageSrc} alt={title} className={styles.cardImage} />
+      <Image src={imageSrc} alt={title} className={styles.cardImage} />
       <p className={styles.cardDescription}>
         <Icon style={{ marginRight: '8px', verticalAlign: 'middle' }} /> {/* Add margin and vertical alignment */}
         {description}
