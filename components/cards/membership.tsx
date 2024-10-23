@@ -1,0 +1,27 @@
+import React from 'react';
+import styles from './membership.module.css';
+import { IconType } from 'react-icons'; // Import IconType from react-icons
+
+interface CardProps {
+  imageSrc: string;
+  title: string;
+  description: string;
+  price: string;
+  icon: IconType; // Change to IconType
+}
+
+const TextIconCard: React.FC<CardProps> = ({ imageSrc, title, description, price, icon: Icon }) => {
+  return (
+    <div className={styles.card}>
+      <h2 className={styles.cardTitle}>{title}</h2>
+      <img src={imageSrc} alt={title} className={styles.cardImage} />
+      <p className={styles.cardDescription}>
+        <Icon style={{ marginRight: '8px', verticalAlign: 'middle' }} /> {/* Add margin and vertical alignment */}
+        {description}
+      </p>
+      <p className={styles.cardPrice}>{price}</p>
+    </div>
+  );
+};
+
+export default TextIconCard;

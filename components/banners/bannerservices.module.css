@@ -1,0 +1,131 @@
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Center the card in the middle of the image */
+.overlayCard {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+.mobileoverlayCard{
+  display: none;  
+}
+
+/* Larger text for the card title using a div */
+.cardTitle {
+  font-size: 1.8rem; /* Responsive font size */
+  font-weight: bold; /* Make text bold */
+  margin-bottom: 20px;
+  line-height: 1.2; /* Reduce line spacing */
+  padding-top: 20px; /* Add padding to the top of the text */
+}
+
+/* Larger text for the card paragraph with reduced line spacing */
+.overlayCard p {
+  font-size: 1.2rem; /* Large font size for the paragraph */
+  line-height: 1.5; /* Reduce line spacing */
+}
+
+/* Button container styling */
+.buttonContainer {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 30px; /* Space between the paragraph and buttons */
+  margin-bottom: 20px; /* Space between the paragraph and buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Button styles */
+.button {
+  background-color: #005bb5; /* Initial button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for the buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+  margin: 0 10px; /* Margin between buttons */
+}
+
+/* Change background color on hover */
+.button:hover {
+  background-color: #004494; /* Darker shade of blue on hover */
+}
+
+.modalBackground {
+  position: fixed; /* Fixed positioning to cover the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background (50% opacity) */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 500; /* Ensure it appears above other content */
+  backdrop-filter: blur(4px); /* Apply a small blur effect to the background */
+}
+
+.modalContent {
+  background: white; /* Background color for the modal */
+  padding: 0px; /* Keep uniform padding */
+  margin: 0; /* Removed margin to fit content */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  position: absolute; /* Change to absolute for better control */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  width: auto; /* Adjust width automatically to fit content */
+  max-width: 60%; /* Adjusted maximum width for smaller screens */
+  max-height: 80%; /* Set a maximum height for the modal */
+  overflow-y: auto; /* Allows vertical scrolling if content exceeds max height */
+  text-align: left; /* Align text to the left */
+  margin-top: -50px; /* Adjust this value to reduce spacing further */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .overlayCard {
+    display: none;
+    left: 50%; /* Adjust left position for small screens */
+    transform: translate(-50%, -50%); /* Keep the translate for centering */
+    width: 100%; /* Set width to 100% to match the image */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .mobileoverlayCard {
+    display: flex;
+    position: absolute; /* Positioning overlay */
+    top: 65%; /* Center vertically */
+    left: 50%; /* Center horizontally */   
+    transform: translate(-50%, -50%); /* Adjust to perfectly center */   
+    text-align: right;    
+    background: none; /* Ensure no background */
+    width: 50px; /* Ensure it doesn't limit the size */
+    height: auto; /* Ensure it doesn't limit the size */    
+  }
+
+  .cardTitle {
+    font-size: 1.6rem; /* Smaller title font size for mobile */
+  }
+}

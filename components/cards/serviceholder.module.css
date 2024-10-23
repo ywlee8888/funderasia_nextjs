@@ -1,0 +1,100 @@
+/* styles/serviceholder.module.css */
+
+/* .card-image should be .cardImage to match JSX class name */
+.cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.cardContainer {
+  display: flex; /* Flexbox for the main container */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  padding: 16px; /* Optional: adds padding around the container */
+  padding-top: 250px; /* Adds space at the top */
+}
+
+.cardItems {
+  display: flex; /* Flexbox for the cards */
+  flex-direction: row; /* Align cards in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 24px; /* Increase spacing between cards */
+  overflow-x: auto; /* Optional: allows horizontal scrolling if necessary */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /* Centers the pagination controls */
+  align-items: center;
+  margin-top: 20px; /* Adds space above the pagination */
+
+  font-size: 1.2em;
+}
+
+.pagination button {
+  margin: 0 10px; /* Space between buttons */
+  padding: 10px 20px; /* Padding inside buttons */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-weight: bold; /* Bold text */
+}
+
+.pagination button:disabled {
+  opacity: 0.5; /* Makes disabled buttons semi-transparent */
+  cursor: not-allowed; /* Changes cursor to not-allowed on hover */
+}
+
+.carousel {
+  width: 100%; /* Full width for the carousel */
+}
+
+.card {
+  width: 380px; /* Increase the card width */
+  padding: 16px; /* Optional: add padding inside the card */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+  background-color: #fff; /* Optional: background color */
+  transition: transform 0.2s; /* Optional: transition effect */
+}
+
+.cardTitle {
+  /* Correct class name to match JSX */
+  font-size: 1.3em;
+  padding-top: 10px; /* Keep if you want some space above the title */
+  padding-bottom: 0;  /* No padding below the title */
+  text-align: center;
+  margin: 10px 0;    /* Adjust as needed */
+}
+
+.cardDescription {
+  font-size: 1em;
+  text-align: center;
+  padding-top: 0;     /* No padding above the description */
+  margin: 0;          /* Remove margin to eliminate space below */
+}
+
+.cardLink {
+  display: block; /* Change to block to take the full width */
+  text-align: center; /* Center the text */
+  color: #0070f3; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  margin-top: 10px; /* Optional: add some space above the link */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Optional: slight lift effect on hover */
+}
+
+/* Optional: Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    width: 48%; /* Two cards per row on medium screens */
+  }
+}

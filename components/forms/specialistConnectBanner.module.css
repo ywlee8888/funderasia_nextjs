@@ -1,0 +1,30 @@
+/*specialistConnectBanner.module.css */
+
+.container {
+    visibility: hidden; /* Hide the parent element but maintain space */
+    max-width: 600px; /* Remove any maximum width restriction */
+    width: 800px; /* Allow width to grow based on content */    
+    height: auto; /* Allow height to grow based on content */
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    margin: 20px auto; /* Margins for outer spacing */
+    border: 2px solid #ccc; /* Border around the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow: auto; /* Handle overflow if content exceeds size */
+    z-index: 1200; /* Ensure it appears on top of other elements */
+}
+  
+  .formContainer {
+    visibility: visible; /* Ensure child is visible */
+    width: 100%; /* Allow the form to take full width */
+    max-width: none; /* Prevent exceeding container's width */
+    height: auto; /* Allow height to grow based on content */
+    margin: 0; /* Remove margins to keep the form within the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 10px; /* Add some padding */
+  }
+  

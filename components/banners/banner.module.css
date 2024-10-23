@@ -1,0 +1,99 @@
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Center the card in the middle of the image */
+.overlayCard {
+  position: absolute;
+  top: 50%; /* Centered vertically */
+  left: 65%; /* Centered horizontally */
+  transform: translate(-50%, -50%); /* Translate to perfectly center the card */
+  background-color: rgba(255, 255, 255, 0.4); /* Increased transparency */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%; /* Responsive width */
+  max-width: 800px; /* Max width for larger screens */
+  height: auto; /* Auto height */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  backdrop-filter: blur(5px); /* Blur effect applied only to the card */
+  text-align: center;
+}
+
+.mobileoverlayCard{
+  display: none;  
+}
+
+/* Larger text for the card title using a div */
+.cardTitle {
+  font-size: 3rem; /* Responsive font size */
+  font-weight: bold; /* Make text bold */
+  margin-bottom: 20px;
+  line-height: 1.2; /* Reduce line spacing */
+  padding-top: 20px; /* Add padding to the top of the text */
+}
+
+/* Larger text for the card paragraph with reduced line spacing */
+.overlayCard p {
+  font-size: 1.2rem; /* Large font size for the paragraph */
+  line-height: 1.5; /* Reduce line spacing */
+}
+
+/* Button container styling */
+.buttonContainer {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 30px; /* Space between the paragraph and buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Button styles */
+.button {
+  background-color: #005bb5; /* Initial button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for the buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+  margin: 0 10px; /* Margin between buttons */
+}
+
+/* Change background color on hover */
+.button:hover {
+  background-color: #004494; /* Darker shade of blue on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .overlayCard {
+    display: none;
+    left: 50%; /* Adjust left position for small screens */
+    transform: translate(-50%, -50%); /* Keep the translate for centering */
+    width: 100%; /* Set width to 100% to match the image */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .mobileoverlayCard {
+    display: flex;
+    position: absolute; /* Positioning overlay */
+    top: 65%; /* Center vertically */
+    left: 50%; /* Center horizontally */   
+    transform: translate(-50%, -50%); /* Adjust to perfectly center */   
+    text-align: right;    
+    background: none; /* Ensure no background */
+    width: 50px; /* Ensure it doesn't limit the size */
+    height: auto; /* Ensure it doesn't limit the size */    
+  }
+
+  .cardTitle {
+    font-size: 1.6rem; /* Smaller title font size for mobile */
+  }
+}

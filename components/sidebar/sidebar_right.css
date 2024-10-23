@@ -1,0 +1,29 @@
+/* components/Sidebar.css */
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 24px; /* Adjust as needed */
+  margin-bottom: 10px; /* Spacing between icon and content */
+}
+
+.content {
+  position: absolute;
+  right: -300px; /* Start hidden off-screen */
+  width: 250px; /* Set the width of the sidebar */
+  background-color: white; /* Background color */
+  border: 1px solid #ccc; /* Optional border */
+  padding: 20px; /* Spacing inside the content */
+  transition: right 0.3s ease; /* Animation for sliding effect */
+}
+
+.content.visible {
+  right: 0; /* Bring into view when visible */
+}

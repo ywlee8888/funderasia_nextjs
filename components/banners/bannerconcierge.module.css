@@ -1,0 +1,145 @@
+.bannerContainer {
+  position: relative;       /* Position relative for absolute positioning of children */
+  width: 100%;             /* Full width */
+  height: 100vh;          /* Full viewport height */
+  overflow: hidden;        /* Optional: hides overflow */
+}
+
+.bannerImage {
+  width: 100%;             /* Full width for the image */
+  height: 100%;            /* Full height for the image */
+  object-fit: cover;       /* Ensures the image covers the container */
+}
+
+.title {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 4rem;
+  text-shadow: 
+    1px 1px 0 rgba(255, 255, 255, 1), 
+    -1px -1px 0 rgba(255, 255, 255, 1),
+    -1px 1px 0 rgba(255, 255, 255, 1), 
+    1px -1px 0 rgba(255, 255, 255, 1), 
+    0 0 10px rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  text-align: center;
+  padding: 10px;
+  padding-top: 100px; /* Adds space at the top */
+}
+
+.title .bold {
+  font-weight: bold; /* Bold font weight */
+}
+
+.title .regular {
+  font-weight: 400; /* Normal font weight */
+}
+
+
+.title_fancy {
+  position: absolute; /* Position it over the image */
+  top: 110px; /* Adjust the top padding as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  color: white; /* Change text color as needed */
+  font-size: 4rem; /* Adjust font size as needed */
+  text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 1), /* Right shadow */
+    -2px -2px 0 rgba(0, 0, 0, 1), /* Left shadow */
+    -2px 2px 0 rgba(0, 0, 0, 1), /* Bottom left shadow */
+    2px -2px 0 rgba(0, 0, 0, 1), /* Top right shadow */
+    0 0 20px rgba(0, 0, 0, 0.7); /* Optional: soft outer shadow */
+  z-index: 1; /* Ensure it is above other elements */
+  text-align: center; /* Center text */
+  padding: 10px; /* Optional: add padding around the title */
+}
+
+.servicesCardContainer {
+  position: absolute;       /* Positioning absolute to overlay on the image */
+  top: 50%;                 /* Center vertically */
+  left: 50%;                /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to truly center the element */
+  display: flex;            /* Use flexbox for horizontal alignment of cards */
+  flex-direction: row;      /* Align children in a row */
+  align-items: center;      /* Center items vertically within the row */
+  justify-content: center;   /* Center items horizontally */
+  gap: 16px;                /* Optional: space between cards */
+  z-index: 1;              /* Ensure it overlays above the image */
+}
+
+/* Styles for overlay content (if needed) */
+.overlayCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width/height */
+  z-index: 10;
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  backdrop-filter: blur(5px); /* Optional blur effect for a frosted-glass look */
+  text-align: center;
+}
+
+/* Styles for the card title */
+.cardTitle {
+  font-size: 3rem; /* Responsive font size */
+  font-weight: bold; /* Bold text */
+  color: white; /* White text for contrast on dark background */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Styles for the card paragraph */
+.overlayCard p {
+  font-size: 1.2rem; /* Large font size */
+  line-height: 1.5;
+  color: white; /* White text */
+}
+
+/* Button container styling */
+.buttonContainer {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Button styles */
+.button {
+  background-color: #005bb5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 10px;
+}
+
+.button:hover {
+  background-color: #004494;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .servicesCardContainer {
+    flex-direction: column; /* Stack cards vertically on small screens */
+    align-items: center; /* Center items */
+    width: 95%; /* Adjust width for mobile */
+  }
+
+  .cardTitle {
+    font-size: 1.6rem; /* Smaller title font size for mobile */
+  }
+}
+
+.bannerContainer {
+  position: relative; /* Allows positioning of child elements */
+}
