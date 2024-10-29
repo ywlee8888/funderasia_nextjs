@@ -12,7 +12,6 @@ import SpecialistConnect from "@/components/forms/specialistConnect";
 
 export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
-  //const router = useRouter();
 
   // Function to toggle SpecialistConnect visibility
   const toggleSpecialistConnect = () => {
@@ -47,7 +46,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Other content remains intact*/} 
+          {/* Other content remains intact*/}
           <div className="relative w-full">
             <ConciergeImage
               src="/img/doctor_consult.jpg"
@@ -56,7 +55,6 @@ export default function Home() {
             />
           </div>
 
-          
           <div className="relative w-full">
             <ServicesImage src="/img/female_doctor.jpg" alt="Services Banner" />
           </div>
