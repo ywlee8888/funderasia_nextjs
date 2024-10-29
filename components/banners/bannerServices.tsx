@@ -26,7 +26,7 @@ const ServicesImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
   return (
     <div className={styles.bannerContainer}>
       {/* Image */}
-      <Image
+      <img
         src={src}
         alt={alt}
         width={1920}

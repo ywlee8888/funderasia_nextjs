@@ -17,7 +17,7 @@ const ConciergeImage: React.FC<FullWidthImageProps> = ({ src, alt, title }) => {
       {/* Title Text */}
       <h1 className={styles.title}>{title}</h1>
       {/* Image */}
-      <Image
+      <img
         src={src}
         alt={alt}
         width={1920}

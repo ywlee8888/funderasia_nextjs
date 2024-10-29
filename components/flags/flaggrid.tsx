@@ -53,7 +53,7 @@ const FlagGrid: React.FC<FlagGridProps> = ({ containerHeight, containerWidth }) 
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden flagGridContainer">
       {/* Render flags */}
       {flags.map((flag, index) => (
-        <Image
+        <img
           key={index}
           src={flag}
           alt={`Flag ${index}`}
