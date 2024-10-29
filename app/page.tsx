@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar/navbar";
 import FullWidthImage from "@/components/banners/bannerfull";
 import ConciergeImage from "@/components/banners/bannerConcierge";
