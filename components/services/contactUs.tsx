@@ -30,7 +30,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         className="h-full w-full"
         style={{
           height: "auto",
-          minHeight: "100vh",
+          minHeight: "80vh",
           backgroundImage: "url('/img/specialist_background.png')", // Use your background image path
           backgroundSize: "cover",
           backgroundPosition: "center",
