@@ -23,7 +23,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 top-0 w-[60rem] z-50 transition-transform duration-300"
+      className="fixed right-0 w-[60rem] z-50 transition-transform duration-300"
       style={{
         top: "190px",
         height: "auto",
