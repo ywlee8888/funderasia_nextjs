@@ -36,7 +36,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           borderRadius: "0.5rem", // Round corners for aesthetics
         }}
       >
-        {/* Overlay to create a mask effect */}
+        {/* Overlay to create a mask effects */}
         <div
           className="absolute inset-0"
           style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }} // Semi-transparent overlay
