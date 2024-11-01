@@ -31,7 +31,6 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         style={{
           height: "auto",
           minHeight: "70vh",
-          display: "flex",
           backgroundImage: "url('/img/specialist_background.png')", // Use your background image path
           backgroundSize: "cover",
           backgroundPosition: "center",
