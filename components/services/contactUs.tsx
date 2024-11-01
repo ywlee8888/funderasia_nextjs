@@ -22,6 +22,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       style={{
         top: "140px",
         height: "auto",
+        minHeight: "80vh",
         width: "60rem",
       }}
     >
@@ -29,7 +30,6 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <div
         className="h-full w-full"
         style={{
-          height: "auto",
           backgroundImage: "url('/img/specialist_background.png')", // Use your background image path
           backgroundSize: "cover",
           backgroundPosition: "center",
