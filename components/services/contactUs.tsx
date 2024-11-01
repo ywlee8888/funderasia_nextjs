@@ -21,7 +21,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       className="fixed right-0 z-50 transition-transform duration-300"
       style={{
         top: "140px",
-        height: "80vh",
+        height: "auto",
         width: "60rem",
       }}
     >
