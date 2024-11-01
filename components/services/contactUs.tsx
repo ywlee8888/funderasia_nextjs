@@ -6,12 +6,13 @@ import Image from "next/image";
 
 type SidebarProps = {
   isOpen: boolean;
-  toggleSidebar: () => void;
+  toggleSidebar: () => void; // This function will be called without arguments
 };
 
 const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
+  // If the sidebar is not open, return null (don't render anything)
   if (!isOpen) return null;
 
   return (
@@ -21,89 +22,89 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       style={{
         top: "140px",
         height: "auto",
-        width: "60rem",
+        backgroundImage: "url('/img/specialist_background.png')", // Set your background image
+        backgroundSize: "cover", // Ensure the image covers the entire sidebar
+        backgroundPosition: "center", // Center the background image
+        backdropFilter: "blur(30px)", // Adjust the blur value here
       }}
     >
+      {/* Overlay to create a mask effects */}
       <div
-        className="h-full w-full relative"
+        className="absolute inset-0"
+        style={{ backgroundColor: "rgba(129, 216, 208, 0.8)" }} // Semi-transparent overlay
+      />
+
+      {/* Close button */}
+      <button
+        onClick={toggleSidebar} // Close the sidebar when clicking this button
+        className="bg-green-500 text-white z-20 absolute left-[-3.5rem] top-4"
         style={{
-          backgroundImage: "url('/img/specialist_background.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backdropFilter: "blur(30px)",
-          borderRadius: "0.5rem",
+          fontSize: "2rem",
+          padding: "0.5rem 0.75rem",
         }}
       >
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }}
-        />
+        <FaWhatsapp />
+      </button>
 
-        <button
-          onClick={toggleSidebar}
-          className="bg-green-500 text-white z-20 absolute left-[-3.5rem] top-4"
-          style={{
-            fontSize: "2rem",
-            padding: "0.5rem 0.75rem",
-          }}
-        >
-          <FaWhatsapp />
-        </button>
+      <div className="max-w-4xl text-black mx-auto p-6 pt-8 relative">
+        {/* Image with text overlay */}
+        <div className="relative mb-4">
+          <Image
+            src="/img/asian_woman_hotline_second.jpg"
+            alt="Contact Image"
+            layout="responsive" // Use responsive layout
+            width={600} // Set the width according to your design
+            height={300} // Set the height according to your design
+            className="rounded-md w-full h-auto" // Full width, maintain aspect ratio
+          />
+          {/* Overlay with mask */}
+          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
 
-        <div className="max-w-4xl text-black mx-auto p-6 pt-8 relative">
-          <div className="relative mb-4">
-            <Image
-              src="/img/asian_woman_hotline_second.jpg"
-              alt="Contact Image"
-              layout="responsive"
-              width={600}
-              height={300}
-              className="rounded-md w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
+          {/* "Get in touch" text over image */}
+          <h1 className="absolute inset-0 flex items-center text-white text-5xl font-bold left-[5%]">
+            Get in touch
+          </h1>
+          <p className="absolute inset-0 flex items-center text-white text-lg font-bold left-[5%] top-[110px]">
+            Want to get in touch? We'd love to hear from you. <br /> Here's how
+            you can reach us.
+          </p>
+        </div>
 
-            <h1 className="absolute inset-0 flex items-center text-white text-5xl font-bold left-[5%]">
-              Get in touch
-            </h1>
-            <p className="absolute inset-0 flex items-center text-white text-lg font-bold left-[5%] top-[110px]">
-              Want to get in touch? We'd love to hear from you. <br /> Here's how
-              you can reach us.
-            </p>
+        {/* Contact Cards positioned above the image */}
+        <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex justify-between gap-4 mb-8 px-4">
+          {/* Card 1 */}
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">
+            <h2 className="text-xl font-bold mb-4">Membership Services</h2>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FaWhatsapp style={{ marginRight: "8px", fontSize: "24px" }} />
+              <span style={{ fontSize: "20px" }}>WhatsApp</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FaPhone style={{ marginRight: "8px", fontSize: "24px" }} />
+              <span style={{ fontSize: "20px" }}>Telephone</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FaEnvelope style={{ marginRight: "8px", fontSize: "24px" }} />
+              <span style={{ fontSize: "20px" }}>member@specialist.asia</span>
+            </div>
           </div>
 
-          <div className="relative w-full mt-4">
-            <div className="absolute inset-0 w-full flex justify-between gap-4 px-4">
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2 h-full flex flex-col justify-between">
-                <h2 className="text-xl font-bold mb-4">Membership Services</h2>
-                <div className="flex items-center">
-                  <FaWhatsapp className="mr-2 text-2xl" />
-                  <span className="text-lg">WhatsApp</span>
-                </div>
-                <div className="flex items-center">
-                  <FaPhone className="mr-2 text-2xl" />
-                  <span className="text-lg">Telephone</span>
-                </div>
-                <div className="flex items-center">
-                  <FaEnvelope className="mr-2 text-2xl" />
-                  <span className="text-lg">member@specialist.asia</span>
-                </div>
-              </div>
-
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2 h-full flex flex-col justify-between">
-                <h2 className="text-xl font-bold mb-4">Healthcare Provider</h2>
-                <div className="flex items-center">
-                  <FaWhatsapp className="mr-2 text-2xl" />
-                  <span className="text-lg">WhatsApp Support</span>
-                </div>
-                <div className="flex items-center">
-                  <FaPhone className="mr-2 text-2xl" />
-                  <span className="text-lg">Phone Support</span>
-                </div>
-                <div className="flex items-center">
-                  <FaEnvelope className="mr-2 text-2xl" />
-                  <span className="text-lg">healthcare@specialist.asia</span>
-                </div>
-              </div>
+          {/* Card 2 */}
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">
+            <h2 className="text-xl font-bold mb-4">Healthcare Provider</h2>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FaWhatsapp style={{ marginRight: "8px", fontSize: "24px" }} />
+              <span style={{ fontSize: "20px" }}>WhatsApp Support</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FaPhone style={{ marginRight: "8px", fontSize: "24px" }} />
+              <span style={{ fontSize: "20px" }}>Phone Support</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FaEnvelope style={{ marginRight: "8px", fontSize: "24px" }} />
+              <span style={{ fontSize: "20px" }}>
+                healthcare@specialist.asia
+              </span>
             </div>
           </div>
         </div>

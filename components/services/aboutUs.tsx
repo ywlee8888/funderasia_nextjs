@@ -26,7 +26,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       style={{
         top: "190px",
         height: "auto",
-        backgroundImage: "url('/specialist_background.png')",
+        backgroundImage: "url('/img/specialist_background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         borderRadius: "8px",
