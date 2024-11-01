@@ -23,14 +23,15 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-[60rem] z-50 transition-transform duration-300"
+      className="fixed right-0 top-0 w-[60rem] z-50 transition-transform duration-300"
       style={{
         top: "190px",
         height: "auto",
         backgroundImage: "url('/img/specialist_background.png')", // Set your background image
         backgroundSize: "cover", // Ensure the image covers the entire sidebar
         backgroundPosition: "center", // Center the background image
-        backdropFilter: "blur(30px)" // Adjust the blur value here
+        backdropFilter: "blur(30px)", // Adjust the blur value here
+        borderRadius: "8px", // Optional: round corners for aesthetics
       }}
     >
       {/* Overlay to create a mask effect */}
