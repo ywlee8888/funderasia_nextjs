@@ -13,7 +13,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   useEffect(() => {
     return () => {
-      document.removeEventListener("mousedown", () => {}); // Cleanup effect
+      document.removeEventListener("mousedown", () => {});
     };
   }, [isOpen]);
 
@@ -29,7 +29,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         alignItems: "center",
         justifyContent: "center",
         // Background image
-        backgroundImage: `url('/img/specialist_background.png')`, // Replace with your image path
+        backgroundImage: `url('/img/specialist_background.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         borderRadius: "0.5rem",

@@ -29,17 +29,21 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <div
         className="h-full w-full"
         style={{
-          backgroundImage: "url('/img/specialist_background.png')", // Use your background image path
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          // Background image
+          backgroundImage: `url('/img/specialist_background.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backdropFilter: "blur(30px)", // Apply blur effect
-          borderRadius: "0.5rem", // Round corners for aesthetics
+          borderRadius: "0.5rem",
+          backdropFilter: "blur(30px)",
         }}
       >
         {/* Overlay to create a mask effect */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }} // Semi-transparent overlay
+          style={{ backgroundColor: "rgba(129, 216, 208, 0.8)" }} // Semi-transparent overlay
         />
 
         {/* Close button */}
@@ -73,8 +77,8 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               Get in touch
             </h1>
             <p className="absolute inset-0 flex items-center text-white text-lg font-bold left-[5%] top-[110px]">
-              Want to get in touch? We'd love to hear from you. <br /> Here's how
-              you can reach us.
+              Want to get in touch? We'd love to hear from you. <br /> Here's
+              how you can reach us.
             </p>
           </div>
 
@@ -110,7 +114,9 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaEnvelope style={{ marginRight: "8px", fontSize: "24px" }} />
-                <span style={{ fontSize: "20px" }}>healthcare@specialist.asia</span>
+                <span style={{ fontSize: "20px" }}>
+                  healthcare@specialist.asia
+                </span>
               </div>
             </div>
           </div>
