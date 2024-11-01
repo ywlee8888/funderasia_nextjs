@@ -51,7 +51,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         style={{
           fontSize: "2rem",
           padding: "0.5rem 0.75rem",
-        }}
+        }} 
       >
         <FaUserFriends />
       </button>

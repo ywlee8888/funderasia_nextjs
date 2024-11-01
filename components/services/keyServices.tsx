@@ -37,14 +37,10 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       className="fixed right-0 w-[60rem] z-50 transition-transform duration-300"
       style={{
         top: "240px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        // Background image
-        backgroundImage: `url('/img/specialist_background.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        borderRadius: "0.5rem",
+        height: "auto",
+        backgroundImage: "url('/img/specialist_background.png')", // Set your background image
+        backgroundSize: "cover", // Ensure the image covers the entire sidebar
+        backgroundPosition: "center", // Center the background image
         backdropFilter: "blur(30px)" // Adjust the blur value here
       }}
     >
