@@ -21,7 +21,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       className="fixed right-0 z-50 transition-transform duration-300"
       style={{
         top: "140px",
-        height: "auto",
+        minHeight: "100vh",
         backgroundImage: "url('/img/specialist_background.png')", // Set your background image
         backgroundSize: "cover", // Ensure the image covers the entire sidebar
         backgroundPosition: "center", // Center the background image
