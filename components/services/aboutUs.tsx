@@ -30,8 +30,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         backgroundImage: "url('/img/specialist_background.png')", // Set your background image
         backgroundSize: "cover", // Ensure the image covers the entire sidebar
         backgroundPosition: "center", // Center the background image
-        backdropFilter: "blur(30px)", // Adjust the blur value here
-        borderRadius: "8px", // Optional: round corners for aesthetics
+        backdropFilter: "blur(30px)" // Adjust the blur value here
       }}
     >
       {/* Overlay to create a mask effect */}

@@ -22,7 +22,10 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       style={{
         top: "140px",
         height: "auto",
-        width: "60rem",
+        backgroundImage: "url('/img/specialist_background.png')", // Set your background image
+        backgroundSize: "cover", // Ensure the image covers the entire sidebar
+        backgroundPosition: "center", // Center the background image
+        backdropFilter: "blur(30px)" // Adjust the blur value here
       }}
     >
       {/* Background image covering the entire sidebar */}
