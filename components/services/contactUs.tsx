@@ -17,15 +17,19 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   return (
     <div
-      ref={sidebarRef}      
+      ref={sidebarRef}
+      className="fixed right-0 z-50 transition-transform duration-300"
+      style={{
+        top: "140px",
+        height: "auto",
+        width: "60rem",
+      }}
     >
       {/* Background image covering the entire sidebar */}
       <div
         className="h-full w-full"
         style={{
-          top: "140px",
           height: "auto",
-          minHeight: "100vh", // Ensures at least full viewport height
           backgroundImage: "url('/img/specialist_background.png')", // Use your background image path
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -33,10 +37,10 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           borderRadius: "0.5rem", // Round corners for aesthetics
         }}
       >
-        {/* Overlay to create a mask effects */}
+        {/* Overlay to create a mask effect */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: "rgba(129, 216, 208, 0.8)" }} // Semi-transparent overlay
+          style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }} // Semi-transparent overlay
         />
 
         {/* Close button */}
@@ -70,8 +74,8 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               Get in touch
             </h1>
             <p className="absolute inset-0 flex items-center text-white text-lg font-bold left-[5%] top-[110px]">
-              Want to get in touch? We'd love to hear from you. <br /> Here's
-              how you can reach us.
+              Want to get in touch? We'd love to hear from you. <br /> Here's how
+              you can reach us.
             </p>
           </div>
 
@@ -107,9 +111,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaEnvelope style={{ marginRight: "8px", fontSize: "24px" }} />
-                <span style={{ fontSize: "20px" }}>
-                  healthcare@specialist.asia
-                </span>
+                <span style={{ fontSize: "20px" }}>healthcare@specialist.asia</span>
               </div>
             </div>
           </div>
