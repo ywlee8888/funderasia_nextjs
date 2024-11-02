@@ -26,25 +26,28 @@
 .heading {
   width: 100%;
   text-align: center;
-  margin-top: 10px; /* Corrected from '10x' to '10px' */
+  top: 50px;
+  margin-top: 10x; /* Adjust this as necessary */
   margin-bottom: 0px; /* Use negative margin to overlap with the card */
+  position: absolute; /* Optional: ensures stacking context */
   z-index: 100; /* Bring heading to the front if necessary */
 }
-
 .explain {
-  width: 100%;
-  text-align: left;
-  margin-top: 20px; /* Adjust this as necessary */
-  margin-bottom: 30px; /* Use negative margin to overlap with the card */
-  margin-left: 100px;
-  margin-right: 50px;
-  padding: 20px; /* Add padding here (adjust the value as necessary) */
-  z-index: 1; /* Bring heading to the front if necessary */
-}
+    width: 100%;
+    text-align: left;
+    top: 100px;
+    margin-top: 20px; /* Adjust this as necessary */
+    margin-bottom: 30px; /* Use negative margin to overlap with the card */
+    margin-left: 100px;
+    margin-right: 50px;
+    padding: 20px; /* Add padding here (adjust the value as necessary) */
+    position: absolute; /* Optional: ensures stacking context */
+    z-index: 1; /* Bring heading to the front if necessary */
+  }  
 
 .cardItems {
   display: flex; /* Flexbox for the cards */
-  flex-direction: row; /* Align cards in a row by default */
+  flex-direction: row; /* Align cards in a row */
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
   gap: 24px; /* Increase spacing between cards */
@@ -78,7 +81,7 @@
 }
 
 .card {
-  width: 200px; /* Corrected from '200' to '200px' */
+  width: 200; /* Increase the card width */
   padding: 16px; /* Optional: add padding inside the card */
   border-radius: 8px; /* Optional: rounded corners */
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
@@ -89,6 +92,7 @@
 }
 
 .cardTitle {
+  /* Correct class name to match JSX */
   font-size: 1.5em;
   text-align: center;
   margin: 10px 0;
@@ -118,18 +122,17 @@
   color: #0070f3; /* Link color */
   text-decoration: none; /* Remove underline */
   font-weight: bold; /* Bold text */
-  margin-top: 10px; /* Optional: add some space above the link */
+  margin-top: 10px; /* Optional: add some space above the link */  
 }
 
 .card:hover {
   transform: translateY(-10px); /* Optional: slight lift effect on hover */
 }
 
-/* Media query for smaller screens */
+/* Optional: Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .cardItems {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: stretch; /* Stretch cards to fill the container */
+  .card {
+    width: 100%; /* Full width on small screens */
   }
 }
 
