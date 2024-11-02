@@ -135,17 +135,17 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
             HOME
           </Link>
 
-          <button
-            className="hover:font-extrabold whitespace-nowrap px-1"
+          <button            
             onClick={() => toggleComponent("membership")}
+            className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="Membership"
           >
             MEMBERSHIP
           </button>
 
-          <button
-            className="hover:font-extrabold whitespace-nowrap px-1"
+          <button            
             onClick={() => toggleComponent("keyServices")}
+            className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="Services"
           >
             SERVICES
