@@ -23,7 +23,6 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Add event listener cleanup if necessary in the future
     return () => {
       document.removeEventListener("mousedown", () => {});
     };
@@ -38,10 +37,10 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       style={{
         top: "240px",
         height: "auto",
-        backgroundImage: "url('/img/specialist_background.png')", // Set your background image
-        backgroundSize: "cover", // Ensure the image covers the entire sidebar
-        backgroundPosition: "center", // Center the background image
-        backdropFilter: "blur(30px)" // Adjust the blur value here
+        backgroundImage: "url('/img/specialist_background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backdropFilter: "blur(30px)"
       }}
     >
       {/* Overlay to create a mask effect */}

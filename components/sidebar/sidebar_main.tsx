@@ -1,9 +1,9 @@
-"use client"; // Ensure this component is a client component
+"use client"; 
 
 import { useState } from "react";
 import Link from "next/link";
-import { HiMenu, HiX } from "react-icons/hi"; // Import icons for hamburger and close
-import { useRouter } from "next/navigation"; // Import useRouter for redirection
+import { HiMenu, HiX } from "react-icons/hi"; 
+import { useRouter } from "next/navigation"; 
 
 const categories = [
   { 
@@ -47,13 +47,13 @@ const categories = [
 export default function Sidebar() {
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter(); // Initialize useRouter
+  const router = useRouter(); 
 
   const toggleCategory = (id: number) => {
     const category = categories.find(category => category.id === id);
     if (category) {
       if (category.subcategories.length === 0) {
-        // Redirect to the category's path if subcategories are empty
+
         router.push(category.path);
       } else {
         setExpandedCategory(expandedCategory === id ? null : id);

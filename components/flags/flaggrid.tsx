@@ -25,7 +25,6 @@ const flags = [
   '/img/flags/south-korea.png', 
 ];
 
-// Define fixed positions for flags to avoid overlap
 const flagPositions = [
   { top: '10%', left: '5%' },
   { top: '50%', left: '5%' },
@@ -46,8 +45,8 @@ const flagPositions = [
 ];
 
 const FlagGrid: React.FC<FlagGridProps> = ({ containerHeight, containerWidth }) => {
-  const flagWidth = containerWidth * 0.1; // Example: 10% of container width
-  const flagHeight = 'auto'; // Maintain aspect ratio
+  const flagWidth = containerWidth * 0.1;
+  const flagHeight = 'auto'; 
 
   return (
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden flagGridContainer">
@@ -62,8 +61,8 @@ const FlagGrid: React.FC<FlagGridProps> = ({ containerHeight, containerWidth }) 
             top: flagPositions[index].top,
             left: flagPositions[index].left,
             zIndex: 1,
-            width: flagWidth, // Set the width based on the container size
-            height: flagHeight, // Set height to auto for aspect ratio
+            width: flagWidth, 
+            height: flagHeight, 
           }}
         />
       ))}

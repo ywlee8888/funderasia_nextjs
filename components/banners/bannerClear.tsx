@@ -3,7 +3,6 @@ import styles from "./bannerclear.module.css";
 import FlagGrid from "../flags/flaggrid";
 import { useEffect, useState } from "react";
 
-// Define the props interface
 interface FullWidthImageProps {
   src: string;
   alt: string;
@@ -12,7 +11,6 @@ interface FullWidthImageProps {
 const MedicalImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
   const [imageDimensions, setImageDimensions] = useState({ height: 0, width: 0 });
 
-  // Use effect to set the dimensions once the image is loaded
   const handleImageLoad = (img: { naturalHeight: number; naturalWidth: number; }) => {
     setImageDimensions({ height: img.naturalHeight, width: img.naturalWidth });
   };
@@ -26,7 +24,7 @@ const MedicalImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         width={1920}
         height={1080}
         className={styles.bannerImage}
-        onLoadingComplete={handleImageLoad} // Adjusted to match the expected type
+        onLoadingComplete={handleImageLoad}
       />
       {/* Overlay FlagGrid */}
       {imageDimensions.height > 0 && (

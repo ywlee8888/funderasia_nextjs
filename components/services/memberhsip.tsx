@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { FaUserFriends } from "react-icons/fa"; // Import icons
+import { FaUserFriends } from "react-icons/fa";
 import MembershipCardContainer from "../cards/membershipTiers";
 import styles from "../cards/membership.module.css";
 
@@ -28,20 +28,18 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // Background image
         backgroundImage: `url('/img/specialist_background.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         borderRadius: "0.5rem",
-      }}
-    >
-      {/* Overlay mask for background image */}
+      }}    >
+
       <div
         className="h-full w-full absolute top-0 left-0"
         style={{
-          backgroundColor: "rgba(129, 216, 208, 0.8)", // Semi-transparent mask
+          backgroundColor: "rgba(129, 216, 208, 0.8)",
           borderRadius: "0.5rem",
-          zIndex: 1, // Set the z-index to ensure it sits below the content
+          zIndex: 1, 
         }}
       />
       {/* Close button */}
@@ -60,7 +58,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <div className={`text-lg ${styles.explain}`}>
           <p>
             <strong>Healthcare Concierge Across Asia </strong> Our annual membership plans provide individuals, families,
-            and corporate executives with comprehensive, personalized support, offering unlimited access to essential healthcare
+            and corporate executives with comprehensive, personalised support, offering unlimited access to essential healthcare
             concierge services in every Asian city where we operate, all at no additional cost.
           </p>
         </div>

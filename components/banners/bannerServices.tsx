@@ -1,26 +1,24 @@
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./bannerservices.module.css";
-import { FaTimes } from "react-icons/fa"; // Import close icon
+import { FaTimes } from "react-icons/fa"; 
 import SpecialistConnectBanner from "../forms/specialistConnectBanner";
 
-// Define the props interface for SpecialistConnect
 interface SidebarProps {
   isOpen: boolean;
   toggleSidebar: () => void;
 }
 
-// Define the props interface for ServicesImage
 interface FullWidthImageProps {
-  src: string; // Expecting a string for the image source
-  alt: string; // Expecting a string for the image alt text
+  src: string;
+  alt: string; 
 }
 
 const ServicesImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage visibility of SpecialistConnect
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen); // Toggle the state
+    setIsOpen(!isOpen);
   };
 
   return (

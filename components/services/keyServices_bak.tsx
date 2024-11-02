@@ -17,12 +17,9 @@ type SidebarProps = {
 const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  // Removed handleClickOutside to prevent closing on outside clicks
-
   useEffect(() => {
-    // No need to listen for outside clicks anymore
     return () => {
-      document.removeEventListener("mousedown", () => {}); // Cleanup effect
+      document.removeEventListener("mousedown", () => {});
     };
   }, [isOpen]);
 

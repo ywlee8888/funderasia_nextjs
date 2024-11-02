@@ -6,9 +6,9 @@ import Link from "next/link";
 
 // Define the props interface
 interface FullWidthImageProps {
-  src: string; // Expecting a string for the image source
-  alt: string; // Expecting a string for the image alt text
-  title: string; // Adding a title prop
+  src: string;
+  alt: string;
+  title: string;
 }
 
 const ConciergeImage: React.FC<FullWidthImageProps> = ({ src, alt, title }) => {

@@ -1,9 +1,9 @@
-"use client"; // Ensure this component is a client component
+"use client"; 
 
 import { useState } from "react";
 import Link from "next/link";
-import { HiMenu, HiX } from "react-icons/hi"; // Import icons for hamburger and close
-import { badgeVariants } from "@/components/ui/badge"; // Import badge variants
+import { HiMenu, HiX } from "react-icons/hi"; 
+import { badgeVariants } from "@/components/ui/badge";
 
 const categories = [
   { 

@@ -30,12 +30,10 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         borderRadius: "0.5rem", 
-      }}
-    >
-      {/* Semi-transparent overlay to create a mask effect */}
+      }}    >
+
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(129, 216, 208, 0.8)", borderRadius: "8px" }}></div>
 
-      {/* Close button */}
       <button
         onClick={toggleSidebar}
         className="bg-red-500 text-white z-20 absolute left-[-3.5rem] top-4"
@@ -47,7 +45,6 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <FaInfo />
       </button>
 
-      {/* Content Area */}
       <div className="relative flex flex-col justify-center text-black items-center p-6 z-10">
         <img
           src="/img/specialistasia_logo_banner_black.png"

@@ -6,9 +6,8 @@ interface TeleConsulttProps {
 }
 
 const TeleConsult = ({ isOpen, onClose }: TeleConsulttProps) => {
-  const modalRef = useRef<HTMLDivElement | null>(null); // Create a ref for the modal content
+  const modalRef = useRef<HTMLDivElement | null>(null); 
 
-  // Close modal on click outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
@@ -30,7 +29,7 @@ const TeleConsult = ({ isOpen, onClose }: TeleConsulttProps) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div
-        ref={modalRef} // Attach ref to the modal content
+        ref={modalRef} 
         className="bg-white p-8 rounded shadow-lg w-1/3"
       >
         <h2 className="text-xl font-bold text-black mb-4">Tele-Consultation Support</h2>

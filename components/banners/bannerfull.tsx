@@ -18,16 +18,15 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
   };
 
   const handleContactUsClick = () => {
-    setContactUsOpen(true); // Open the Contact Us modal
+    setContactUsOpen(true);
   };
 
   const handleDrawerClose = (open: boolean) => {
     setIsDrawerOpen(open);
   };
 
-  // Change this function to match the expected signature
   const handleContactUsClose = () => {
-    setContactUsOpen(false); // Close the Contact Us modal
+    setContactUsOpen(false);
   };
 
   return (
@@ -61,7 +60,7 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
 
         <div className={styles.buttonContainer}>
           <button 
-            onClick={handleContactUsClick} // Directly handle button click
+            onClick={handleContactUsClick}
             className="bg-blue-600 hover:bg-blue-800 text-white px-5 py-2 rounded me-5"
           >
             Contact Us

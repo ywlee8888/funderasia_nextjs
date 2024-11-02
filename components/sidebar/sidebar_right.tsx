@@ -1,7 +1,7 @@
 // components/Sidebar.tsx
 
 import React, { useState } from 'react';
-import './sidebar_right.css'; // Ensure you import the CSS file
+import './sidebar_right.css';
 
 const SidebarRight = () => {
   const [isVisible, setIsVisible] = useState(false);

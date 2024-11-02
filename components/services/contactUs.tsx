@@ -1,18 +1,17 @@
 "use client";
 
 import React, { useRef } from "react";
-import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa"; // Import icons
+import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa"; 
 import Image from "next/image";
 
 type SidebarProps = {
   isOpen: boolean;
-  toggleSidebar: () => void; // This function will be called without arguments
+  toggleSidebar: () => void;
 };
 
 const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  // If the sidebar is not open, return null (don't render anything)
   if (!isOpen) return null;
 
   return (
@@ -31,22 +30,22 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         style={{
           height: "auto",
           minHeight: "65vh",
-          backgroundImage: "url('/img/specialist_background.png')", // Use your background image path
+          backgroundImage: "url('/img/specialist_background.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backdropFilter: "blur(30px)", // Apply blur effect
-          borderRadius: "0.5rem", // Round corners for aesthetics
+          backdropFilter: "blur(30px)",
+          borderRadius: "0.5rem",
         }}
       >
         {/* Overlay to create a mask effect */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }} // Semi-transparent overlay
+          style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }}
         />
 
         {/* Close button */}
         <button
-          onClick={toggleSidebar} // Close the sidebar when clicking this button
+          onClick={toggleSidebar}
           className="bg-green-500 text-white z-20 absolute left-[-3.5rem] top-4"
           style={{
             fontSize: "2rem",
@@ -62,10 +61,10 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             <Image
               src="/img/asian_woman_hotline_second.jpg"
               alt="Contact Image"
-              layout="responsive" // Use responsive layout
-              width={600} // Set the width according to your design
-              height={300} // Set the height according to your design
-              className="rounded-md w-full h-auto" // Full width, maintain aspect ratio
+              layout="responsive"
+              width={600} 
+              height={300} 
+              className="rounded-md w-full h-auto" 
             />
             {/* Overlay with mask */}
             <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>

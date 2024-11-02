@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TextIconCard from "./membership";
 import styles from "./serviceholder.module.css";
-import { FaCheckCircle } from "react-icons/fa"; // Import icons
+import { FaCheckCircle } from "react-icons/fa";
 
 const MembershipCardContainer: React.FC = () => {
   const cardsData = [
@@ -54,7 +54,7 @@ const MembershipCardContainer: React.FC = () => {
             title={card.title}
             description={card.description}
             price={card.price}
-            icon={FaCheckCircle} // Pass FaCheckCircle as icon
+            icon={FaCheckCircle}
           />
         ))}
       </div>

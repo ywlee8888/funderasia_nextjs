@@ -29,7 +29,7 @@ const aestheticsTreatments = [
   "Laser Treatment",
   "Chemical Peel",
   "Others",
-  // Add more treatments
+
 ];
 
 const stemCellTreatments = [
@@ -40,7 +40,7 @@ const stemCellTreatments = [
   "Prochymal (Remestemcel-L)",
   "Temcell (Regenerative Cell Therapy)",
   "Others",
-  // Add more treatments
+
 ];
 
 const healthScreenings = [
@@ -50,7 +50,7 @@ const healthScreenings = [
   "Diabetes Screening",
   "Cancer Screening",
   "Others",
-  // Add more screenings
+
 ];
 
 const countries = [
@@ -60,7 +60,7 @@ const countries = [
   "Taiwan",
   "Thailand",
   "Others",
-  // Add more countries
+
 ];
 
 type SidebarProps = {
@@ -95,20 +95,20 @@ export default function SpecialistConnectNavBar({
   const [alertMessage, setAlertMessage] = useState("");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
 
     let selectedTreatmentType;
 
     if (treatmentType === "medicalSpecialist") {
-      selectedTreatmentType = selectedSpecialist; // Use selectedSpecialist for medical specialties
+      selectedTreatmentType = selectedSpecialist; 
     } else if (treatmentType === "aesthetics") {
-      selectedTreatmentType = aestheticsType; // Use aestheticsType for aesthetics
+      selectedTreatmentType = aestheticsType; 
     } else if (treatmentType === "healthScreening") {
-      selectedTreatmentType = healthScreeningType; // Use healthScreeningType for health screening
+      selectedTreatmentType = healthScreeningType; 
     } else if (treatmentType === "stemCell") {
       selectedTreatmentType = stemCellType; //
     } else {
-      selectedTreatmentType = ""; // Default case if none match
+      selectedTreatmentType = ""; 
     }
 
     const formData = {
@@ -117,7 +117,7 @@ export default function SpecialistConnectNavBar({
       telephone: contactDetails.telephone,
       remarks: contactDetails.remarks,
       treatmentType,
-      selectedTreatmentType, // This should now have a valid value
+      selectedTreatmentType,
       preferredCountry,
     };
 
@@ -136,16 +136,16 @@ export default function SpecialistConnectNavBar({
           "Message sent successfully! Our liaison officers will be in touch within the next 48 hours."
         );
         setAlertVisible(true);
-        // Delay the sidebar closure
+
         setTimeout(() => {
-          toggleSidebar(); // Close sidebar after a brief delay
-        }, 8000); // Adjust delay time (in milliseconds) as needed
+          toggleSidebar(); 
+        }, 8000); 
       } else {
-        // Handle error (e.g., show an error message)
-        const errorText = await response.text(); // Get response as text for debugging
-        alert(`Error: ${errorText}`); // Alerting the error message
+
+        const errorText = await response.text();
+        alert(`Error: ${errorText}`); 
         const errorData = await response.json();
-        // Use errorData.message if available or a fallback message
+
         alert(
           `Error: ${
             errorData.message ||
@@ -162,7 +162,7 @@ export default function SpecialistConnectNavBar({
 
   const closeAlert = () => {
     setAlertVisible(false);
-    toggleSidebar(); // Close the sidebar when the alert is closed
+    toggleSidebar(); 
   };
 
   const handleVirtualConsultation = (answer: string) => {
@@ -208,11 +208,11 @@ export default function SpecialistConnectNavBar({
                 value={treatmentType}
                 onChange={(e) => {
                   setTreatmentType(e.target.value);
-                  setHasSpecialistArea(null); // Reset the specialist area when changing treatment type
+                  setHasSpecialistArea(null);
                   setSelectedSpecialist("");
                   setPreferredCountry("");
-                  setShowContactDetails(false); // Reset contact details visibility
-                  setVirtualConsultation(null); // Reset virtual consultation selection
+                  setShowContactDetails(false);
+                  setVirtualConsultation(null); 
                 }}
                 style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
               >
@@ -253,9 +253,9 @@ export default function SpecialistConnectNavBar({
                       if (!isSpecialistArea) {
                         setSelectedSpecialist(
                           "Request GP Consultation and Referral"
-                        ); // Set value when "No" is selected
+                        ); 
                       } else {
-                        setSelectedSpecialist(""); // Reset if "Yes" is selected
+                        setSelectedSpecialist(""); 
                       }
                     }}
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
@@ -284,7 +284,7 @@ export default function SpecialistConnectNavBar({
                           if (e.target.value) {
                             setShowContactDetails(
                               virtualConsultation === "yes"
-                            ); // Show contact details if virtual consultation is yes
+                            ); 
                           }
                         }}
                         style={{
@@ -374,7 +374,7 @@ export default function SpecialistConnectNavBar({
                       className="block w-full border border-gray-300 rounded-md px-4 py-2 mb-4"
                       value={preferredCountry || ""}
                       onChange={(e) => {
-                        setPreferredCountry(e.target.value); // Update state with the selected country
+                        setPreferredCountry(e.target.value);
                       }}
                       style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
                       required
@@ -397,7 +397,7 @@ export default function SpecialistConnectNavBar({
                       </strong>
                     </label>
                     <select
-                      className="block w-full border border-gray-300 rounded-md px-4 py-2" // Added margin bottom for spacing
+                      className="block w-full border border-gray-300 rounded-md px-4 py-2" 
                       value={virtualConsultation || ""}
                       onChange={(e) => {
                         handleVirtualConsultation(e.target.value);
@@ -454,7 +454,7 @@ export default function SpecialistConnectNavBar({
                     className="block w-full border border-gray-300 rounded-md px-4 py-2 mb-2"
                     value={preferredCountry || ""}
                     onChange={(e) => {
-                      setPreferredCountry(e.target.value); // Update state with the selected country
+                      setPreferredCountry(e.target.value);
                     }}
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
                     required
@@ -532,7 +532,7 @@ export default function SpecialistConnectNavBar({
                     className="block w-full border border-gray-300 rounded-md px-4 py-2 mb-4"
                     value={preferredCountry || ""}
                     onChange={(e) => {
-                      setPreferredCountry(e.target.value); // Update state with the selected country
+                      setPreferredCountry(e.target.value);
                     }}
                     required
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
@@ -611,7 +611,7 @@ export default function SpecialistConnectNavBar({
                     className="block w-full border border-gray-300 rounded-md px-4 py-2 mb-4"
                     value={preferredCountry || ""}
                     onChange={(e) => {
-                      setPreferredCountry(e.target.value); // Update state with the selected country
+                      setPreferredCountry(e.target.value); 
                     }}
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
                     required
@@ -672,7 +672,7 @@ export default function SpecialistConnectNavBar({
                       })
                     }
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
-                    placeholder="Enter your name" // Added placeholder
+                    placeholder="Enter your name" 
                     required
                   />
                 </div>
@@ -694,7 +694,7 @@ export default function SpecialistConnectNavBar({
                       })
                     }
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
-                    placeholder="Enter your email" // Added placeholder
+                    placeholder="Enter your email"
                     required
                   />
                 </div>
@@ -716,7 +716,7 @@ export default function SpecialistConnectNavBar({
                       })
                     }
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
-                    placeholder="Enter your telephone" // Added placeholder
+                    placeholder="Enter your telephone" 
                     required
                   />
                 </div>
@@ -737,7 +737,7 @@ export default function SpecialistConnectNavBar({
                       })
                     }
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
-                    placeholder="Enter your remarks" // Added placeholder
+                    placeholder="Enter your remarks" 
                     rows={4}
                   />
                 </div>

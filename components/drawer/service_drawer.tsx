@@ -11,7 +11,7 @@ import {
   GlobeIcon,
   CheckCircledIcon,
   PersonIcon,
-} from "@radix-ui/react-icons"; // Importing PersonIcon
+} from "@radix-ui/react-icons";
 import { IoPeople } from "react-icons/io5";
 import { FaClipboardList, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -34,7 +34,6 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
           </DrawerHeader>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
             {" "}
-            {/* Increased gap between cards */}
             {/* Card for Navigating Healthcare Systems */}
             <div className="p-6 border rounded-lg shadow-md bg-white">
               <div className="flex items-center mb-4">
