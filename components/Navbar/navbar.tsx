@@ -205,23 +205,21 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
               SERVICES
             </button>
 
-            <Link
-              href="/about"
+            <button
               className="hover:font-extrabold whitespace-nowrap text-left"
-              onClick={handleLinkClick}
+              onClick={() => toggleComponent("aboutUs")}
               aria-label="About Us"
             >
               ABOUT
-            </Link>
+            </button>
 
-            <Link
-              href="/contact"
+            <button
               className="hover:font-extrabold whitespace-nowrap text-left"
-              onClick={handleLinkClick}
+              onClick={() => toggleComponent("contactUs")}
               aria-label="Contact Us"
             >
               CONTACT
-            </Link>
+            </button>
 
             <button
               onClick={() => toggleComponent("specialistConnect")}
