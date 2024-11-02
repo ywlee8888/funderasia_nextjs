@@ -65,7 +65,7 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         </p>
 
         <div className={styles.buttonContainer}>
-          <button 
+          <button
             onClick={handleContactUsClick}
             className="bg-blue-600 hover:bg-blue-800 text-white px-5 py-2 rounded me-5"
           >
@@ -81,7 +81,10 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
       </div>
 
       <DrawerDemo isOpen={isDrawerOpen} onOpenChange={handleDrawerClose} />
-      <ContactUs isOpen={isContactUsOpen} toggleSidebar={handleContactUsClose} />
+      <ContactUs
+        isOpen={isContactUsOpen}
+        toggleSidebar={handleContactUsClose}
+      />
     </div>
   );
 };
