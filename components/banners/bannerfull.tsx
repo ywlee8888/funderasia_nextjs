@@ -44,6 +44,12 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
           Your Most Trusted <br />
           Healthcare Concierge
         </div>
+        <p>
+          Need professional assistance for your overseas healthcare treatment?{" "}
+          <br />
+          Contact us to find out how we help make your health journeys across
+          Asia seamless.
+        </p>
       </div>
 
       <div className={styles.overlayCard}>
