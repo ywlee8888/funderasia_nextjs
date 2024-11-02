@@ -22,7 +22,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-[60rem] z-50 transition-transform duration-300 p-8"
+      className="fixed right-0 w-full sm:w-[60rem] z-50 transition-transform duration-300 p-4 sm:p-8"
       style={{
         top: "190px",
         height: "auto",
@@ -30,8 +30,8 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         borderRadius: "0.5rem", 
-      }}    >
-
+      }}
+    >
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(129, 216, 208, 0.8)", borderRadius: "8px" }}></div>
 
       <button
@@ -51,24 +51,24 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           alt="About Specialist Asia"
           className="mb-8 max-w-md h-auto"
         />
-        <h1 className="text-2xl font-bold mb-3">About Specialist Asia</h1>
-        <p className="text-lg mb-5">
+        <h1 className="text-2xl font-bold mb-3 text-center">About Specialist Asia</h1>
+        <p className="text-lg mb-5 text-center">
           <strong>Specialist Asia</strong> offers exclusive membership-based healthcare concierge service, designed to provide
           personalized support and priority access to world-class healthcare.
         </p>
-        <p className="text-lg mb-3">
+        <p className="text-lg mb-3 text-center">
           Our team of dedicated experts ensures that all the details,
           including healthcare coordination, translations, and local liaisons, are managed seamlessly.
         </p>
-        <p className="text-lg mb-3">
+        <p className="text-lg mb-3 text-center">
           As a member, you gain tailored assistance with everything from pre-trip healthcare consultations to travel arrangements,
           appointment scheduling, and post-treatment follow-ups.
         </p>
-        <p className="text-lg mb-3">
+        <p className="text-lg mb-3 text-center">
           Whether for consultation or treatment, our local experts ensure every step of your journey is smooth, allowing
           you to focus solely on recovery and well-being.
         </p>
-        <p className="text-lg mb-5">
+        <p className="text-lg mb-5 text-center">
           Seamlessly navigate the complexities of traveling overseas for healthcare treatment across Asia.
         </p>
       </div>
