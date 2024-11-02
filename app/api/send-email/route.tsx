@@ -22,8 +22,8 @@ export async function POST(req: NextRequest) {
   });
 
   const mailOptions = {
-    from: email, // Ensure the sender email is valid
-    to: 'ywlee8888@gmail.com',
+    from: email,
+    to: 'hello@specialist.asia',
     subject: `Specialist Asia - New Customer/Member Enquiry From ${name}`,
     text: `
     Name: ${name}

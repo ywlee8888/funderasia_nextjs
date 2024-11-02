@@ -29,7 +29,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         backgroundImage: "url('/img/specialist_background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        borderRadius: "8px",
+        borderRadius: "0.5rem", 
       }}
     >
       {/* Semi-transparent overlay to create a mask effect */}
