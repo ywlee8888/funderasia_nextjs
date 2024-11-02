@@ -22,7 +22,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 z-50 transition-transform duration-300 p-8 md:w-[60rem] w-[90%] sm:w-[80%] h-auto md:h-auto h-screen"
+      className="fixed right-0 z-50 transition-transform duration-300 p-8 md:w-[60rem] w-[80%] sm:w-[80%] h-auto md:h-auto h-screen"
       style={{
         top: "190px",
         backgroundImage: "url('/img/specialist_background.png')",
@@ -57,7 +57,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <img
           src="/img/specialistasia_logo_banner_black.png"
           alt="About Specialist Asia"
-          className="mb-8 max-w-[70%] h-auto"
+          className="mb-8 max-w-[80%] h-auto"
         />
         <h1 className="text-2xl font-bold mb-3">About Specialist Asia</h1>
         <p className="text-lg mb-5">
