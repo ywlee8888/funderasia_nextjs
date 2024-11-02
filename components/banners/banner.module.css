@@ -34,7 +34,7 @@
   top: 50%; /* Centered vertically */
   left: 50%; /* Centered horizontally */
   transform: translate(-50%, -50%); /* Translate to perfectly center the card */
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   width: 90%; /* Slightly wider for mobile */
   margin: 0 auto; /* Centered horizontally */

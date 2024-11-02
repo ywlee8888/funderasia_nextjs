@@ -6,6 +6,7 @@ import AboutUs from "../services/aboutUs";
 import ContactUs from "../services/contactUs";
 import Membership from "../services/memberhsip";
 import SpecialistConnectNavBar from "../forms/specialistConnectNavBar";
+import styles from "./navbar.module.css";
 
 interface NavbarProps {
   className?: string;
