@@ -22,14 +22,13 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-[60rem] z-50 transition-transform duration-300 p-8"
+      className="fixed right-0 z-50 transition-transform duration-300 p-8 md:w-[60rem] w-full md:h-auto h-screen"
       style={{
         top: "190px",
-        height: "auto",
         backgroundImage: "url('/img/specialist_background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        borderRadius: "0.5rem", 
+        borderRadius: "0.5rem",
       }}
     >
       {/* Semi-transparent overlay to create a mask effect */}
