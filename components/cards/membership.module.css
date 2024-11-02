@@ -33,21 +33,21 @@
   z-index: 100; /* Bring heading to the front if necessary */
 }
 .explain {
-    width: 100%;
-    text-align: left;
-    top: 100px;
-    margin-top: 20px; /* Adjust this as necessary */
-    margin-bottom: 30px; /* Use negative margin to overlap with the card */
-    margin-left: 100px;
-    margin-right: 50px;
-    padding: 20px; /* Add padding here (adjust the value as necessary) */
-    position: absolute; /* Optional: ensures stacking context */
-    z-index: 1; /* Bring heading to the front if necessary */
-  }  
+  width: 100%;
+  text-align: left;
+  top: 100px;
+  margin-top: 20px; /* Adjust this as necessary */
+  margin-bottom: 30px; /* Use negative margin to overlap with the card */
+  margin-left: 100px;
+  margin-right: 50px;
+  padding: 20px; /* Add padding here (adjust the value as necessary) */
+  position: absolute; /* Optional: ensures stacking context */
+  z-index: 1; /* Bring heading to the front if necessary */
+}
 
 .cardItems {
   display: flex; /* Flexbox for the cards */
-  flex-direction: row; /* Align cards in a row */
+  flex-direction: row; /* Align cards in a row by default */
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
   gap: 24px; /* Increase spacing between cards */
@@ -122,17 +122,19 @@
   color: #0070f3; /* Link color */
   text-decoration: none; /* Remove underline */
   font-weight: bold; /* Bold text */
-  margin-top: 10px; /* Optional: add some space above the link */  
+  margin-top: 10px; /* Optional: add some space above the link */
 }
 
 .card:hover {
   transform: translateY(-10px); /* Optional: slight lift effect on hover */
 }
 
-/* Optional: Media Queries for Responsiveness */
+/* Media query for smaller screens */
 @media (max-width: 768px) {
-  .card {
-    width: 100%; /* Full width on small screens */
+  /* Adjust the max-width as needed */
+  .cardItems {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: stretch; /* Stretch cards to fill the container */
   }
 }
 

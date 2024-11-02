@@ -32,14 +32,14 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         borderRadius: "0.5rem",
-      }}    >
-
+      }}
+    >
       <div
         className="h-full w-full absolute top-0 left-0"
         style={{
           backgroundColor: "rgba(129, 216, 208, 0.8)",
           borderRadius: "0.5rem",
-          zIndex: 1, 
+          zIndex: 1,
         }}
       />
       {/* Close button */}
@@ -49,17 +49,21 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         style={{
           fontSize: "2rem",
           padding: "0.5rem 0.75rem",
-        }} 
+        }}
       >
         <FaUserFriends />
       </button>
       <div className="max-w-4xl text-black mx-auto p-6 pb-10 h-full flex flex-col justify-center items-center">
-        <h2 className={`text-4xl pb-0 font-bold ${styles.heading}`}>Membership Plans</h2>
+        <h2 className={`text-4xl pb-0 font-bold ${styles.heading}`}>
+          Membership Plans
+        </h2>
         <div className={`text-lg ${styles.explain}`}>
           <p>
-            <strong>Healthcare Concierge Across Asia </strong> Our annual membership plans provide individuals, families,
-            and corporate executives with comprehensive, personalised support, offering unlimited access to essential healthcare
-            concierge services in every Asian city where we operate, all at no additional cost.
+            <strong>Healthcare Concierge Across Asia </strong> Our annual
+            membership plans provide individuals, families, and corporate
+            executives with comprehensive, personalised support, offering
+            unlimited access to essential healthcare concierge services in every
+            Asian city where we operate, all at no additional cost.
           </p>
         </div>
         <MembershipCardContainer />
