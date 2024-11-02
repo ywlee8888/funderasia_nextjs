@@ -6,7 +6,7 @@ import AboutUs from "../services/aboutUs";
 import ContactUs from "../services/contactUs";
 import Membership from "../services/memberhsip";
 import SpecialistConnectNavBar from "../forms/specialistConnectNavBar";
-import styles from "./navbar.module.css"; // Import your CSS module
+import styles from "./navbar.module.css";
 
 interface NavbarProps {
   className?: string;
@@ -74,6 +74,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
         body: JSON.stringify(formData),
       });
   
+      // Log the response for debugging
       const data = await response.json();
       console.log("Response from server:", data);
   
@@ -90,7 +91,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
   };
 
   return (
-    <nav className={`${styles.navbar} relative bg-gray-800 bg-opacity-50 text-white p-4 ${className}`} aria-label="Main Navigation">
+    <nav className={`relative bg-gray-800 bg-opacity-50 text-white p-4 ${className}`} aria-label="Main Navigation">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-lg font-bold">
           <img
@@ -103,7 +104,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
         <div className="block lg:hidden">
           <button
             onClick={toggleMenu}
-            className={styles.toggleButton} // Apply the toggle button styles
+            className="text-white focus:outline-none"
             aria-expanded={isOpen}
             aria-label="Toggle menu"
           >
@@ -127,7 +128,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
         <div className={`hidden lg:flex space-x-4 items-center ${isOpen ? "flex" : "hidden"}`}>
           <Link
             href="/"
-            className={`${styles.menuItem} text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap px-1`}
+            className="text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap px-1"
             onClick={handleLinkClick}
             aria-label="Home"
           >
@@ -135,7 +136,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
           </Link>
 
           <button
-            className={styles.menuItem} // Use menu item styles
+            className="hover:font-extrabold whitespace-nowrap px-1"
             onClick={() => toggleComponent("membership")}
             aria-label="Membership"
           >
@@ -143,7 +144,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
           </button>
 
           <button
-            className={styles.menuItem}
+            className="hover:font-extrabold whitespace-nowrap px-1"
             onClick={() => toggleComponent("keyServices")}
             aria-label="Services"
           >
@@ -152,7 +153,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
 
           <button
             onClick={() => toggleComponent("aboutUs")}
-            className={styles.menuItem}
+            className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="About Us"
           >
             ABOUT
@@ -160,7 +161,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
 
           <button
             onClick={() => toggleComponent("contactUs")}
-            className={styles.menuItem}
+            className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="Contact Us"
           >
             CONTACT
@@ -177,11 +178,11 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
       </div>
 
       {isOpen && (
-        <div className={`${styles.menu} lg:hidden bg-gray-700 mt-2 rounded-md ${isOpen ? 'open' : ''}`}>
+        <div className="lg:hidden bg-gray-700 mt-2 rounded-md">
           <div className="flex flex-col space-y-2 p-4">
             <Link
               href="/"
-              className={`${styles.menuItem} text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap`}
+              className="text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap"
               onClick={handleLinkClick}
               aria-label="Home"
             >
@@ -189,7 +190,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
             </Link>
 
             <button
-              className={styles.menuItem}
+              className="hover:font-extrabold whitespace-nowrap"
               onClick={() => toggleComponent("membership")}
               aria-label="Membership"
             >
@@ -197,7 +198,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
             </button>
 
             <button
-              className={styles.menuItem}
+              className="hover:font-extrabold whitespace-nowrap"
               onClick={() => toggleComponent("keyServices")}
               aria-label="Services"
             >
@@ -206,7 +207,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
 
             <Link
               href="/about"
-              className={styles.menuItem}
+              className="hover:font-extrabold whitespace-nowrap"
               onClick={handleLinkClick}
               aria-label="About Us"
             >
@@ -215,7 +216,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
 
             <Link
               href="/contact"
-              className={styles.menuItem}
+              className="hover:font-extrabold whitespace-nowrap"
               onClick={handleLinkClick}
               aria-label="Contact Us"
             >
