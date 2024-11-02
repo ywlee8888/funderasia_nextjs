@@ -1,0 +1,30 @@
+/* sidebar.css */
+.sidebar {
+  width: 60rem; /* Default width for larger screens */
+  transition: transform 0.3s;
+  position: fixed;
+  right: 0;
+  z-index: 50;
+  top: 140px;
+}
+
+.sidebar-background {
+  height: auto;
+  min-height: 65vh;
+  background-image: url("/img/specialist_background.png");
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(30px);
+  border-radius: 0.5rem;
+}
+
+.sidebar-mobile {
+  width: 40rem; /* Adjust this value for mobile screens */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 40rem; /* Set your desired width for mobile here */
+  }
+}

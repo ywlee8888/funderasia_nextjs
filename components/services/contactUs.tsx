@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa"; 
 import Image from "next/image";
+import styles from "./services.module.css";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -15,28 +16,9 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   if (!isOpen) return null;
 
   return (
-    <div
-      ref={sidebarRef}
-      className="fixed right-0 z-50 transition-transform duration-300"
-      style={{
-        top: "140px",
-        height: "auto",
-        width: "60rem",
-      }}
-    >
+    <div className={styles.sidebar}>
       {/* Background image covering the entire sidebar */}
-      <div
-        className="h-full w-full"
-        style={{
-          height: "auto",
-          minHeight: "65vh",
-          backgroundImage: "url('/img/specialist_background.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backdropFilter: "blur(30px)",
-          borderRadius: "0.5rem",
-        }}
-      >
+      <div className={styles.sidebarBackground}>
         {/* Overlay to create a mask effect */}
         <div
           className="absolute inset-0"
