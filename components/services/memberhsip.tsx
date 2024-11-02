@@ -22,7 +22,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-[60rem] z-30 transition-transform duration-300"
+      className="fixed right-0 md:w-[60rem] w-[80%] sm:w-[80%] h-auto md:h-auto h-screen z-30 transition-transform duration-300"
       style={{
         top: "280px",
         display: "flex",

@@ -83,7 +83,7 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaListOl style={{ marginRight: "8px" }} />
-                <span>Pre-Arrival Planning & Coordination</span>
+                <span style={{ flex: "1 1 auto", textAlign: "left" }}>Pre-Arrival Planning & Coordination</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
