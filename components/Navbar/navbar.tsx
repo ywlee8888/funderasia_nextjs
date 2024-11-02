@@ -190,7 +190,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
             </Link>
 
             <button
-              className="hover:font-extrabold whitespace-nowrap"
+              className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={() => toggleComponent("membership")}
               aria-label="Membership"
             >
@@ -198,7 +198,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
             </button>
 
             <button
-              className="hover:font-extrabold whitespace-nowrap"
+              className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={() => toggleComponent("keyServices")}
               aria-label="Services"
             >
@@ -207,7 +207,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
 
             <Link
               href="/about"
-              className="hover:font-extrabold whitespace-nowrap"
+              className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={handleLinkClick}
               aria-label="About Us"
             >
@@ -216,7 +216,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
 
             <Link
               href="/contact"
-              className="hover:font-extrabold whitespace-nowrap"
+              className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={handleLinkClick}
               aria-label="Contact Us"
             >
