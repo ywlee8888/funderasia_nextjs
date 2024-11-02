@@ -33,7 +33,7 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-[60rem] z-50 transition-transform duration-300"
+      className="fixed right-0 w-[60rem] sm:w-[40rem] md:w-[60rem] z-50 transition-transform duration-300"
       style={{
         top: "240px",
         height: "auto",
