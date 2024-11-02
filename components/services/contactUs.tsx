@@ -55,7 +55,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <FaWhatsapp />
         </button>
 
-        <div className="max-w-4xl text-black mx-auto p-6 pt-8 relative">
+        <div className="max-w-4xl text-black mx-auto p-6 pt-8 md:w-[60rem] w-[80%] sm:w-[80%] h-auto md:h-auto h-screen relative">
           {/* Image with text overlay */}
           <div className="relative mb-4">
             <Image
