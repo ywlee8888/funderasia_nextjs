@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
 
   const mailOptions = {
     from: email,
-    to: 'hello@specialist.asia',
+    to: 'member@specialist.asia',
     subject: `Specialist Asia - New Customer/Member Enquiry From ${name}`,
     text: `
     Name: ${name}

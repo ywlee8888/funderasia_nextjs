@@ -53,7 +53,7 @@ const ServicesImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         <br/>
         <p>
           Specialist Connect&#8482; links you with top 
-          healthcare specialists who can provide professional guidance for your treatment options. 
+          healthcare specialists across Asia who can provide professional guidance for your treatment options. 
           Whether you are seeking expert advice or confirmation on your current diagnosis, 
           we are here to help you navigate your healthcare journey with confidence.
         </p>

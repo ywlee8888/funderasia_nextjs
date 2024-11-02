@@ -69,7 +69,7 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
-              Specialist Connect is your gateway to personalised healthcare. Our
+              Specialist Connect&#8482; is your gateway to personalised healthcare. Our
               service facilitates seamless connections to premier healthcare
               specialists, allowing you to engage in tele-consultations or
               schedule in-person appointments with ease. Whether you need expert
