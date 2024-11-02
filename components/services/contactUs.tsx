@@ -80,7 +80,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           </div>
 
           {/* Contact Cards positioned above the image */}
-          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-wrap justify-between gap-4 mb-8 px-4">
+          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex justify-between gap-4 mb-8 px-4">
             {/* Card 1 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">
               <h2 className="text-xl font-bold mb-4">Membership Services</h2>
@@ -99,7 +99,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full sm:w-1/2">
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">
               <h2 className="text-xl font-bold mb-4">Healthcare Provider</h2>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaWhatsapp style={{ marginRight: "8px", fontSize: "24px" }} />
