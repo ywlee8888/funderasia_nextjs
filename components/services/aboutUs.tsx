@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { FaInfo } from "react-icons/fa";
+import { FaTimes, FaHospitalSymbol, FaInfo } from "react-icons/fa";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -22,23 +22,24 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-full sm:w-[60rem] z-50 transition-transform duration-300 p-4 sm:p-8 h-full overflow-y-auto"
+      className="fixed right-0 w-[60rem] z-50 transition-transform duration-300 p-8"
       style={{
         top: "190px",
-        height: "calc(100vh - 190px)", // Ensure it fits in the viewport
+        height: "auto",
         backgroundImage: "url('/img/specialist_background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        borderRadius: "0.5rem",
-      }}
-    >
+        borderRadius: "0.5rem", 
+      }}    >
+
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(129, 216, 208, 0.8)", borderRadius: "8px" }}></div>
 
       <button
         onClick={toggleSidebar}
-        className="bg-red-500 text-white z-20 absolute left-4 top-4 flex items-center justify-center w-10 h-10 rounded-full shadow-lg"
+        className="bg-red-500 text-white z-20 absolute left-[-3.5rem] top-4"
         style={{
-          fontSize: "1.5rem", // Reduced size for mobile
+          fontSize: "2rem",
+          padding: "0.5rem 0.75rem",
         }}
       >
         <FaInfo />
@@ -48,26 +49,26 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <img
           src="/img/specialistasia_logo_banner_black.png"
           alt="About Specialist Asia"
-          className="mb-4 max-w-xs h-auto" // Reduced max width for mobile
+          className="mb-8 max-w-md h-auto"
         />
-        <h1 className="text-xl font-bold mb-2 text-center">About Specialist Asia</h1>
-        <p className="text-base mb-3 text-center">
+        <h1 className="text-2xl font-bold mb-3">About Specialist Asia</h1>
+        <p className="text-lg mb-5">
           <strong>Specialist Asia</strong> offers exclusive membership-based healthcare concierge service, designed to provide
           personalized support and priority access to world-class healthcare.
         </p>
-        <p className="text-base mb-3 text-center">
+        <p className="text-lg mb-3">
           Our team of dedicated experts ensures that all the details,
           including healthcare coordination, translations, and local liaisons, are managed seamlessly.
         </p>
-        <p className="text-base mb-3 text-center">
+        <p className="text-lg mb-3">
           As a member, you gain tailored assistance with everything from pre-trip healthcare consultations to travel arrangements,
           appointment scheduling, and post-treatment follow-ups.
         </p>
-        <p className="text-base mb-3 text-center">
+        <p className="text-lg mb-3">
           Whether for consultation or treatment, our local experts ensure every step of your journey is smooth, allowing
           you to focus solely on recovery and well-being.
         </p>
-        <p className="text-base mb-5 text-center">
+        <p className="text-lg mb-5">
           Seamlessly navigate the complexities of traveling overseas for healthcare treatment across Asia.
         </p>
       </div>
