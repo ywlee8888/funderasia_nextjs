@@ -28,7 +28,7 @@
 }
 
 .mobileoverlayCard{
-  /*display: none;*/  
+  display: none; 
   position: absolute;
   top: 50%; /* Centered vertically */
   left: 65%; /* Centered horizontally */
