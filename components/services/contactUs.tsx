@@ -62,8 +62,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 src="/img/asian_woman_hotline_second.jpg"
                 alt="Contact Image"
                 layout="responsive"
-                width={600}
-                height={300}
+                fill
                 className="rounded-md w-full h-auto"
               />
               {/* Overlay with mask */}
