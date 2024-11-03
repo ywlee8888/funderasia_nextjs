@@ -38,7 +38,7 @@ export default function Home() {
 
       <div className="w-full">
         <main>
-          <div className="relative w-full">
+          <div className="w-full sm:w-auto lg:w-full">
             {/* FullWidthImage section */}
             <div className="relative">
               <FullWidthImage src="/img/asian_nurse.jpg" alt="Welcome Banner" />

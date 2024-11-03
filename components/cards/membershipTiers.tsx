@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TextIconCard from "./membership";
-import styles from "./serviceholder.module.css";
+import styles from './membership.module.css';
 import { FaCheckCircle } from "react-icons/fa";
 
 const MembershipCardContainer: React.FC = () => {

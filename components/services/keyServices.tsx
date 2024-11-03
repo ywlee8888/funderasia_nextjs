@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from "react";
-import { 
-  FaUserNurse, 
-  FaPlaneDeparture, 
-  FaListOl, 
-  FaUserMd, 
-  FaUserAlt, 
-  FaHandHoldingHeart 
-} from "react-icons/fa"; 
+import React, { useRef, useEffect, useState } from "react";
+import {
+  FaUserNurse,
+  FaPlaneDeparture,
+  FaListOl,
+  FaUserMd,
+  FaUserAlt,
+  FaHandHoldingHeart,
+} from "react-icons/fa";
 import {
   Accordion,
   AccordionContent,
@@ -21,30 +21,65 @@ type SidebarProps = {
 
 const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const [dragging, setDragging] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
+  const [sidebarPosition, setSidebarPosition] = useState(240); // initial top position
 
   useEffect(() => {
-    return () => {
-      document.removeEventListener("mousedown", () => {});
+    const handleClickOutside = (event: MouseEvent) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+        toggleSidebar();
+      }
     };
-  }, [isOpen]);
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isOpen, toggleSidebar]);
+
+  const handleMouseDown = (event: React.MouseEvent) => {
+    setDragging(true);
+    setOffsetY(event.clientY - sidebarPosition);
+  };
+
+  const handleMouseMove = (event: MouseEvent) => {
+    if (dragging) {
+      const newPosition = event.clientY - offsetY;
+      setSidebarPosition(newPosition);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
 
   if (!isOpen) return null;
 
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 md:w-[60rem] w-[80%] sm:w-[80%] h-auto md:h-auto h-screen z-50 transition-transform duration-300"
+      className="absolute right-0 md:w-[60rem] w-[80%] sm:w-[80%] h-auto z-50 transition-transform duration-300"
       style={{
-        top: "240px",
+        top: `${sidebarPosition}px`,
         height: "auto",
         backgroundImage: "url('/img/specialist_background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backdropFilter: "blur(30px)"
+        backdropFilter: "blur(30px)",
+        cursor: dragging ? "grabbing" : "grab",
       }}
+      onMouseDown={handleMouseDown}
     >
       {/* Overlay to create a mask effect */}
-      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }} /> {/* Semi-transparent red overlay */}
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }} />
 
       {/* Close button */}
       <button
@@ -57,7 +92,7 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       >
         <FaUserNurse />
       </button>
-      <div className="relative max-w-4xl text-black mx-auto p-6"> {/* Adjust text color for better visibility */}
+      <div className="relative max-w-4xl text-black mx-auto p-6">
         <Accordion type="single" collapsible className="w-full">
           <h2 className="text-2xl font-bold mb-3">Key Member Services</h2>
           <AccordionItem value="item-1">
