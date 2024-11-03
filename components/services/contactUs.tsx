@@ -89,7 +89,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             {/* Card 1 */}
             {/*<div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">*/}
             {/*<div className="bg-gray-100 p-6 rounded-lg shadow-md w-full md:w-3/4">*/}
-            <div className="relative sm:absolute bg-gray-100 sm:ml-0 p-6 rounded-lg shadow-md w-full sm:w-[100%] sm:h-[100%] overflow-hidden">
+            <div className="relative sm:absolute bg-gray-100 sm:ml-0 p-6 rounded-lg shadow-md w-full sm:w-[80%] sm:h-[80%] overflow-hidden">
               <h2 className="text-xl md:text-2xl font-bold mb-4">
                 Membership Services
               </h2>
@@ -111,7 +111,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
             {/* Card 2 */}
             {/*<div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">*/}
-            <div className="relative sm:absolute bg-gray-100 sm:ml-0 p-6 rounded-lg shadow-md w-full sm:w-[100%] sm:h-[100%] overflow-hidden">
+            <div className="relative sm:absolute bg-gray-100 sm:ml-0 p-6 rounded-lg shadow-md w-full sm:w-[80%] sm:h-[80%] overflow-hidden">
               <h2 className="text-xl md:text-2xl font-bold mb-4">Healthcare Provider</h2>
               <div className="flex items-center"> 
                 <FaWhatsapp style={{ marginRight: "8px", fontSize: "24px" }} />
