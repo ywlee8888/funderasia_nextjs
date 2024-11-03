@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa"; 
+import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 
 type SidebarProps = {
@@ -29,8 +29,10 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <div
         className="h-full w-full"
         style={{
-          height: "auto",
-          //minHeight: "65vh",
+          minHeight: "65vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           backgroundImage: "url('/img/specialist_background.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -41,7 +43,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         {/* Overlay to create a mask effect */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(129, 216, 208, 0.8)' }}
+          style={{ backgroundColor: "rgba(129, 216, 208, 0.8)" }}
         />
 
         {/* Close button */}
@@ -56,33 +58,33 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <FaWhatsapp />
         </button>
 
-          <div className="max-w-4xl text-black mx-auto p-6 pt-8 w-[80%] sm:w-[80%] md:w-[60rem] h-screen md:h-auto relative">
-            {/* Image with text overlay */}
-            <div className="relative mb-4">
-              <Image
-                src="/img/asian_woman_hotline_second.jpg"
-                alt="Contact Image"
-                layout="responsive"
-                width={600}
-                height={300}
-                className="rounded-md w-full h-auto"
-              />
-              {/* Overlay with mask */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
+        <div className="max-w-4xl text-black mx-auto p-6 pt-8 w-[80%] sm:w-[80%] md:w-[60rem] h-screen md:h-auto relative">
+          {/* Image with text overlay */}
+          <div className="relative mb-4">
+            <Image
+              src="/img/asian_woman_hotline_second.jpg"
+              alt="Contact Image"
+              layout="responsive"
+              width={600}
+              height={300}
+              className="rounded-md w-full h-auto"
+            />
+            {/* Overlay with mask */}
+            <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
 
-              {/* "Get in touch" text over image */}
-              <h1 className="absolute inset-0 flex items-start justify-start text-white text-3xl sm:text-lg md:text-5xl font-bold left-[5%] top-[10%]">
-                Get in touch
-              </h1>
-              <p className="absolute inset-0 flex items-start text-white text-base sm:text-lg md:text-lg font-bold left-[5%] top-[25%]">
-                Want to get in touch? We'd love to hear from you. <br />
-                Here's how you can reach us.
-              </p>
-            </div>
+            {/* "Get in touch" text over image */}
+            <h1 className="absolute inset-0 flex items-start justify-start text-white text-3xl sm:text-lg md:text-5xl font-bold left-[5%] top-[10%]">
+              Get in touch
+            </h1>
+            <p className="absolute inset-0 flex items-start text-white text-base sm:text-lg md:text-lg font-bold left-[5%] top-[25%]">
+              Want to get in touch? We'd love to hear from you. <br />
+              Here's how you can reach us.
+            </p>
+          </div>
 
           {/* Contact Cards positioned above the image */}
           {/*<div className="absolute top-5/8 transform -translate-y-1/2 w-full flex justify-between gap-4 mb-8 px-4">*/}
-          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-col md:flex-row justify-between gap-4 mb-8 px-4">        
+          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-col md:flex-row justify-between gap-4 mb-8 px-4">
             {/* Card 1 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">
               <h2 className="text-xl font-bold mb-4">Membership Services</h2>
@@ -113,7 +115,9 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaEnvelope style={{ marginRight: "8px", fontSize: "24px" }} />
-                <span style={{ fontSize: "20px" }}>healthcare@specialist.asia</span>
+                <span style={{ fontSize: "20px" }}>
+                  healthcare@specialist.asia
+                </span>
               </div>
             </div>
           </div>
