@@ -92,15 +92,15 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               <h2 className="text-xl md:text-2xl font-bold mb-4">
                 Membership Services
               </h2>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="flex items-center"> 
                 <FaWhatsapp className="mr-2 text-lg md:text-2xl" />
                 <span className="text-lg md:text-xl">WhatsApp</span>
               </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="flex items-center"> 
                 <FaPhone className="mr-2 text-lg md:text-2xl" />
                 <span className="text-lg md:text-xl">Telephone</span>
               </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="flex items-center"> 
                 <FaEnvelope className="mr-2 text-lg md:text-2xl" />
                 <span className="text-lg md:text-xl">
                   member@specialist.asia
@@ -112,15 +112,15 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             {/*<div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">*/}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full md:w-3/4">
               <h2 className="text-xl md:text-2xl font-bold mb-4">Healthcare Provider</h2>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="flex items-center"> 
                 <FaWhatsapp style={{ marginRight: "8px", fontSize: "24px" }} />
                 <span style={{ fontSize: "20px" }}>WhatsApp Support</span>
               </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="flex items-center"> 
                 <FaPhone style={{ marginRight: "8px", fontSize: "24px" }} />
                 <span style={{ fontSize: "20px" }}>Phone Support</span>
               </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="flex items-center"> 
                 <FaEnvelope style={{ marginRight: "8px", fontSize: "24px" }} />
                 <span style={{ fontSize: "20px" }}>
                   healthcare@specialist.asia
