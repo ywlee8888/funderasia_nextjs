@@ -33,14 +33,14 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-full sm:w-[80%] md:w-[60rem] h-screen md:h-auto z-50 transition-transform duration-300"
+      className="fixed right-0 w-full sm:w-full md:w-[60rem] h-screen md:h-auto z-50 transition-transform duration-300"
       style={{
         top: "140px",
         height: "auto",
       }}
     >
       <div
-        className="fixed right-0 z-50 transition-transform duration-300 p-8 md:w-[60rem] w-[80%] sm:w-[80%] h-auto md:h-[60vh] sm:h-[50vh] xs:h-[40vh]"
+        className="fixed right-0 z-50 transition-transform duration-300 p-8 w-full sm:w-full md:w-[60rem] h-auto md:h-[60vh] sm:h-[50vh] xs:h-[40vh]"
         style={{
           backgroundImage: "url('/img/specialist_background.png')",
           backgroundSize: "cover",

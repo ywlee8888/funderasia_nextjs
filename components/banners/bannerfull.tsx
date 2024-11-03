@@ -38,26 +38,13 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         height={1080}
         className={styles.bannerImage}
       />
-
-      <div className={styles.mobileoverlayCard}>
-        <div className={styles.cardTitle}>
-          Your Most Trusted <br />
-          Healthcare Concierge
-        </div>
-        <p>
-          Need professional assistance for your overseas healthcare treatment?{" "}
-          <br />
-          Contact us to find out how we help make your health journeys across
-          Asia seamless.
-        </p>
-      </div>
-
+      
       <div className={styles.overlayCard}>
         <div className={styles.cardTitle}>
           Your Most Trusted <br />
           Healthcare Concierge
         </div>
-        <p>
+        <p className={styles.cardText}>
           Need professional assistance for your overseas healthcare treatment?{" "}
           <br />
           Contact us to find out how we help make your health journeys across

@@ -66,7 +66,7 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="absolute right-0 md:w-[60rem] w-[80%] sm:w-[80%] h-auto z-50 transition-transform duration-300"
+      className="absolute right-0 w-full md:w-[60rem] h-auto z-50 transition-transform duration-300"
       style={{
         top: `${sidebarPosition}px`,
         height: "auto",

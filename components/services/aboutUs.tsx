@@ -58,7 +58,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="absolute right-0 z-50 transition-transform duration-300 p-8 md:w-[60rem] w-[80%] sm:w-[80%]"
+      className="absolute right-0 z-50 transition-transform duration-300 p-8 w-full sm:w-full md:w-[60rem]"
       style={{
         top: `${position}px`,
         backgroundImage: "url('/img/specialist_background.png')",

@@ -81,7 +81,9 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="absolute right-0 md:w-[60rem] w-[80%] sm:w-[80%] h-auto z-30 transition-transform duration-300"
+      className={`absolute right-0 z-30 transition-transform duration-300 ${
+        isSmallScreen ? 'w-full' : 'md:w-[60rem] w-[80%]'
+      } h-auto`}
       style={{
         top: `${topPosition}px`,
         display: "flex",
@@ -130,7 +132,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
         {/* Conditional rendering of MembershipCardContainer based on screen size */}
         {isSmallScreen ? (
-          <div style={{ paddingTop: "8rem" }}>
+          <div style={{ paddingTop: "6rem" }}>
             <MembershipCardContainer />
           </div>
         ) : (

@@ -27,22 +27,6 @@
   text-align: center;
 }
 
-/* Styling for the mobile overlay card */
-.mobileoverlayCard {
-  display: none; /* Hidden by default */
-  position: absolute; /* Absolute positioning */
-  top: 50%; /* Centered vertically */
-  left: 50%; /* Centered horizontally */
-  transform: translate(-50%, -50%); /* Translate to perfectly center the card */
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 8px;
-  width: 90%; /* Slightly wider for mobile */
-  margin: 0 auto; /* Centered horizontally */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  z-index: 2; /* Higher z-index to be above other elements */
-}
-
 /* Responsive typography */
 .cardTitle {
   font-size: 2rem; /* Reduce font size slightly */
@@ -84,29 +68,30 @@
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .overlayCard {
-    display: none; /* Hide the overlay card on smaller screens */
+    position: absolute; /* Position it absolutely to move it over the image */
+    top: 60%; /* Adjust the vertical position to move it up */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, 0); /* Center it horizontally without vertical translation */
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust transparency for better visibility */
+    width: 90%; /* Full width on mobile */
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 15px; /* Optional: adjust padding for smaller screens */
+    box-shadow: none; /* Remove shadow for cleaner look on mobile */
   }
 
-  .mobileoverlayCard {
-    display: block; /* Show the mobile version */
-  }
-
-  .cardTitle {
-    font-size: 1.5rem; /* Adjust font size for mobile */
-  }
-
-  .mobileoverlayCard p {
-    font-size: 0.9rem; /* Adjust paragraph size for mobile */
+  .cardTitle .cardText {
+    display: none; /* Adjust this if you want to hide the text */
   }
 
   .buttonContainer {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;
+    display:none;
+    flex-direction: row; /* Keep buttons side by side */
+    align-items: center; /* Align items in the center */
   }
 
   .button {
-    width: 90%; /* Full-width buttons on mobile */
+    width: auto; /* Auto width for buttons to fit side by side */
     padding: 8px 16px; /* Adjust button size */
-    margin: 5px 5px; /* Reduced margin for better fit */
+    margin: 5px; /* Margin for spacing between buttons */
   }
 }
