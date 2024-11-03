@@ -30,7 +30,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         className="h-full w-full"
         style={{
           height: "auto",
-          minHeight: "65vh",
+          //minHeight: "65vh",
           backgroundImage: "url('/img/specialist_background.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -71,7 +71,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
 
               {/* "Get in touch" text over image */}
-              <h1 className="absolute inset-0 flex items-start justify-start text-white text-3xl sm:text-4xl md:text-5xl font-bold left-[5%] top-[10%]">
+              <h1 className="absolute inset-0 flex items-start justify-start text-white text-3xl sm:text-lg md:text-5xl font-bold left-[5%] top-[10%]">
                 Get in touch
               </h1>
               <p className="absolute inset-0 flex items-start text-white text-base sm:text-lg md:text-lg font-bold left-[5%] top-[25%]">
@@ -82,7 +82,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
           {/* Contact Cards positioned above the image */}
           {/*<div className="absolute top-5/8 transform -translate-y-1/2 w-full flex justify-between gap-4 mb-8 px-4">*/}
-          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-col md:flex-row justify-between gap-4 mb-8 px-4">
+          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-col md:flex-row justify-between gap-4 mb-8 px-4">        
             {/* Card 1 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">
               <h2 className="text-xl font-bold mb-4">Membership Services</h2>
