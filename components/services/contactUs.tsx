@@ -55,32 +55,33 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <FaWhatsapp />
         </button>
 
-        <div className="max-w-4xl text-black mx-auto p-6 pt-8 w-[80%] sm:w-[80%] md:w-[60rem] h-screen md:h-auto relative">
-          {/* Image with text overlay */}
-          <div className="relative mb-4">
-            <Image
-              src="/img/asian_woman_hotline_second.jpg"
-              alt="Contact Image"
-              layout="responsive" 
-              width={600} 
-              height={300} 
-              className="rounded-md w-full h-auto"
-            />
-            {/* Overlay with mask */}
-            <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
+          <div className="max-w-4xl text-black mx-auto p-6 pt-8 w-[80%] sm:w-[80%] md:w-[60rem] h-screen md:h-auto relative">
+            {/* Image with text overlay */}
+            <div className="relative mb-4">
+              <Image
+                src="/img/asian_woman_hotline_second.jpg"
+                alt="Contact Image"
+                layout="responsive"
+                width={600}
+                height={300}
+                className="rounded-md w-full h-auto"
+              />
+              {/* Overlay with mask */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
 
-            {/* "Get in touch" text over image */}
-            <h1 className="absolute inset-0 flex items-center text-white text-5xl font-bold left-[5%]">
-              Get in touch
-            </h1>
-            <p className="absolute inset-0 flex items-center text-white text-lg font-bold left-[5%] top-[110px]">
-              Want to get in touch? We'd love to hear from you. <br /> Here's how
-              you can reach us.
-            </p>
+              {/* "Get in touch" text over image */}
+              <h1 className="absolute inset-0 flex items-start justify-start text-white text-3xl sm:text-4xl md:text-5xl font-bold left-[5%] top-[10%]">
+                Get in touch
+              </h1>
+              <p className="absolute inset-0 flex items-start text-white text-base sm:text-lg md:text-lg font-bold left-[5%] top-[25%]">
+                Want to get in touch? We'd love to hear from you. <br />
+                Here's how you can reach us.
+              </p>
+            </div>
           </div>
-
           {/* Contact Cards positioned above the image */}
-          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex justify-between gap-4 mb-8 px-4">
+          {/*<div className="absolute top-5/8 transform -translate-y-1/2 w-full flex justify-between gap-4 mb-8 px-4">*/}
+          <div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-col md:flex-row justify-between gap-4 mb-8 px-4"></div>
             {/* Card 1 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">
               <h2 className="text-xl font-bold mb-4">Membership Services</h2>
