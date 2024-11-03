@@ -83,8 +83,8 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
           {/* Contact Cards positioned above the image */}
           {/*<div className="absolute top-5/8 transform -translate-y-1/2 w-full flex justify-between gap-4 mb-8 px-4">*/}
-          {/*</div><div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-col md:flex-row justify-between gap-4 mb-8 px-4"> */}
-          <div className="flex flex-col md:flex-row justify-between gap-4 mt-4 mb-8 px-4">
+          </div><div className="absolute top-5/8 transform -translate-y-1/2 w-full flex flex-col md:flex-row justify-between gap-4 mb-8 px-4">
+          {/*<div className="flex flex-col md:flex-row justify-between gap-4 mt-4 mb-8 px-4">*/}
             {/* Card 1 */}
             {/*<div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/2">*/}
             {/*<div className="bg-gray-100 p-6 rounded-lg shadow-md w-full md:w-3/4">*/}
