@@ -17,11 +17,12 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       ref={sidebarRef}
-      className="fixed right-0 w-[80%] sm:w-[80%] md:w-[60rem] h-screen md:h-auto z-50 transition-transform duration-300"
+      //className="fixed right-0 w-[80%] sm:w-[80%] md:w-[60rem] h-screen md:h-auto z-50 transition-transform duration-300"
+      className="fixed right-0 w-full sm:w-[80%] md:w-[60rem] h-screen md:h-auto z-50 transition-transform duration-300"
       style={{
         top: "140px",
         height: "auto",
-        width: "60rem",
+        //width: "60rem",
       }}
     >
       {/* Background image covering the entire sidebar */}
@@ -55,7 +56,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <FaWhatsapp />
         </button>
 
-          <div className="max-w-4xl text-black mx-auto p-6 pt-8 w-[80%] sm:w-[60%] md:w-[60rem] h-screen md:h-auto relative">
+          <div className="max-w-4xl text-black mx-auto p-6 pt-8 w-[80%] sm:w-[80%] md:w-[60rem] h-screen md:h-auto relative">
             {/* Image with text overlay */}
             <div className="relative mb-4">
               <Image
