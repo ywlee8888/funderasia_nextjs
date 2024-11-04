@@ -71,8 +71,16 @@
     position: absolute; /* Position it absolutely to move it over the image */
     top: 60%; /* Adjust the vertical position to move it up */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, 0); /* Center it horizontally without vertical translation */
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust transparency for better visibility */
+    transform: translate(
+      -50%,
+      0
+    ); /* Center it horizontally without vertical translation */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.7
+    ); /* Adjust transparency for better visibility */
     width: 90%; /* Full width on mobile */
     margin: 0 auto; /* Center the card horizontally */
     padding: 15px; /* Optional: adjust padding for smaller screens */
@@ -84,7 +92,7 @@
   }
 
   .buttonContainer {
-    display:none;
+    display: none;
     flex-direction: row; /* Keep buttons side by side */
     align-items: center; /* Align items in the center */
   }
@@ -105,8 +113,19 @@
   z-index: 2; /* Ensure it appears above other elements */
 }
 
-@media (max-width: 640px) { /* Tailwind's sm breakpoint */
+@media (max-width: 640px) {
+  /* Tailwind's sm breakpoint */
   .specialistConnectButton {
     display: inline-block; /* Show on xs and small screens */
+    top: 20px; /* Position from the top */
+    right: 20px; /* Position from the right */
+  }
+}
+
+@media (max-width: 480px) {
+  .specialistConnectButton {
+    display: inline-block; /* Show on xs and small screens */
+    top: 20px; /* Position from the top */
+    right: 20px; /* Position from the right */
   }
 }

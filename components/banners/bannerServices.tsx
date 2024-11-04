@@ -31,12 +31,12 @@ const ServicesImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
       <div className={styles.mobileoverlayCard}>        
         {/* Button for mobile overlay */}
         <div className={styles.buttonContainer}>
-          <button 
+          {/*<button 
             onClick={toggleSidebar} 
             className="bg-blue-600 hover:bg-blue-800 text-white px-5 py-4 rounded"
           >
             SPECIALIST CONNECT&#8482;
-          </button>    
+          </button>  */}  
           <div className={styles.cardTitle}>         
           Healthcare Concierge
         </div>      

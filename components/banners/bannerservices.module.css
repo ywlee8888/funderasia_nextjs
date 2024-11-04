@@ -112,7 +112,7 @@
   .mobileoverlayCard {
     display: flex; /* Show the mobile overlay card */
     position: absolute; /* Positioning overlay */
-    top: 65%; /* Adjust vertical positioning */
+    top: 40%; /* Adjust vertical positioning */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust to perfectly center */
     text-align: center; /* Center text within the card */
@@ -129,7 +129,7 @@
     justify-content: center; /* Center the buttons horizontally */
     align-items: center; /* Center buttons in the container */
     margin-top: 3px; /* Space above buttons */
-    margin-bottom: 50px; /* Space below buttons */
+    margin-bottom: 40px; /* Space below buttons */
     width: 50%; /* Full width for button container */
     background-color: transparent; /* Ensure background is transparent */
   }
@@ -154,6 +154,6 @@
   }
 
   .cardTitle {
-    font-size: 1.2rem; /* Smaller title font size for mobile */
+    font-size: 1.5rem; /* Smaller title font size for mobile */
   }
 }
