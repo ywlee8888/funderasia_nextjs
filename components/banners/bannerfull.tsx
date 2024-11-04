@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./banner.module.css";
 import { DrawerDemo } from "../drawer/service_drawer";
 import ContactUs from "../services/contactUs";
+import SpecialistConnectNavBar from "../forms/specialistConnectNavBar";
 
 interface FullWidthImageProps {
   src: string;
@@ -10,23 +11,18 @@ interface FullWidthImageProps {
 }
 
 const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isContactUsOpen, setContactUsOpen] = useState(false);
+  const [openComponents, setOpenComponents] = useState({
+    drawer: false,
+    contactUs: false,
+    specialistConnect: false,
+  });
 
-  const handleOurServicesClick = () => {
-    setIsDrawerOpen(true);
+  const handleOpen = (component: keyof typeof openComponents) => {
+    setOpenComponents((prevState) => ({ ...prevState, [component]: true }));
   };
 
-  const handleContactUsClick = () => {
-    setContactUsOpen(true);
-  };
-
-  const handleDrawerClose = (open: boolean) => {
-    setIsDrawerOpen(open);
-  };
-
-  const handleContactUsClose = () => {
-    setContactUsOpen(false);
+  const handleClose = (component: keyof typeof openComponents) => {
+    setOpenComponents((prevState) => ({ ...prevState, [component]: false }));
   };
 
   return (
@@ -38,7 +34,19 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         height={1080}
         className={styles.bannerImage}
       />
-      
+
+      <div className={styles.specialistConnectContainer}>
+        <h3 className={styles.specialistConnectTitle}>
+        </h3>
+        <button
+          onClick={() => handleOpen("specialistConnect")}
+          className={`${styles.specialistConnectButton} bg-blue-500 hover:bg-blue-600 font-bold text-white px-4 py-4 rounded whitespace-nowrap`}
+          aria-label="Specialist Connect"
+        >
+          SPECIALIST CONNECT &#8482;
+        </button>
+      </div>
+
       <div className={styles.overlayCard}>
         <div className={styles.cardTitle}>
           Your Most Trusted <br />
@@ -53,25 +61,40 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
 
         <div className={styles.buttonContainer}>
           <button
-            onClick={handleContactUsClick}
+            onClick={() => handleOpen("contactUs")}
             className="bg-blue-600 hover:bg-blue-800 text-white px-5 py-2 rounded me-5"
+            aria-label="Contact Us"
           >
             Contact Us
           </button>
           <button
-            onClick={handleOurServicesClick}
+            onClick={() => handleOpen("drawer")}
             className="bg-white hover:bg-gray-300 text-black px-5 py-2 rounded border border-black"
+            aria-label="Discover Our Services"
           >
             Discover
           </button>
         </div>
       </div>
 
-      <DrawerDemo isOpen={isDrawerOpen} onOpenChange={handleDrawerClose} />
-      <ContactUs
-        isOpen={isContactUsOpen}
-        toggleSidebar={handleContactUsClose}
+      <DrawerDemo
+        isOpen={openComponents.drawer}
+        onOpenChange={() => handleClose("drawer")}
       />
+      <ContactUs
+        isOpen={openComponents.contactUs}
+        toggleSidebar={() => handleClose("contactUs")}
+      />
+
+      {openComponents.specialistConnect && (
+        <>
+          <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-2000"></div>
+          <SpecialistConnectNavBar
+            isOpen={openComponents.specialistConnect}
+            toggleSidebar={() => handleClose("specialistConnect")}
+          />
+        </>
+      )}
     </div>
   );
 };

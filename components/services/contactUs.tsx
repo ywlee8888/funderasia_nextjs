@@ -61,7 +61,7 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <FaWhatsapp />
         </button>
 
-        <div className="max-w-4xl text-black mx-auto p-6 pt-6 relative w-[95%]">
+        <div className="max-w-4xl text-black mx-auto p-6 pt-6 relative w-[100%]">
           <div className="relative mb-4">
             <Image
               src="/img/asian_woman_hotline_second.jpg"

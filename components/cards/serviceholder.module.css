@@ -86,15 +86,50 @@
   transform: translateY(-10px); /* Optional: slight lift effect on hover */
 }
 
-/* Optional: Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .card {
-    width: 100%; /* Full width on small screens */
-  }
+/* Styles for mobile carousel */
+.mobileCarousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+.carouselCard {
+  width: 100%; /* Full width for individual cards */
+  max-width: 400px; /* Optional: limit the max width */
+  margin: auto; /* Center the card */
+}
+
+.carouselControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+.carouselControls button {
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carouselControls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive card adjustments for XS and small screens */
+@media (max-width: 576px) {
   .card {
-    width: 48%; /* Two cards per row on medium screens */
+    width: 70%; /* Reduce card width for extra small screens */
+    padding: 12px; /* Reduce padding */
+  }  
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .card {
+    width: 95%; /* Adjust card width for small screens */
+    padding: 14px; /* Adjust padding */
   }
 }

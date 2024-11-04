@@ -106,26 +106,54 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .overlayCard {
-    display: none;
-    left: 50%; /* Adjust left position for small screens */
-    transform: translate(-50%, -50%); /* Keep the translate for centering */
-    width: 100%; /* Set width to 100% to match the image */
-    padding: 15px; /* Adjust padding for mobile */
+    display: none; /* Hide the overlay card on smaller screens */
   }
 
   .mobileoverlayCard {
-    display: flex;
+    display: flex; /* Show the mobile overlay card */
     position: absolute; /* Positioning overlay */
-    top: 65%; /* Center vertically */
-    left: 50%; /* Center horizontally */   
-    transform: translate(-50%, -50%); /* Adjust to perfectly center */   
-    text-align: right;    
-    background: none; /* Ensure no background */
-    width: 50px; /* Ensure it doesn't limit the size */
-    height: auto; /* Ensure it doesn't limit the size */    
+    top: 65%; /* Adjust vertical positioning */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to perfectly center */
+    text-align: center; /* Center text within the card */
+    /*background: rgba(255, 255, 255, 0.5); /* Light background for visibility */
+    width: 90%; /* Responsive width */
+    height: auto; /* Ensure it doesn't limit the size */
+    padding: 15px; /* Add padding for better layout */
+  }
+
+  /* Ensure button container is displayed */
+  .buttonContainer {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center buttons in the container */
+    margin-top: 3px; /* Space above buttons */
+    margin-bottom: 50px; /* Space below buttons */
+    width: 50%; /* Full width for button container */
+    background-color: transparent; /* Ensure background is transparent */
+  }
+
+  /* Ensure buttons are visible and laid out properly */
+  .button {
+    width: 100%; /* Make buttons full-width */
+    padding: 15px; /* Increase padding for better touch target */
+    margin: 5px 0; /* Margin between stacked buttons */
+    font-size: 1rem; /* Ensure font size is readable */
+    background-color: #005bb5; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+
+  /* Change background color on hover for buttons */
+  .button:hover {
+    background-color: #004494; /* Darker shade of blue on hover */
   }
 
   .cardTitle {
-    font-size: 1.6rem; /* Smaller title font size for mobile */
+    font-size: 1.2rem; /* Smaller title font size for mobile */
   }
 }

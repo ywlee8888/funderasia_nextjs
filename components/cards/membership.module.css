@@ -2,7 +2,7 @@
 
 /* .card-image should be .cardImage to match JSX class name */
 .cardImage {
-  width: 70%; /* Image will take up the full width of its container */
+  width: 50%; /* Image will take up the full width of its container */
   height: auto;
   border-radius: 4px;
   display: block; /* Ensures it's treated as a block-level element */
@@ -139,9 +139,11 @@
   }
 
   .card {
-    width: 90%; /* Adjust width to 90% of the container on small screens */
+    width: 60%; /* Adjust width to 90% of the container on small screens */
     padding: 12px; /* Optional: reduce padding inside the card */
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Optional: adjust shadow for smaller cards */
+    margin: 0 auto; /* Centers the card horizontally */
+    display: block; /* Ensures the element is treated as a block for centering */
   }
 
   /* Reduce font sizes for smaller screens */

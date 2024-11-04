@@ -95,3 +95,18 @@
     margin: 5px; /* Margin for spacing between buttons */
   }
 }
+
+/* Additional styles for Specialist Connect button positioning */
+.specialistConnectButton {
+  display: none; /* Hide by default */
+  position: absolute; /* Position it absolutely */
+  top: 40px; /* Position from the top */
+  right: 40px; /* Position from the right */
+  z-index: 2; /* Ensure it appears above other elements */
+}
+
+@media (max-width: 640px) { /* Tailwind's sm breakpoint */
+  .specialistConnectButton {
+    display: inline-block; /* Show on xs and small screens */
+  }
+}
