@@ -71,6 +71,11 @@
   text-align: center;
   padding-top: 0;     /* No padding above the description */
   margin: 0;          /* Remove margin to eliminate space below */
+  height: 60px;       /* Fixed height for the description */
+  overflow: hidden;   /* Hide overflow text */
+  display: flex;      /* Use flexbox for alignment */
+  align-items: center;/* Center text vertically */
+  justify-content: center; /* Center text horizontally */
 }
 
 .cardLink {
