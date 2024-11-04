@@ -163,7 +163,7 @@
   .title {
     font-size: 1.6rem;
     padding: 10px;
-    padding-top: 150px; /* Adds space at the top */
+    padding-top: 100px; /* Adds space at the top */
     padding-bottom: 50px; /* Adds space at the top */
   }
 }
