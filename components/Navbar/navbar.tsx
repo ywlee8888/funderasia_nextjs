@@ -10,20 +10,27 @@ import styles from "./navbar.module.css";
 
 interface NavbarProps {
   className?: string;
-  toggleSpecialistConnect: () => void; 
+  toggleSpecialistConnect: () => void;
 }
 
-export default function Navbar({ className, toggleSpecialistConnect }: NavbarProps) {
+export default function Navbar({
+  className,
+  toggleSpecialistConnect,
+}: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isKeyServicesOpen, setIsKeyServicesOpen] = useState(false);
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
   const [isMembershipOpen, setIsMembershipOpen] = useState(false);
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
-  
+
   // State for the contact form
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('');
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -53,47 +60,52 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
       default:
         break;
     }
-    setIsOpen(false); // Close the menu after clicking
+    setIsOpen(false);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('Sending...');
-  
+    setStatus("Sending...");
+
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-  
+
       // Log the response for debugging
       const data = await response.json();
       console.log("Response from server:", data);
-  
+
       if (response.ok) {
-        setStatus('Email sent successfully!');
-        setFormData({ name: '', email: '', message: '' }); // Clear form
+        setStatus("Email sent successfully!");
+        setFormData({ name: "", email: "", message: "" }); // Clear form
       } else {
         setStatus(`Error sending email: ${data.message}`);
       }
     } catch (error) {
       console.error(error);
-      setStatus('An unexpected error occurred.');
+      setStatus("An unexpected error occurred.");
     }
   };
 
   return (
-    <nav className={`relative bg-gray-800 bg-opacity-50 text-white p-4 ${className}`} aria-label="Main Navigation">
+    <nav
+      className={`relative bg-gray-800 bg-opacity-50 text-white p-4 ${className}`}
+      aria-label="Main Navigation"
+    >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold">
+        <div className={`text-lg font-bold ${styles.navlogo}`}>
           <img
             src="/img/logo_banner_white.png"
             alt="Specialist Asia Logo"
@@ -125,7 +137,11 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
           </button>
         </div>
 
-        <div className={`hidden lg:flex space-x-4 items-center ${isOpen ? "flex" : "hidden"}`}>
+        <div
+          className={`hidden lg:flex space-x-4 items-center ${
+            isOpen ? "flex" : "hidden"
+          }`}
+        >
           <Link
             href="/"
             className="text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap px-1"
@@ -135,7 +151,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
             HOME
           </Link>
 
-          <button            
+          <button
             onClick={() => toggleComponent("membership")}
             className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="Membership"
@@ -143,7 +159,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
             MEMBERSHIP
           </button>
 
-          <button            
+          <button
             onClick={() => toggleComponent("keyServices")}
             className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="Services"
@@ -234,22 +250,34 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
 
       {/* KeyServices Component */}
       {isKeyServicesOpen && (
-        <KeyServices isOpen={isKeyServicesOpen} toggleSidebar={() => toggleComponent("keyServices")} />
+        <KeyServices
+          isOpen={isKeyServicesOpen}
+          toggleSidebar={() => toggleComponent("keyServices")}
+        />
       )}
 
       {/* AboutUs Component */}
       {isAboutUsOpen && (
-        <AboutUs isOpen={isAboutUsOpen} toggleSidebar={() => toggleComponent("aboutUs")} />
+        <AboutUs
+          isOpen={isAboutUsOpen}
+          toggleSidebar={() => toggleComponent("aboutUs")}
+        />
       )}
 
       {/* ContactUs Component */}
       {isContactUsOpen && (
-        <ContactUs isOpen={isContactUsOpen} toggleSidebar={() => toggleComponent("contactUs")} />
+        <ContactUs
+          isOpen={isContactUsOpen}
+          toggleSidebar={() => toggleComponent("contactUs")}
+        />
       )}
 
       {/* Membership Component */}
       {isMembershipOpen && (
-        <Membership isOpen={isMembershipOpen} toggleSidebar={() => toggleComponent("membership")} />
+        <Membership
+          isOpen={isMembershipOpen}
+          toggleSidebar={() => toggleComponent("membership")}
+        />
       )}
 
       {/* SpecialistConnect Component */}
@@ -258,9 +286,12 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
           {/* Background Mask */}
           <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-2000"></div>
 
-          <SpecialistConnectNavBar isOpen={isSpecialistConnectOpen} toggleSidebar={() => toggleComponent("specialistConnect")} />
+          <SpecialistConnectNavBar
+            isOpen={isSpecialistConnectOpen}
+            toggleSidebar={() => toggleComponent("specialistConnect")}
+          />
         </>
-      )}      
+      )}
     </nav>
   );
 }

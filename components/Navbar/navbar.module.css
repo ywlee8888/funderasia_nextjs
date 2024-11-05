@@ -1,51 +1,53 @@
-/* Example CSS for mobile responsiveness */
-
 /* Default desktop styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .menu {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #444;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .menu.open {
+    display: block; /* Show when the `open` class is added */
+  }
+
+  .menu-item {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #555;
+  }
+
+  .toggle-button {
+    display: block;
     background-color: #333;
     color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
   }
-  
-  .menu {
-    display: flex;
-    gap: 1rem;
+
+  /* Hide navlogo on mobile screens */
+  .navlogo {
+    display: none !important;
   }
-  
-  /* Mobile view adjustments */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      padding: 1rem;
-    }
-  
-    .menu {
-      display: none; /* Hide by default */
-      flex-direction: column;
-      gap: 0.5rem;
-      background-color: #444;
-      width: 100%;
-      padding: 1rem;
-    }
-  
-    .menu.open {
-      display: block; /* Show when the `open` class is added */
-    }
-  
-    .menu-item {
-      padding: 0.5rem 1rem;
-      border-bottom: 1px solid #555;
-    }
-  
-    .toggle-button {
-      display: block;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-    }
-  }
-  
+}

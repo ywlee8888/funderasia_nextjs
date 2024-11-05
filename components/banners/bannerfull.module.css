@@ -65,6 +65,24 @@
   background-color: #004494; /* Darker shade of blue on hover */
 }
 
+.logo_container {
+  display: none;
+}
+
+.logo {
+  display: none;
+  width: 90%;
+  height: auto;
+}
+
+.fullScreenOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 50; /* Ensure this is higher than other elements */
+}
+
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .overlayCard {
@@ -117,15 +135,51 @@
   /* Tailwind's sm breakpoint */
   .specialistConnectButton {
     display: inline-block; /* Show on xs and small screens */
-    top: 20px; /* Position from the top */
-    right: 20px; /* Position from the right */
+    top: 100px; /* Position from the top */
+    right: 50px; /* Position from the right */
+  }
+  .logo_container {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    color: black;
+    z-index: 10;
+  }
+
+  .logo {
+    display: inline-block;
   }
 }
 
 @media (max-width: 480px) {
+  .overlayCard {
+    top: 80%; /* Move further down on very small screens */
+    padding: 10px;
+  }
+
   .specialistConnectButton {
     display: inline-block; /* Show on xs and small screens */
-    top: 20px; /* Position from the top */
-    right: 20px; /* Position from the right */
+    top: 100px; /* Position from the top */
+    right: 50px; /* Position from the right */
+    z-index: 500;
+  }
+  .logo_container {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    color: black;
+    z-index: 10;
+  }
+
+  .logo {
+    display: inline-block;
   }
 }

@@ -10,12 +10,15 @@ type SidebarProps = {
 
 const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState(190); // Initial position in pixels
+  const [position, setPosition] = useState(190);
   const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
         toggleSidebar();
       }
     };
@@ -47,7 +50,6 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const handleMouseMove = (event: MouseEvent) => {
     if (isDragging) {
-      // Calculate new position based on mouse movement
       const newPosition = position + event.movementY;
       setPosition(newPosition);
     }
@@ -66,7 +68,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         backgroundPosition: "center",
         borderRadius: "0.5rem",
       }}
-      onMouseDown={handleMouseDown} // Enable dragging on mouse down
+      onMouseDown={handleMouseDown}
     >
       {/* Semi-transparent overlay to create a mask effect */}
       <div

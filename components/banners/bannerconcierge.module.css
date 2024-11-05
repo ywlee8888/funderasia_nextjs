@@ -13,7 +13,7 @@
 
 .title {
   position: absolute;
-  top: 110px;
+  top: 20%; /* Adjust based on preferred vertical position */
   left: 50%;
   transform: translateX(-50%);
   color: black;
@@ -23,9 +23,7 @@
     1px -1px 0 rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 0.7);
   z-index: 1;
   text-align: center;
-  padding: 10px;
-  padding-top: 100px; /* Adds space at the top */
-  white-space: nowrap; /* Prevents text from wrapping */
+  white-space: nowrap;
 }
 
 .title .bold {
@@ -125,23 +123,11 @@
   background-color: #004494;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .servicesCardContainer {
-    flex-direction: column; /* Stack cards vertically on small screens */
-    align-items: center; /* Center items */
-    width: 95%; /* Adjust width for mobile */
-  }
-
-  .cardTitle {
-    font-size: 1.6rem; /* Smaller title font size for mobile */
-  }
-
   .title {
-    font-size: 1.5rem;
-    padding: 10px;
-    padding-top: 100px; /* Adds space at the top */
-    padding-bottom: 50px; /* Adds space at the top */
+    font-size: 2.5rem;
+    top: 15%;
   }
 }
 
