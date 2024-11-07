@@ -55,7 +55,7 @@ export default function Home() {
             <ConciergeImage
               src="/img/doctor_consult.jpg"
               alt="Healthcare Banner"
-              title="Premier Healthcare Specialists"
+              title="Healthcare Specialists Coverage"
             />
           </div>
 
