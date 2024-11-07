@@ -8,6 +8,12 @@ import MedicalImage from "@/components/banners/bannerClear";
 import ServicesImage from "@/components/banners/bannerServices";
 import Copyright from "@/components/copyright/copyright";
 import SpecialistConnect from "@/components/forms/specialistConnect";
+import KeyServicesMobile from "@/components/services/keyServicesMobile";
+import MembershipMobile from "@/components/services/membershipMobile";
+import AboutUsMobile from "@/components/services/aboutUsMobile";
+import ContactUsMobile from "@/components/services/contactUsMobile";
+import KeyServicesDesktop from "@/components/services/keyServicesDesktop";
+import MembershipDesktop from "@/components/services/membershipDesktop";
 
 export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
@@ -45,7 +51,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Other content remains intact*/}
           <div className="relative w-full">
             <ConciergeImage
               src="/img/doctor_consult.jpg"
@@ -54,11 +59,35 @@ export default function Home() {
             />
           </div>
 
-          <div className="relative w-full">
+          <div className="relative w-full hidden md:block">
+            <KeyServicesDesktop />
+          </div>
+
+          <div className="relative w-full hidden md:block">
+            <MembershipDesktop />
+          </div>
+
+          <div className="relative w-full block sm:hidden">
+            <KeyServicesMobile />
+          </div>
+
+          <div className="relative w-full block sm:hidden">
+            <MembershipMobile />
+          </div>
+
+          <div className="relative w-full sm:block hidden">
             <ServicesImage src="/img/female_doctor.jpg" alt="Services Banner" />
           </div>
 
-          <div className="relative w-full">
+          <div className="relative w-full block">
+            <AboutUsMobile />
+          </div>
+
+          <div className="relative w-full block sm:hidden">
+            <ContactUsMobile />
+          </div>
+
+          <div className="relative w-full sm:block hidden">
             <MedicalImage
               src="/img/medical_background_narrow.jpg"
               alt="Medical Banner"
@@ -66,7 +95,11 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <Copyright />
+
+      {/* Copyright remains at the bottom */}
+      <div className="relative w-full mt-auto">
+        <Copyright />
+      </div>
     </div>
   );
 }

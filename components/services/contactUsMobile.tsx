@@ -1,48 +1,21 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 
-type SidebarProps = {
-  isOpen: boolean;
-  toggleSidebar: () => void;
-};
-
-const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
-  const sidebarRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
-        toggleSidebar();
-      }
-    };
-
-    // Add event listener to the document
-    document.addEventListener("mousedown", handleClickOutside);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [toggleSidebar]);
-
-  if (!isOpen) return null;
-
+const ContactUsMobile: React.FC = () => {
   return (
     <div
-      ref={sidebarRef}
-      className="fixed right-0 w-full sm:w-full md:w-[60rem] h-screen md:h-auto z-50 transition-transform duration-300"
+      className="relative flex flex-col justify-center text-black items-center p-6 z-10"
       style={{
-        top: "140px",
-        height: "auto",
+        height: "calc(100vh - 140px)", // Ensures it takes full height of the screen minus the top offset
       }}
     >
       <div
-        className="fixed right-0 z-50 transition-transform duration-300 p-8 w-full sm:w-full md:w-[60rem] h-auto md:h-[60vh] sm:h-[50vh] xs:h-[40vh]"
+        className="absolute right-0 p-8 w-full sm:w-full md:w-[60rem] h-full z-50"
         style={{
-          backgroundImage: "url('/img/specialist_background.png')",
+          backgroundImage: "url('/img/asian_woman_hotline_second.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backdropFilter: "blur(30px)",
@@ -51,12 +24,11 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: "rgba(129, 216, 208, 0.8)" }}
+
         />
 
         <button
-          onClick={toggleSidebar}
-          className="bg-green-500 text-white z-20 absolute left-[-3.5rem] top-4 text-[2.5rem] p-2"
+          className="bg-green-500 text-white absolute left-[-3.5rem] top-4 text-[2.5rem] p-2 z-20"
         >
           <FaWhatsapp />
         </button>
@@ -118,4 +90,4 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   );
 };
 
-export default ContactUs;
+export default ContactUsMobile;
