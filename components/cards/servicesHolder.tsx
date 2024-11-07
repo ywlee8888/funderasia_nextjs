@@ -21,7 +21,13 @@ const ServicesCardContainer: React.FC = () => {
       title: "SOUTH KOREA",
       description: "Specialist Healthcare Providers",
       link: "",
-    },    
+    },  
+    {
+      imageSrc: "/img/flags/taiwan_round.png",
+      title: "TAIWAN",
+      description: "Specialist Healthcare Providers",
+      link: "",
+    },   
     {
       imageSrc: "/img/flags/thailand_round.png",
       title: "THAILAND",
