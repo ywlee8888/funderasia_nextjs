@@ -1,10 +1,12 @@
 /* styles/serviceholder.module.css */
 
 /* .card-image should be .cardImage to match JSX class name */
-.cardImage {
-  width: 100%;
+.cardImage {  
+  width: 70%;
   height: auto;
   border-radius: 4px;
+  display: block; /* Ensures the image takes up only necessary width */
+  margin: auto; /* Centers the image horizontally within the card */
 }
 .cardContainer {
   display: flex; /* Flexbox for the main container */
