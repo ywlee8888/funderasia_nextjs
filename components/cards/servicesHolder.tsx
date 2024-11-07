@@ -5,57 +5,39 @@ import styles from "./serviceholder.module.css";
 const ServicesCardContainer: React.FC = () => {
   const cardsData = [
     {
-      imageSrc: "/img/hospital-1.jpg",
-      title: "Silver Oaks Hospital",
-      description: "12 Orchard Road, Orchard Heights, Singapore",
-      link: "/link1",
+      imageSrc: "/img/flags/japan_round.png",
+      title: "JAPAN",
+      description: "Specialist Healthcare Providers",
+      link: "",
     },
     {
-      imageSrc: "/img/hospital-2.jpg",
-      title: "Cedarwood General Hospital",
-      description: "120 Jalan Tunku Abdul Rahman, Kuala Lumpur, Malaysia",
-      link: "/link2",
+      imageSrc: "/img/flags/malaysia_round.png",
+      title: "MALAYSIA",
+      description: "Specialist Healthcare Providers",
+      link: "",
     },
     {
-      imageSrc: "/img/hospital-3.jpg",
-      title: "Pine Ridge Medical Institute",
-      description: "33 East Coast Parkway, Singapore",
-      link: "/link3",
+      imageSrc: "/img/flags/singapore_round.png",
+      title: "SINGAPORE",
+      description: "Specialist Healthcare Providers",
+      link: "",
     },
     {
-      imageSrc: "/img/hospital-4.jpg",
-      title: "Blue Horizon Health Center",
-      description: "75 Zhongxiao East Road, Taipei, Taiwan",
-      link: "/link4",
-    },
+      imageSrc: "/img/flags/south-korea_round.png",
+      title: "SOUTH KOREA",
+      description: "Specialist Healthcare Providers",
+      link: "",
+    },    
     {
-      imageSrc: "/img/hospital-5.jpg",
-      title: "Crystal Lake Hospital",
-      description: "90 Jalan Sultan Ismail, Kuala Lumpur, Malaysia",
-      link: "/link5",
-    },
-    {
-      imageSrc: "/img/hospital-6.jpg",
-      title: "Mountainview Care Center",
-      description: "88 Silom Road, Silom Tower, Bangkok, Thailand",
-      link: "/link6",
-    },
-    {
-      imageSrc: "/img/hospital-7.jpg",
-      title: "Maple Leaf Medical Center",
-      description: "58 Dongdaemun Design Plaza, Jung-gu, Seoul, South Korea",
-      link: "/link7",
-    },
-    {
-      imageSrc: "/img/hospital-8.jpg",
-      title: "Lakeside Wellness Hospital",
-      description: "30 Dotonbori, Namba, Osaka, Japan",
-      link: "/link8",
-    },
+      imageSrc: "/img/flags/thailand_round.png",
+      title: "THAILAND",
+      description: "Specialist Healthcare Providers",
+      link: "",
+    },    
   ];
 
   const [isMobile, setIsMobile] = useState(false);
-  const itemsPerPage = isMobile ? 1 : 4;
+  const itemsPerPage = isMobile ? 1 : 5;
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = Math.ceil(cardsData.length / itemsPerPage);
 
