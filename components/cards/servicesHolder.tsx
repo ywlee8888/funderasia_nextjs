@@ -3,13 +3,7 @@ import TextImageCard from "./text_image_card";
 import styles from "./serviceholder.module.css";
 
 const ServicesCardContainer: React.FC = () => {
-  const cardsData = [
-    {
-      imageSrc: "/img/flags/japan_round.png",
-      title: "JAPAN",
-      description: "Specialist Healthcare Providers",
-      link: "",
-    },
+  const cardsData = [    
     {
       imageSrc: "/img/flags/malaysia_round.png",
       title: "MALAYSIA",
@@ -37,7 +31,7 @@ const ServicesCardContainer: React.FC = () => {
   ];
 
   const [isMobile, setIsMobile] = useState(false);
-  const itemsPerPage = isMobile ? 1 : 5;
+  const itemsPerPage = isMobile ? 1 : 4;
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = Math.ceil(cardsData.length / itemsPerPage);
 
