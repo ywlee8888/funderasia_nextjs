@@ -64,13 +64,16 @@ export default function Home() {
             <KeyServicesDesktop />
           </div>
 
-          <div className="relative w-full hidden md:block">
-            <MembershipDesktop />
-          </div>
-
           <div className="relative w-full block sm:hidden">
             <KeyServicesMobile />
           </div>
+          
+          <div className="relative w-full sm:block hidden">
+            <MedicalImage
+              src="/img/medical_background_narrow.jpg"
+              alt="Medical Banner"
+            />
+          </div> 
           
           <div className="relative w-full block sm:hidden">
             <BannerFlag
@@ -78,6 +81,10 @@ export default function Home() {
               alt="Medical Banner"
             />
           </div>
+          
+          <div className="relative w-full hidden md:block">
+            <MembershipDesktop />
+          </div>    
 
           <div className="relative w-full block sm:hidden">
             <MembershipMobile />
@@ -93,14 +100,7 @@ export default function Home() {
 
           <div className="relative w-full block sm:hidden">
             <ContactUsMobile />
-          </div>
-
-          <div className="relative w-full sm:block hidden">
-            <MedicalImage
-              src="/img/medical_background_narrow.jpg"
-              alt="Medical Banner"
-            />
-          </div>          
+          </div>   
         </main>
       </div>
 
