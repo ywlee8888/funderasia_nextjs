@@ -9,8 +9,6 @@ export async function POST(req: NextRequest) {
 
   const { name, email, telephone, remarks, treatmentType, selectedTreatmentType, preferredCountry } = data;
 
-  console.log("Received data:", { name, email, telephone, remarks, treatmentType, selectedTreatmentType, preferredCountry }); // Debugging line
-
   const transporter = nodemailer.createTransport({
     host: 'smtp-relay.brevo.com',
     port: 587,
@@ -38,7 +36,6 @@ export async function POST(req: NextRequest) {
 
 
   try {
-    console.log("Sending email with options:", mailOptions); // Debugging line
     await transporter.sendMail(mailOptions);
     return new Response(JSON.stringify({ message: 'Email sent successfully!' }), { status: 200 });
   } catch (error) {

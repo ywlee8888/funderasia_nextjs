@@ -83,13 +83,11 @@ export default function Navbar({
         body: JSON.stringify(formData),
       });
 
-      // Log the response for debugging
       const data = await response.json();
-      console.log("Response from server:", data);
 
       if (response.ok) {
         setStatus("Email sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); // Clear form
+        setFormData({ name: "", email: "", message: "" }); 
       } else {
         setStatus(`Error sending email: ${data.message}`);
       }

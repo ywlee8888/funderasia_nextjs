@@ -14,7 +14,6 @@ interface CarouselProps {
 }
 
 const PartnerCarousel: React.FC<CarouselProps> = ({ cards }) => {
-  console.log("Rendering PartnerCarousel with cards:", cards);
   const settings = {
     dots: true,
     infinite: true,
