@@ -9,19 +9,19 @@ const MembershipCardContainer: React.FC = () => {
       imageSrc: "/img/individual.jpg",
       title: "INDIVIDUAL",
       description: "Individual Member",
-      price: "USD800/-",
+      price: "US$1,800/-",
     },
     {
       imageSrc: "/img/family.jpg",
       title: "FAMILY",
       description: "4 Family Members",
-      price: "USD1,800/-",
+      price: "US$4,800/-",
     },
     {
       imageSrc: "/img/corporate_executives.jpg",
       title: "CORPORATE",
       description: "6 Corporate Nominees",
-      price: "USD3,800/-",
+      price: "US$8,800/-",
     },    
   ];
 
