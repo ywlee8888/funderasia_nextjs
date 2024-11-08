@@ -122,7 +122,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </h2>
         <div className={`text-lg ${styles.explain}`}>
           <p>
-            <strong>Healthcare Concierge Across Asia </strong> Our annual
+            <strong>Healthcare Concierge Across Asia </strong> <br/>Our annual
             membership plans provide individuals, families, and corporate
             executives with comprehensive, personalised support, offering
             unlimited access to essential healthcare concierge services in every
@@ -132,7 +132,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
         {/* Conditional rendering of MembershipCardContainer based on screen size */}
         {isSmallScreen ? (
-          <div style={{ paddingTop: "6rem" }}>
+          <div style={{ paddingTop: "8rem" }}>
             <MembershipCardContainer />
           </div>
         ) : (

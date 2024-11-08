@@ -53,7 +53,7 @@ const ContactUsMobile: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between gap-4 mb-8 mt-4 lg:top-5/8 lg:transform lg:-translate-y-1/2">
+          <div className="flex flex-col md:flex-row justify-between gap-4 mb-8 mt-4 lg:top-3/4 lg:transform lg:-translate-y-1/2">
             {/* Card 1 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full md:w-[48%]">
               <h2 className="text-xl md:text-2xl font-bold mb-4">
