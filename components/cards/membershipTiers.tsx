@@ -20,7 +20,7 @@ const MembershipCardContainer: React.FC = () => {
     {
       imageSrc: "/img/corporate_executives.jpg",
       title: "CORPORATE",
-      description: "6 Corporate Nominees",
+      description: "6 Corp Nominees",
       price: "US$8,800/-",
     },    
   ];
