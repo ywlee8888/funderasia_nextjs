@@ -103,7 +103,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </h1>
         <p className="text-md md:text-lg mt-3 mb-5">
           <strong>Specialist Asia</strong> offers exclusive membership-based
-          healthcare concierge service, designed to provide personalised support
+          healthcare concierge services, designed to provide personalised support
           and priority access to world-class healthcare.
         </p>
         <p className="text-md md:text-lg mb-3">

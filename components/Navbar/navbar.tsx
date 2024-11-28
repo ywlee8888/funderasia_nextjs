@@ -87,7 +87,7 @@ export default function Navbar({
 
       if (response.ok) {
         setStatus("Email sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); 
+        setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus(`Error sending email: ${data.message}`);
       }
@@ -147,7 +147,7 @@ export default function Navbar({
             aria-label="Home"
           >
             HOME
-          </Link>
+          </Link>          
 
           <button
             onClick={() => toggleComponent("membership")}
@@ -201,7 +201,7 @@ export default function Navbar({
               aria-label="Home"
             >
               HOME
-            </Link>
+            </Link>           
 
             <button
               className="hover:font-extrabold whitespace-nowrap text-left"
@@ -233,7 +233,7 @@ export default function Navbar({
               aria-label="Contact Us"
             >
               CONTACT
-            </button>
+            </button>            
 
             <button
               onClick={() => toggleComponent("specialistConnect")}

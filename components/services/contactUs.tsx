@@ -88,10 +88,20 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 Membership Services
               </h2>
               <div className="flex items-center">
-                <FaWhatsapp className="mr-2 text-md md:text-2xl" />
-                <span className="text-md md:text-xl">+65 8411 8213</span>
-              </div>              
-              <div className="flex items-center">
+                <a
+                  href="https://wa.me/6584118213"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <img
+                    src="/img/whatsapp-chat.png"
+                    alt="WhatsApp Icon"
+                    className="mr-2 w-[150px] h-auto"
+                  />                 
+                </a>
+              </div>          
+              <div className="flex items-center mt-4">
                 <FaEnvelope className="mr-2 text-md md:text-2xl" />
                 <span className="text-md md:text-xl">member@specialist.asia</span>
               </div>
@@ -103,10 +113,20 @@ const ContactUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 Healthcare Provider
               </h2>
               <div className="flex items-center">
-                <FaWhatsapp className="mr-2 text-md md:text-2xl" />
-                <span className="text-md md:text-xl">+65 8411 8213</span>
+                <a
+                  href="https://wa.me/6584118213"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <img
+                    src="/img/whatsapp-chat.png"
+                    alt="WhatsApp Icon"
+                    className="mr-2 w-[150px] h-auto"
+                  />                 
+                </a>
               </div>              
-              <div className="flex items-center">
+              <div className="flex items-center mt-4">
                 <FaEnvelope className="mr-2 text-md md:text-2xl" />
                 <span className="text-md md:text-xl">healthcare@specialist.asia</span>
               </div>

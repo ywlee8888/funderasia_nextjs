@@ -39,7 +39,7 @@ const AboutUsMobile: React.FC = () => {
         </h1>
         <p className="text-md sm:text-lg md:text-xl lg:text-xl mt-3 mb-5"> {/* Increased text size for larger screens */}
           <strong>Specialist Asia</strong> offers exclusive membership-based
-          healthcare concierge service, designed to provide personalised support
+          healthcare concierge services, designed to provide personalised support
           and priority access to world-class healthcare.
         </p>
         <p className="text-md sm:text-lg md:text-xl lg:text-xl mb-3">
