@@ -29,11 +29,11 @@ const MembershipDesktop: React.FC = () => {
           </div>
           <div className="mt-2 p-4 border border-gray-300 rounded-lg shadow-md bg-white bg-opacity-50 max-w-3xl mx-auto">
             <h4 className="text-xl">
-              Our annual membership plans provide individuals, families, and
+              Our <strong>annual membership plans</strong> provide individuals, families, and
               corporate executives with comprehensive, personalised support,
               offering unlimited access to essential healthcare concierge
               services in every Asian city where we operate, all at no
-              additional cost.<br />Additionally, pay-per-use options are also available. Contact us to find out more.
+              additional cost.  Additionally, <strong>pay-per-use options</strong> are also available. Contact us to find out more.
             </h4>
           </div>
         </div>
