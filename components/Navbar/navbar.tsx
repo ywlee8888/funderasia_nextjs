@@ -176,6 +176,17 @@ export default function Navbar({
           </button>
 
           <button
+            onClick={() =>
+              (window.location.href =
+                "https://www.medicina.asia/health_journeys")
+            }
+            className="hover:font-extrabold whitespace-nowrap px-1"
+            aria-label="Services"
+          >
+            HEALTH JOURNEYS
+          </button>
+
+          <button
             onClick={() => toggleComponent("aboutUs")}
             className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="About Us"
@@ -241,7 +252,8 @@ export default function Navbar({
 
             <button
               onClick={() =>
-                (window.location.href = "https://www.medicina.asia/health_journeys")
+                (window.location.href =
+                  "https://www.medicina.asia/health_journeys")
               }
               className="hover:font-extrabold whitespace-nowrap px-1"
               aria-label="Services"
