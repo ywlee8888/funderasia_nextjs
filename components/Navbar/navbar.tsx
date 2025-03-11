@@ -240,6 +240,16 @@ export default function Navbar({
             </button>
 
             <button
+              onClick={() =>
+                (window.location.href = "https://www.medicina.asia/health_journeys")
+              }
+              className="hover:font-extrabold whitespace-nowrap px-1"
+              aria-label="Services"
+            >
+              HEALTH JOURNEYS
+            </button>
+
+            <button
               className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={() => toggleComponent("aboutUs")}
               aria-label="About Us"
