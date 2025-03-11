@@ -20,7 +20,7 @@ const MembershipDesktop: React.FC = () => {
         }}
       />
       <div className="max-w-4xl text-black mx-auto p-6 pb-2 h-full flex flex-col justify-center items-center">
-        <div className={`text-4xl pb-2 font-bold ${styles.headingDesktop}`}>       
+        <div className={`text-4xl pb-2 font-bold ${styles.headingDesktop}`}>
           Membership Plans
         </div>
         <div className={`text-lg ${styles.explainDesktop}`}>
@@ -29,11 +29,12 @@ const MembershipDesktop: React.FC = () => {
           </div>
           <div className="mt-2 p-4 border border-gray-300 rounded-lg shadow-md bg-white bg-opacity-50 max-w-3xl mx-auto">
             <h4 className="text-xl">
-              Our <strong>annual membership plans</strong> provide individuals, families, and
-              corporate executives with comprehensive, personalised support,
-              offering unlimited access to essential healthcare concierge
-              services in every Asian city where we operate, all at no
-              additional cost.  Additionally, <strong>pay-per-use options</strong> are also available. Contact us to find out more.
+              <strong>Healthcare Concierge Across Asia </strong> <br />
+              Our annual and pay-per-use membership plans provide individuals,
+              families, and corporate executives with comprehensive,
+              personalised support, offering unlimited access to essential
+              healthcare concierge services in every Asian city where we
+              operate, all at no additional cost.
             </h4>
           </div>
         </div>
