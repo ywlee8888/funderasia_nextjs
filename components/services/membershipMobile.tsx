@@ -25,11 +25,13 @@ const MembershipMobile: React.FC = () => {
         </h2>
         <div className={`text-lg ${styles.explainMobile}`}>
           <p>
-            <strong>Healthcare Concierge Across Asia </strong> <br/>Our annual
-            membership plans provide individuals, families, and corporate
-            executives with comprehensive, personalised support, offering
-            unlimited access to essential healthcare concierge services in every
-            Asian city where we operate, all at no additional cost.
+            <strong>Healthcare Concierge Across Asia </strong> <br />
+            Our <strong>annual membership plans</strong> provide individuals,
+            families, and corporate executives with comprehensive, personalised
+            support, offering unlimited access to essential healthcare concierge
+            services in every Asian city where we operate, all at no additional
+            cost. Additionally, <strong>pay-per-use options</strong> are also
+            available. Contact us to find out more.
           </p>
         </div>
 
