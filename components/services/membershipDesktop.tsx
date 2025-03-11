@@ -33,7 +33,7 @@ const MembershipDesktop: React.FC = () => {
               corporate executives with comprehensive, personalised support,
               offering unlimited access to essential healthcare concierge
               services in every Asian city where we operate, all at no
-              additional cost.
+              additional cost.<br />Additionally, pay-per-use options are also available. Contact us to find out more.
             </h4>
           </div>
         </div>
