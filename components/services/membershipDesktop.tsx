@@ -29,12 +29,11 @@ const MembershipDesktop: React.FC = () => {
           </div>
           <div className="mt-2 p-4 border border-gray-300 rounded-lg shadow-md bg-white bg-opacity-50 max-w-3xl mx-auto">
             <h4 className="text-xl">
-              <strong>Healthcare Concierge Across Asia </strong> <br />
-              Our annual and pay-per-use membership plans provide individuals,
-              families, and corporate executives with comprehensive,
-              personalised support, offering unlimited access to essential
-              healthcare concierge services in every Asian city where we
-              operate, all at no additional cost.
+              Our annual membership plans provide individuals, families, and
+              corporate executives with comprehensive, personalised support,
+              offering unlimited access to essential healthcare concierge
+              services in every Asian city where we operate, all at no
+              additional cost.
             </h4>
           </div>
         </div>

@@ -123,7 +123,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <div className={`text-lg ${styles.explain}`}>
           <p>
             <strong>Healthcare Concierge Across Asia </strong> <br/>Our annual
-            and pay-per-use membership plans provide individuals, families, and corporate
+            membership plans provide individuals, families, and corporate
             executives with comprehensive, personalised support, offering
             unlimited access to essential healthcare concierge services in every
             Asian city where we operate, all at no additional cost.
