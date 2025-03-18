@@ -44,7 +44,7 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Specialist Connect&#8482;:</strong> We connect members with top
+                  <strong>Specialist Connect&#8482;:</strong> We connect members with top local and
                   overseas healthcare specialists for priority access.
                 </li>
                 <li className="py-2">
@@ -67,7 +67,7 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Tele-Consultation Support:</strong> Connect with
+                  <strong>Tele-Consultation Support:</strong> Connect with local and 
                   overseas healthcare specialists for expert remote consultations ensuring 
                   informed decisions before treatment.                  
                 </li>

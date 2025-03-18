@@ -103,28 +103,34 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </h1>
         <div className="text-left w-full">
           <p className="text-md md:text-lg mt-3 mb-5">
-            <strong>Specialist Asia</strong> offers exclusive membership-based
-            healthcare concierge services, designed to provide personalised
-            support and priority access to world-class healthcare.
+            <strong>Specialist Asia</strong> provides an exclusive,
+            membership-based healthcare concierge service, ensuring seamless
+            access to world-class medical care with personalized support at
+            every step.
           </p>
           <p className="text-md md:text-lg mb-3">
-            Our team of dedicated experts ensures that all the details,
-            including healthcare coordination, translations, and local liaisons,
-            are managed seamlessly.
+            Our <strong>dedicated medical concierge team</strong> offers{" "}
+            <strong>priority access to top specialists</strong>, handling
+            everything from specialist referrals to fast-tracked appointments
+            and hospital admissions.
           </p>
           <p className="text-md md:text-lg mb-3">
-            As a member, you gain tailored assistance with everything from
-            pre-trip healthcare consultations to travel arrangements,
-            appointment scheduling, and post-treatment follow-ups.
+            Enjoy a <strong>VIP hospital and clinic experience</strong>, with
+            private suites, expedited check-ins, and personalized care
+            coordination for maximum comfort and discretion.
           </p>
           <p className="text-md md:text-lg mb-3">
-            Whether for consultation or treatment, our local experts ensure
-            every step of your journey is smooth, allowing you to focus solely
-            on recovery and well-being.
+            For those seeking medical care abroad, we provide{" "}
+            <strong>
+              global healthcare coordination and medical travel services
+            </strong>
+            , including pre-trip consultations, travel arrangements, and
+            post-treatment follow-ups, ensuring a stress-free experience.
           </p>
           <p className="text-md md:text-lg mb-5">
-            Seamlessly navigate the complexities of traveling overseas for
-            healthcare treatment across Asia.
+            Whether for consultation or treatment, our local experts manage all
+            logistics, so you can focus on your health and recovery with
+            complete peace of mind.
           </p>
         </div>
       </div>

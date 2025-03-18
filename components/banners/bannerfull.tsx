@@ -66,7 +66,7 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
           Healthcare Concierge
         </div>
         <p className={styles.cardText}>
-          Need professional assistance for your overseas healthcare treatment?{" "}
+          Need professional assistance for your local and overseas healthcare treatment?{" "}
           <br />
           Contact us to find out how we help make your health journeys across
           Asia seamless.

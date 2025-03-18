@@ -27,7 +27,7 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               </div>
               <ul className="text-xl list-disc ml-5 mb-6"> {/* Increased margin-bottom to UL */}
                 <li className="py-2">
-                  <strong>Specialist Connect:</strong> Our "Specialist Connect" service links clients with top overseas medical specialists, providing priority access to expert care across borders.
+                  <strong>Specialist Connect:</strong> Our "Specialist Connect" service links clients with top local and overseas medical specialists, providing priority access to expert care across borders.
                 </li>
                 <li className="py-2">
                   <strong>Expert Guidance:</strong> From pre-arrival planning to post-treatment follow-ups, our local liaisons assist patients in navigating the often confusing and stressful healthcare systems of unfamiliar countries.
@@ -46,7 +46,7 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               </div>
               <ul className="text-xl list-disc ml-5 mb-6"> {/* Increased margin-bottom to UL */}                
                 <li className="py-2">
-                  <strong>Tele-Consultation Support:</strong> We facilitate clients to connect with overseas medical specialists for convenient and expert remote consultations, ensuring informed decisions before traveling for treatment.
+                  <strong>Tele-Consultation Support:</strong> We facilitate clients to connect with local and overseas medical specialists for convenient and expert remote consultations, ensuring informed decisions before traveling for treatment.
                 </li>
                 <li className="py-2">
                   <strong>Pre-Trip Planning:</strong> Your local liaison helps arrange every aspect of the trip in advance, from hospital appointments to visa processing and travel logistics.
