@@ -84,27 +84,30 @@
 }
 
 /* Show logo on larger screens (desktop) */
+/*
 @media (min-width: 1025px) {
   .logo_container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 20%; /* Adjusted for better positioning */
+    top: 20%; 
     left: 70%;
-    transform: translate(-50%, -50%); /* Center it properly */
-    z-index: 2; /* Keep it above the overlay card */
+    transform: translate(-50%, -50%); 
+    z-index: 2;
     width: 100%;
-    padding-bottom: 30px; /* Adds spacing below the logo */
+    padding-bottom: 30px; 
   }
-  
+  */
   /* Make logo larger */
+  /*
   .logo {
     display: block;
-    max-width: 400px; /* Increased logo size */
+    max-width: 400px;
     height: auto;
   }
 }
+  */
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
