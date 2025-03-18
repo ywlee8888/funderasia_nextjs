@@ -90,8 +90,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 40%; /* Adjusted for better positioning */
-    left: 50%;
+    top: 35%; /* Adjusted for better positioning */
+    left: 60%;
     transform: translate(-50%, -50%); /* Center it properly */
     z-index: 2; /* Keep it above the overlay card */
     width: 100%;
