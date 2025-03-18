@@ -53,7 +53,7 @@ const KeyServicesDesktop: React.FC = () => {
             <AccordionContent className="text-xl mb-1 p-4">
               {" "}
               {/* Added padding here */}
-              <p>
+              <p className="mb-4">
                 Specialist Connect&#8482; offers a{" "}
                 <strong>
                   personalised and priority pathway to top-tier medical
@@ -68,7 +68,7 @@ const KeyServicesDesktop: React.FC = () => {
                 , our service streamlines the process, giving you direct access
                 to the best medical expertise.
               </p>
-              <p>
+              <p className="mb-4">
                 Our dedicated concierge team{" "}
                 <strong>matches you with the most suitable specialist</strong>{" "}
                 based on your unique medical history, condition, and
@@ -76,7 +76,7 @@ const KeyServicesDesktop: React.FC = () => {
                 priority appointments and expedited access, so you receive
                 timely and precise medical guidance.
               </p>
-              <p>
+              <p className="mb-4">
                 With{" "}
                 <strong>
                   Specialist Connect&#8482;, high-quality healthcare is always
