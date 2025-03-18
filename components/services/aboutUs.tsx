@@ -96,9 +96,9 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <img
           src="/img/specialistasia_logo_banner_black.png"
           alt="About Specialist Asia"
-          className="mb-8 w-[90%] sm:w-[70%] h-auto"
+          className="mb-8 w-[90%] sm:w-[70%] h-auto items-center"
         />
-        <h1 className="text-2xl md:text-3xl font-bold mb-3">
+        <h1 className="text-2xl md:text-3xl font-bold mb-3 items-center">
           About Specialist Asia
         </h1>
         <p className="text-md md:text-lg mt-3 mb-5">
