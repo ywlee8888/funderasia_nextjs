@@ -26,7 +26,7 @@ const MembershipMobile: React.FC = () => {
         <div className={`text-lg ${styles.explainMobile}`}>
           <p>
             <strong>Healthcare Concierge Across Asia </strong> <br />
-            Our annual membership plans provide individuals,
+            Our <strong>annual and pay-per-use membership plans</strong> provide individuals,
             families, and corporate executives with comprehensive, personalised
             support, offering unlimited access to essential healthcare concierge
             services in every Asian city where we operate, all at no additional
