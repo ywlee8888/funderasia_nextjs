@@ -15,6 +15,7 @@ import ContactUsMobile from "@/components/services/contactUsMobile";
 import KeyServicesDesktop from "@/components/services/keyServicesDesktop";
 import MembershipDesktop from "@/components/services/membershipDesktop";
 import BannerFlag from "@/components/banners/bannerFlag";
+import WhatsApp from "@/components/chat/whatsapp";
 
 export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
@@ -67,24 +68,21 @@ export default function Home() {
           <div className="relative w-full block sm:hidden">
             <KeyServicesMobile />
           </div>
-          
+
           <div className="relative w-full sm:block hidden">
             <MedicalImage
               src="/img/medical_background_narrow.jpg"
               alt="Medical Banner"
             />
-          </div> 
-          
-          <div className="relative w-full block sm:hidden">
-            <BannerFlag
-              src="/img/flags_background.png"
-              alt="Medical Banner"
-            />
           </div>
-          
+
+          <div className="relative w-full block sm:hidden">
+            <BannerFlag src="/img/flags_background.png" alt="Medical Banner" />
+          </div>
+
           <div className="relative w-full hidden md:block">
             <MembershipDesktop />
-          </div>    
+          </div>
 
           <div className="relative w-full block sm:hidden">
             <MembershipMobile />
@@ -100,7 +98,8 @@ export default function Home() {
 
           <div className="relative w-full block sm:hidden">
             <ContactUsMobile />
-          </div>   
+          </div>
+          <WhatsApp />
         </main>
       </div>
 
