@@ -52,13 +52,13 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         </button>
       </div>
       <div className={styles.overlayCard}>
-        <div className="flex justify-center">
+        <div className="hidden md:flex justify-center">
           <img
             src="/img/specialistasia_logo_banner_black.png"
             alt="About Specialist Asia"
-            className="mb-3 scale-80" 
+            className="mb-3 scale-70"
           />
-        </div>       
+        </div>
         <div className={styles.cardTitle}>
           Your Most Trusted <br />
           Healthcare Concierge
