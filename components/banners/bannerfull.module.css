@@ -65,7 +65,6 @@
   background-color: #004494; /* Darker shade of blue on hover */
 }
 
-/*
 .logo_container {
   display: none;
 }
@@ -75,24 +74,6 @@
   width: 90%;
   height: auto;
 }
-*/
-
-.logo_container {
-  display: flex; /* Ensure it's visible */
-  position: absolute;
-  top: 20px; /* Adjust positioning */
-  left: 20px;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-
-.logo {
-  display: block; /* Make sure it's visible */
-  width: 150px; /* Adjust size */
-  height: auto;
-}
-
 
 .fullScreenOverlay {
   position: fixed;
