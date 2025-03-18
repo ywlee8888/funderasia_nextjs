@@ -97,18 +97,27 @@ const KeyServicesDesktop: React.FC = () => {
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaListOl style={{ marginRight: "8px" }} />
                 <span style={{ flex: "1 1 auto", textAlign: "left" }}>
-                  Pre-Arrival Planning & Coordination
+                  Dedicated Medical Concierge & Case Management
                 </span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
               {" "}
               {/* Added padding here */}
-              As part of your membership, we take care of all the pre-arrival
-              arrangements, including booking medical appointments, handling
-              paperwork, and managing visa facilitation. Our service ensures a
-              seamless entry process, allowing you to focus solely on your
-              health.
+              We provide end-to-end support for your healthcare journey,
+              ensuring a seamless and stress-free experience. From the moment
+              you need medical assistance, our expert concierge team takes care
+              of every detail—
+              <strong>
+                coordinating appointments, managing medical records,
+                facilitating second opinions, and handling hospital admissions
+              </strong>{" "}
+              with efficiency and discretion. Whether you require assistance
+              with complex treatment plans, insurance navigation, or
+              post-treatment follow-ups, we act as your trusted healthcare
+              liaison, ensuring continuity of care and personalised support at
+              every step. With our dedicated case management, you can focus on
+              your well-being while we handle the rest.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
@@ -117,15 +126,19 @@ const KeyServicesDesktop: React.FC = () => {
               {/* Added padding here */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaUserAlt style={{ marginRight: "8px" }} />
-                <span>On-Ground Liaison Services</span>
+                <span>Exclusive VIP Hospital & Clinic Experience</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
               {" "}
               {/* Added padding here */}
-              Upon arrival, our local liaison will handle every detail, from
-              airport pickups to smooth hospital admissions, so you and your
-              family can enjoy a stress-free experience.
+              Specialist Connect&#8482; offers a VIP hospital and clinic
+              experience, providing seamless access to top-tier specialists,
+              expedited admissions, private consultation suites, and
+              personalised care coordination. Whether for in-person
+              consultations, advanced diagnostics, or specialised treatments, we
+              ensure a discreet, stress-free medical journey with priority
+              access and tailored support at every step.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
@@ -151,15 +164,30 @@ const KeyServicesDesktop: React.FC = () => {
               {/* Added padding here */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaPlaneDeparture style={{ marginRight: "8px" }} />
-                <span>Post-Treatment Support</span>
+                <span>Global Healthcare Coordination & Medical Travel</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
               {" "}
               {/* Added padding here */}
-              We ensure seamless aftercare, including assisting with follow-up
-              appointments, and recovery arrangements, all included in your
-              membership.
+              Specialist Connect&#8482; provides seamless{" "}
+              <strong>global healthcare coordination</strong>, ensuring you
+              receive world-class medical care wherever you are. From arranging{" "}
+              <strong>international specialist consultations</strong> to
+              coordinating{" "}
+              <strong>
+                medical travel, hospital admissions, and post-treatment
+                follow-ups
+              </strong>
+              , we handle every detail. Our team assists with{" "}
+              <strong>
+                visa support, travel logistics, medical translations, and direct
+                hospital liaising
+              </strong>
+              , allowing you to focus entirely on your health. Whether you
+              require advanced treatment abroad or a second opinion from a
+              global expert, we ensure a smooth and stress-free experience
+              tailored to your needs.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
