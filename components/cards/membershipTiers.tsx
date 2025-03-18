@@ -15,7 +15,7 @@ const MembershipCardContainer: React.FC = () => {
       imageSrc: "/img/family.jpg",
       title: "FAMILY",
       description:
-        "Protect your loved ones with unlimited access to expert healthcare support, providing peace of mind and convenience wherever you are in Asia",
+        "Protect your loved ones with access to expert healthcare support, providing peace of mind and convenience wherever you are in Asia",
     },
     {
       imageSrc: "/img/corporate_executives.jpg",
