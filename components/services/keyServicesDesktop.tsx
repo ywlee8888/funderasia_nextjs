@@ -65,7 +65,7 @@ const KeyServicesDesktop: React.FC = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4"> {/* Added padding here */}
-              As part of your annual membership, we take care of all the
+              As part of your membership, we take care of all the
               pre-arrival arrangements, including booking medical appointments,
               handling paperwork, and managing visa facilitation. Our service
               ensures a seamless entry process, allowing you to focus solely on
