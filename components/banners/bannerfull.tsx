@@ -56,7 +56,7 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
           <img
             src="/img/specialistasia_logo_banner_black.png"
             alt="About Specialist Asia"
-            className="mb-3 scale-70"
+            className="mb-3 scale-70 !important"
           />
         </div>
         <div className={styles.cardTitle}>
