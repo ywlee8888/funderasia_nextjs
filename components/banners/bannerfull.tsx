@@ -58,14 +58,7 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
             alt="About Specialist Asia"
             className={styles.logo}
           />
-        </div>
-        <img
-          src={src}
-          alt={alt}
-          width={1920}
-          height={1800}
-          className={styles.bannerImage}
-        />
+        </div>       
         <div className={styles.cardTitle}>
           Your Most Trusted <br />
           Healthcare Concierge
