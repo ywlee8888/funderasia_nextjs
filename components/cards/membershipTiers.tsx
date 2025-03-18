@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TextIconCard from "./membership";
-import styles from './membership.module.css';
+import styles from "./membership.module.css";
 import { FaCheckCircle } from "react-icons/fa";
 
 const MembershipCardContainer: React.FC = () => {
@@ -8,21 +8,21 @@ const MembershipCardContainer: React.FC = () => {
     {
       imageSrc: "/img/individual.jpg",
       title: "INDIVIDUAL",
-      description: "Individual Member",
-      price: "US$15,000/-",
+      description:
+        "Enjoy seamless, personalized healthcare concierge services across Asia, ensuring you get the care you need, when you need it—at no extra cost.",
     },
     {
       imageSrc: "/img/family.jpg",
       title: "FAMILY",
-      description: "4 Family Members",
-      price: "US$50,000/-",
+      description:
+        "Protect your loved ones with unlimited access to expert healthcare support, providing peace of mind and convenience wherever you are in Asia.",
     },
     {
       imageSrc: "/img/corporate_executives.jpg",
       title: "CORPORATE",
-      description: "6 Corp Nominees",
-      price: "US$100,000/-",
-    },    
+      description:
+        "Elevate employee well-being with tailored healthcare concierge services, enhancing productivity and care access for your team across Asia.",
+    },
   ];
 
   const itemsPerPage = 4;
@@ -44,8 +44,8 @@ const MembershipCardContainer: React.FC = () => {
   const startIndex = currentPage * itemsPerPage;
   const currentCards = cardsData.slice(startIndex, startIndex + itemsPerPage);
 
-  return (    
-    <div className={styles.cardContainer}>    
+  return (
+    <div className={styles.cardContainer}>
       <div className={styles.cardItems}>
         {currentCards.map((card, index) => (
           <TextIconCard
@@ -53,7 +53,6 @@ const MembershipCardContainer: React.FC = () => {
             imageSrc={card.imageSrc}
             title={card.title}
             description={card.description}
-            price={card.price}
             icon={FaCheckCircle}
           />
         ))}
