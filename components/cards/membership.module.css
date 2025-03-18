@@ -65,7 +65,6 @@
   font-size: 1.8em; /* Increase font size (adjust as necessary) */
 }
 
-
 .explainMobile {
   width: 100%;
   text-align: center;
@@ -113,14 +112,18 @@
 }
 
 .card {
-  width: 200; /* Increase the card width */
-  padding: 16px; /* Optional: add padding inside the card */
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
-  background-color: #fff; /* Optional: background color */
-  transition: transform 0.2s; /* Optional: transition effect */
+  width: 250px; /* Set a fixed width */
+  height: 350px; /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content evenly */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s;
   position: relative;
-  z-index: 100; /* Corrected property name */
+  z-index: 100;
 }
 
 .cardTitle {
@@ -164,7 +167,6 @@
 .extraSpacing {
   padding-top: 2rem; /* or margin-top, based on your needs */
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
