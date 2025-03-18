@@ -52,6 +52,20 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         </button>
       </div>
       <div className={styles.overlayCard}>
+        <div>
+          <img
+            src="/img/specialistasia_logo_banner_black.png"
+            alt="About Specialist Asia"
+            className={styles.logo}
+          />
+        </div>
+        <img
+          src={src}
+          alt={alt}
+          width={1920}
+          height={1800}
+          className={styles.bannerImage}
+        />
         <div className={styles.cardTitle}>
           Your Most Trusted <br />
           Healthcare Concierge
