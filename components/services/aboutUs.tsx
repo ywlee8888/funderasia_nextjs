@@ -92,39 +92,41 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       </button>
 
       {/* Content Area */}
-      <div className="relative flex flex-col justify-center text-black p-6 z-10">
+      <div className="relative flex flex-col justify-center text-black items-center p-6 z-10">
         <img
           src="/img/specialistasia_logo_banner_black.png"
           alt="About Specialist Asia"
-          className="mb-8 w-[90%] sm:w-[70%] h-auto items-center"
+          className="mb-8 w-[90%] sm:w-[70%] h-auto"
         />
-        <h1 className="text-2xl md:text-3xl font-bold mb-3 items-center">
+        <h1 className="text-2xl md:text-3xl font-bold mb-3">
           About Specialist Asia
         </h1>
-        <p className="text-md md:text-lg mt-3 mb-5">
-          <strong>Specialist Asia</strong> offers exclusive membership-based
-          healthcare concierge services, designed to provide personalised support
-          and priority access to world-class healthcare.
-        </p>
-        <p className="text-md md:text-lg mb-3">
-          Our team of dedicated experts ensures that all the details, including
-          healthcare coordination, translations, and local liaisons, are managed
-          seamlessly.
-        </p>
-        <p className="text-md md:text-lg mb-3">
-          As a member, you gain tailored assistance with everything from
-          pre-trip healthcare consultations to travel arrangements, appointment
-          scheduling, and post-treatment follow-ups.
-        </p>
-        <p className="text-md md:text-lg mb-3">
-          Whether for consultation or treatment, our local experts ensure every
-          step of your journey is smooth, allowing you to focus solely on
-          recovery and well-being.
-        </p>
-        <p className="text-md md:text-lg mb-5">
-          Seamlessly navigate the complexities of traveling overseas for
-          healthcare treatment across Asia.
-        </p>
+        <div className="text-left w-full">
+          <p className="text-md md:text-lg mt-3 mb-5">
+            <strong>Specialist Asia</strong> offers exclusive membership-based
+            healthcare concierge services, designed to provide personalised
+            support and priority access to world-class healthcare.
+          </p>
+          <p className="text-md md:text-lg mb-3">
+            Our team of dedicated experts ensures that all the details,
+            including healthcare coordination, translations, and local liaisons,
+            are managed seamlessly.
+          </p>
+          <p className="text-md md:text-lg mb-3">
+            As a member, you gain tailored assistance with everything from
+            pre-trip healthcare consultations to travel arrangements,
+            appointment scheduling, and post-treatment follow-ups.
+          </p>
+          <p className="text-md md:text-lg mb-3">
+            Whether for consultation or treatment, our local experts ensure
+            every step of your journey is smooth, allowing you to focus solely
+            on recovery and well-being.
+          </p>
+          <p className="text-md md:text-lg mb-5">
+            Seamlessly navigate the complexities of traveling overseas for
+            healthcare treatment across Asia.
+          </p>
+        </div>
       </div>
     </div>
   );
