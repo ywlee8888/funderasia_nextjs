@@ -90,17 +90,18 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 35%; /* Adjust to position above the overlay card */
+    top: 40%; /* Adjusted for better positioning */
     left: 50%;
-    transform: translate(-50%, -50%); /* Center it */
-    z-index: 2; /* Ensure it appears above the card */
-    width: 100%; /* Ensure it spans the width */
+    transform: translate(-50%, -50%); /* Center it properly */
+    z-index: 2; /* Keep it above the overlay card */
+    width: 100%;
+    padding-bottom: 30px; /* Adds spacing below the logo */
   }
   
-  /* Adjust the logo size */
+  /* Make logo larger */
   .logo {
     display: block;
-    max-width: 300px; /* Increase size */
+    max-width: 400px; /* Increased logo size */
     height: auto;
   }
 }
