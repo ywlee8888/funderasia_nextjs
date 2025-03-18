@@ -166,9 +166,19 @@ const KeyServicesMobile: React.FC = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
-              Your membership includes tailored support for your family,
-              offering emotional support, entertainment, and logistical
-              management while your loved ones receive care.
+              Your membership extends beyond individual care to ensure the
+              well-being of your entire family. We provide{" "}
+              <strong>comprehensive support services</strong> designed to ease
+              the stress of medical treatments, offering everything from{" "}
+              <strong>emotional support and counseling</strong> to{" "}
+              <strong>logistical coordination</strong> for family members.
+              Whether it’s arranging comfortable accommodations, organizing
+              transportation, or ensuring entertainment and activities for
+              children, we take care of every detail. Our concierge team is also
+              available to <strong>guide and assist caregivers</strong>,
+              offering practical resources and continuous updates so that
+              families can focus on supporting their loved ones with peace of
+              mind.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
