@@ -145,7 +145,9 @@ const KeyServicesMobile: React.FC = () => {
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaUserAlt style={{ marginRight: "8px" }} />
-                <span>Exclusive VIP Hospital & Clinic Experience</span>
+                <span style={{ flex: "1 1 auto", textAlign: "left" }}>
+                  Exclusive VIP Hospital & Clinic Experience
+                </span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
@@ -162,7 +164,9 @@ const KeyServicesMobile: React.FC = () => {
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaHandHoldingHeart style={{ marginRight: "8px" }} />
-                <span>Family Care & Support</span>
+                <span style={{ flex: "1 1 auto", textAlign: "left" }}>
+                  Family Care & Support
+                </span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
@@ -185,7 +189,9 @@ const KeyServicesMobile: React.FC = () => {
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaPlaneDeparture style={{ marginRight: "8px" }} />
-                <span>Global Healthcare Coordination & Medical Travel</span>
+                <span style={{ flex: "1 1 auto", textAlign: "left" }}>
+                  Global Healthcare Coordination & Medical Travel
+                </span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
