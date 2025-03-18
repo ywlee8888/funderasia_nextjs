@@ -28,13 +28,13 @@ const AboutUsMobile: React.FC = () => {
       ></div>
 
       {/* Content Area */}
-      <div className="relative flex flex-col justify-center text-black items-center p-6 z-10">
+      <div className="relative flex flex-col justify-center text-black p-6 z-10">
         <img
           src="/img/specialistasia_logo_banner_black.png"
           alt="About Specialist Asia"
-          className="mb-8 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[30%] h-auto"
+          className="mb-8 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[30%] h-auto items-center "
         />
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-3"> {/* Increased text size for larger screens */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-3 items-center "> {/* Increased text size for larger screens */}
           About Specialist Asia
         </h1>
         <p className="text-md sm:text-lg md:text-xl lg:text-xl mt-3 mb-5"> {/* Increased text size for larger screens */}
