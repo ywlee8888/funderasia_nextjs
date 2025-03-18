@@ -9,7 +9,7 @@ const MembershipCardContainer: React.FC = () => {
       imageSrc: "/img/individual.jpg",
       title: "INDIVIDUAL",
       description:
-        "Enjoy seamless, personalized healthcare concierge services across Asia, ensuring you get the care you need, when you need it, with complete peace of mind",
+        "Enjoy seamless, personalised healthcare concierge services across Asia, ensuring you get the care when you need it, with complete peace of mind",
     },
     {
       imageSrc: "/img/family.jpg",
