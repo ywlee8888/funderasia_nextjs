@@ -9,19 +9,19 @@ const MembershipCardContainer: React.FC = () => {
       imageSrc: "/img/individual.jpg",
       title: "INDIVIDUAL",
       description:
-        "Enjoy seamless, personalized healthcare concierge services across Asia, ensuring you get the care you need, when you need it—at no extra cost.",
+        "Enjoy seamless, personalized healthcare concierge services across Asia, ensuring you get the care you need, when you need it, with complete peace of mind—at no extra cost",
     },
     {
       imageSrc: "/img/family.jpg",
       title: "FAMILY",
       description:
-        "Protect your loved ones with unlimited access to expert healthcare support, providing peace of mind and convenience wherever you are in Asia.",
+        "Protect your loved ones with unlimited access to expert healthcare support, providing peace of mind and convenience wherever you are in Asia",
     },
     {
       imageSrc: "/img/corporate_executives.jpg",
       title: "CORPORATE",
       description:
-        "Elevate employee well-being with tailored healthcare concierge services, enhancing productivity and care access for your team across Asia.",
+        "Elevate employee well-being with tailored healthcare concierge services, enhancing productivity and care access for your team across Asia",
     },
   ];
 
@@ -53,7 +53,6 @@ const MembershipCardContainer: React.FC = () => {
             imageSrc={card.imageSrc}
             title={card.title}
             description={card.description}
-            icon={FaCheckCircle}
           />
         ))}
       </div>
