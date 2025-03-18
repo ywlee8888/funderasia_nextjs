@@ -92,7 +92,7 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       </button>
 
       {/* Content Area */}
-      <div className="relative flex flex-col justify-center text-black items-center p-6 z-10">
+      <div className="relative flex flex-col justify-center text-black p-6 z-10">
         <img
           src="/img/specialistasia_logo_banner_black.png"
           alt="About Specialist Asia"
