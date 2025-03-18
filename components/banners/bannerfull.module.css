@@ -90,14 +90,18 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 20px; /* Adjust position as needed */
-    left: 20px;
-    z-index: 10;
+    top: 35%; /* Adjust to position above the overlay card */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it */
+    z-index: 2; /* Ensure it appears above the card */
+    width: 100%; /* Ensure it spans the width */
   }
-
+  
+  /* Adjust the logo size */
   .logo {
     display: block;
-    max-width: 200px; /* Adjust size as needed */
+    max-width: 300px; /* Increase size */
+    height: auto;
   }
 }
 
