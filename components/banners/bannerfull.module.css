@@ -83,6 +83,193 @@
   z-index: 50; /* Ensure this is higher than other elements */
 }
 
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Center the card in the middle of the image */
+.overlayCard {
+  position: absolute;
+  top: 50%; /* Centered vertically */
+  left: 65%; /* Centered horizontally */
+  transform: translate(-50%, -50%); /* Translate to perfectly center the card */
+  background-color: rgba(255, 255, 255, 0.4); /* Increased transparency */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%; /* Responsive width */
+  max-width: 800px; /* Max width for larger screens */
+  height: auto; /* Auto height */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  backdrop-filter: blur(5px); /* Blur effect applied only to the card */
+  text-align: center;
+}
+
+/* Responsive typography */
+.cardTitle {
+  font-size: 2rem; /* Reduce font size slightly */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text styling */
+.overlayCard p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Button container for larger screens */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Button styles */
+.button {
+  background-color: #005bb5; /* Initial button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for the buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+  margin: 0 10px; /* Margin between buttons */
+}
+
+/* Change background color on hover */
+.button:hover {
+  background-color: #004494; /* Darker shade of blue on hover */
+}
+
+.logo_container {
+  display: none;
+}
+
+.logo {
+  display: none;
+  width: 90%;
+  height: auto;
+}
+
+.fullScreenOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 50; /* Ensure this is higher than other elements */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .overlayCard {
+    position: absolute; /* Position it absolutely to move it over the image */
+    top: 60%; /* Adjust the vertical position to move it up */
+    left: 50%; /* Center horizontally */
+    transform: translate(
+      -50%,
+      0
+    ); /* Center it horizontally without vertical translation */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.7
+    ); /* Adjust transparency for better visibility */
+    width: 90%; /* Full width on mobile */
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 15px; /* Optional: adjust padding for smaller screens */
+    box-shadow: none; /* Remove shadow for cleaner look on mobile */
+  }
+
+  .cardTitle .cardText {
+    display: none; /* Adjust this if you want to hide the text */
+  }
+
+  .buttonContainer {
+    display: none;
+    flex-direction: row; /* Keep buttons side by side */
+    align-items: center; /* Align items in the center */
+  }
+
+  .button {
+    width: auto; /* Auto width for buttons to fit side by side */
+    padding: 8px 16px; /* Adjust button size */
+    margin: 5px; /* Margin for spacing between buttons */
+  }
+}
+
+/* Additional styles for Specialist Connect button positioning */
+.specialistConnectButton {
+  display: none; /* Hide by default */
+  position: absolute; /* Position it absolutely */
+  top: 40px; /* Position from the top */
+  right: 40px; /* Position from the right */
+  z-index: 2; /* Ensure it appears above other elements */
+}
+
+@media (max-width: 640px) {
+  /* Tailwind's sm breakpoint */
+  .specialistConnectButton {
+    display: inline-block; /* Show on xs and small screens */
+    top: 100px; /* Position from the top */
+    right: 50px; /* Position from the right */
+  }
+  .logo_container {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    color: black;
+    z-index: 10;
+  }
+
+  .logo {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlayCard {
+    top: 80%; /* Move further down on very small screens */
+    padding: 10px;
+  }
+
+  .specialistConnectButton {
+    display: inline-block; /* Show on xs and small screens */
+    top: 100px; /* Position from the top */
+    right: 50px; /* Position from the right */
+    z-index: 500;
+  }
+  .logo_container {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    color: black;
+    z-index: 10;
+  }
+
+  .logo {
+    display: inline-block;
+  }
+}
+
+
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .overlayCard {
