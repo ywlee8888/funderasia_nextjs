@@ -52,11 +52,11 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         </button>
       </div>
       <div className={styles.overlayCard}>
-        <div>
+        <div >
           <img
             src="/img/specialistasia_logo_banner_black.png"
             alt="About Specialist Asia"
-            className={styles.logo}
+            className='mb-3'
           />
         </div>       
         <div className={styles.cardTitle}>
