@@ -19,12 +19,12 @@ const MembershipMobile: React.FC = () => {
           backdropFilter: "blur(30px)",
         }}
       />
-      <div className="max-w-4xl text-black mx-auto p-6 pb-10 h-full flex flex-col justify-center items-center">
+      <div className="max-w-4xl text-black mx-auto p-6 pb-6 h-full flex flex-col justify-center items-center">
         <h2 className={`text-4xl pb-0 font-bold ${styles.heading}`}>
           Membership Plans
         </h2>
         <div className={`text-lg ${styles.explainMobile}`}>
-          <p>
+          <p className="mb-4">
             <strong>Healthcare Concierge Across Asia </strong>
           </p>
           <p>
