@@ -24,10 +24,6 @@ export default function Home() {
     setIsSpecialistConnectOpen(!isSpecialistConnectOpen);
   };
 
-  useEffect(() => {
-    setIsSpecialistConnectOpen(true);
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col">
       <div className="relative w-full">
