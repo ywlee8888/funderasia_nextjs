@@ -8,7 +8,7 @@ const WhatsApp: React.FC = () => {
       href={whatsappLink} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="fixed bottom-4 left-4 z-50 animate-bounce"
+      className="fixed bottom-4 left-4 z-200 animate-bounce"
     >
       <img 
         src="/img/whatsapp-chat.png" 
