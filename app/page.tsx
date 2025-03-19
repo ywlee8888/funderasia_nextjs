@@ -33,18 +33,8 @@ export default function Home() {
       <div className="relative w-full">
         <Navbar
           className="absolute top-0 left-0 w-full z-10"
-          toggleSpecialistConnect={toggleSpecialistConnect} 
+          toggleSpecialistConnect={toggleSpecialistConnect}
         />
-      </div>
-
-      <div>
-        {/* Render SpecialistConnect component conditionally */}
-        {isSpecialistConnectOpen && (
-          <SpecialistConnect
-            isOpen={isSpecialistConnectOpen}
-            toggleSidebar={toggleSpecialistConnect}
-          />
-        )}
       </div>
 
       <div className="w-full">
@@ -110,6 +100,14 @@ export default function Home() {
       <div className="relative w-full mt-auto">
         <Copyright />
       </div>
+
+      {/* Render SpecialistConnect at the top-level */}
+      {isSpecialistConnectOpen && (
+        <SpecialistConnect
+          isOpen={isSpecialistConnectOpen}
+          toggleSidebar={toggleSpecialistConnect}
+        />
+      )}
     </div>
   );
 }
