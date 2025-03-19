@@ -29,7 +29,6 @@ const aestheticsTreatments = [
   "Laser Treatment",
   "Chemical Peel",
   "Others",
-
 ];
 
 const stemCellTreatments = [
@@ -40,7 +39,6 @@ const stemCellTreatments = [
   "Prochymal (Remestemcel-L)",
   "Temcell (Regenerative Cell Therapy)",
   "Others",
-
 ];
 
 const healthScreenings = [
@@ -50,7 +48,6 @@ const healthScreenings = [
   "Diabetes Screening",
   "Cancer Screening",
   "Others",
-
 ];
 
 const countries = [
@@ -60,7 +57,6 @@ const countries = [
   "Taiwan",
   "Thailand",
   "Others",
-
 ];
 
 type SidebarProps = {
@@ -95,20 +91,20 @@ export default function SpecialistConnectNavBar({
   const [alertMessage, setAlertMessage] = useState("");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     let selectedTreatmentType;
 
     if (treatmentType === "medicalSpecialist") {
-      selectedTreatmentType = selectedSpecialist; 
+      selectedTreatmentType = selectedSpecialist;
     } else if (treatmentType === "aesthetics") {
-      selectedTreatmentType = aestheticsType; 
+      selectedTreatmentType = aestheticsType;
     } else if (treatmentType === "healthScreening") {
-      selectedTreatmentType = healthScreeningType; 
+      selectedTreatmentType = healthScreeningType;
     } else if (treatmentType === "stemCell") {
       selectedTreatmentType = stemCellType; //
     } else {
-      selectedTreatmentType = ""; 
+      selectedTreatmentType = "";
     }
 
     const formData = {
@@ -138,12 +134,11 @@ export default function SpecialistConnectNavBar({
         setAlertVisible(true);
 
         setTimeout(() => {
-          toggleSidebar(); 
-        }, 8000); 
+          toggleSidebar();
+        }, 8000);
       } else {
-
         const errorText = await response.text();
-        alert(`Error: ${errorText}`); 
+        alert(`Error: ${errorText}`);
         const errorData = await response.json();
 
         alert(
@@ -162,7 +157,7 @@ export default function SpecialistConnectNavBar({
 
   const closeAlert = () => {
     setAlertVisible(false);
-    toggleSidebar(); 
+    toggleSidebar();
   };
 
   const handleVirtualConsultation = (answer: string) => {
@@ -171,7 +166,10 @@ export default function SpecialistConnectNavBar({
   };
 
   return isOpen ? (
-    <div className={Styles.container}>
+    //<div className={Styles.container}>
+    <div
+      className={`${isOpen ? Styles.open : Styles.hidden} ${Styles.container}`}
+    >
       <div className="flex justify-center items-center">
         <div
           className={`p-6 bg-white rounded shadow-md w-full ${Styles.formContainer}`}
@@ -212,7 +210,7 @@ export default function SpecialistConnectNavBar({
                   setSelectedSpecialist("");
                   setPreferredCountry("");
                   setShowContactDetails(false);
-                  setVirtualConsultation(null); 
+                  setVirtualConsultation(null);
                 }}
                 style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
               >
@@ -253,9 +251,9 @@ export default function SpecialistConnectNavBar({
                       if (!isSpecialistArea) {
                         setSelectedSpecialist(
                           "Request GP Consultation and Referral"
-                        ); 
+                        );
                       } else {
-                        setSelectedSpecialist(""); 
+                        setSelectedSpecialist("");
                       }
                     }}
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
@@ -284,7 +282,7 @@ export default function SpecialistConnectNavBar({
                           if (e.target.value) {
                             setShowContactDetails(
                               virtualConsultation === "yes"
-                            ); 
+                            );
                           }
                         }}
                         style={{
@@ -397,7 +395,7 @@ export default function SpecialistConnectNavBar({
                       </strong>
                     </label>
                     <select
-                      className="block w-full border border-gray-300 rounded-md px-4 py-2" 
+                      className="block w-full border border-gray-300 rounded-md px-4 py-2"
                       value={virtualConsultation || ""}
                       onChange={(e) => {
                         handleVirtualConsultation(e.target.value);
@@ -611,7 +609,7 @@ export default function SpecialistConnectNavBar({
                     className="block w-full border border-gray-300 rounded-md px-4 py-2 mb-4"
                     value={preferredCountry || ""}
                     onChange={(e) => {
-                      setPreferredCountry(e.target.value); 
+                      setPreferredCountry(e.target.value);
                     }}
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
                     required
@@ -672,7 +670,7 @@ export default function SpecialistConnectNavBar({
                       })
                     }
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
-                    placeholder="Enter your name" 
+                    placeholder="Enter your name"
                     required
                   />
                 </div>
@@ -716,7 +714,7 @@ export default function SpecialistConnectNavBar({
                       })
                     }
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
-                    placeholder="Enter your telephone" 
+                    placeholder="Enter your telephone"
                     required
                   />
                 </div>
@@ -737,7 +735,7 @@ export default function SpecialistConnectNavBar({
                       })
                     }
                     style={{ backgroundColor: "#ecf0f1", color: "#2c3e50" }}
-                    placeholder="Enter your remarks" 
+                    placeholder="Enter your remarks"
                     rows={4}
                   />
                 </div>
