@@ -33,19 +33,27 @@ export default function Home() {
       <div className="relative w-full">
         <Navbar
           className="absolute top-0 left-0 w-full z-10"
-          toggleSpecialistConnect={toggleSpecialistConnect} 
+          toggleSpecialistConnect={toggleSpecialistConnect}
         />
       </div>
 
-      <div>
-        {/* Render SpecialistConnect component conditionally */}
-        {isSpecialistConnectOpen && (
-          <SpecialistConnect
-            isOpen={isSpecialistConnectOpen}
-            toggleSidebar={toggleSpecialistConnect}
-          />
-        )}
-      </div>
+      {/* Overlay Modal for SpecialistConnect */}
+      {isSpecialistConnectOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+            <button
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
+              onClick={toggleSpecialistConnect}
+            >
+              ✕
+            </button>
+            <SpecialistConnect
+              isOpen={isSpecialistConnectOpen}
+              toggleSidebar={toggleSpecialistConnect}
+            />
+          </div>
+        </div>
+      )}
 
       <div className="w-full">
         <main>
