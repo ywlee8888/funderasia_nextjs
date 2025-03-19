@@ -244,7 +244,7 @@ export default function Navbar({
               onClick={() =>
                 (window.location.href = "https://www.medicina.asia/shop")
               }
-              className="hover:font-extrabold whitespace-nowrap px-1"
+              className="hover:font-extrabold whitespace-nowrap text-left"
               aria-label="Services"
             >
               SHOP
@@ -255,7 +255,7 @@ export default function Navbar({
                 (window.location.href =
                   "https://www.medicina.asia/health_journeys")
               }
-              className="hover:font-extrabold whitespace-nowrap px-1"
+              className="hover:font-extrabold whitespace-nowrap text-left"
               aria-label="Services"
             >
               HEALTH JOURNEYS

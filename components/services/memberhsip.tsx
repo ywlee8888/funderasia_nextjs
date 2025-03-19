@@ -31,7 +31,10 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
         toggleSidebar();
       }
     };
@@ -82,7 +85,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     <div
       ref={sidebarRef}
       className={`absolute right-0 z-30 transition-transform duration-300 ${
-        isSmallScreen ? 'w-full' : 'md:w-[60rem] w-[80%]'
+        isSmallScreen ? "w-full" : "md:w-[60rem] w-[80%]"
       } h-auto`}
       style={{
         top: `${topPosition}px`,
@@ -120,13 +123,16 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <h2 className={`text-4xl pb-0 font-bold ${styles.heading}`}>
           Membership Plans
         </h2>
+        <h4 className={`text-2xl pb-0 font-bold ${styles.heading}`}>
+          Healthcare Concierge Across Asia
+        </h4>
         <div className={`text-lg ${styles.explain}`}>
           <p>
-            <strong>Healthcare Concierge Across Asia </strong> <br/>Our <strong>annual and pay-per-use
-            membership plans</strong> provide individuals, families, and corporate
-            executives with comprehensive, personalised support, offering
-            unlimited access to essential healthcare concierge services in every
-            Asian city where we operate, all at no additional cost.
+            Our <strong>annual and pay-per-use membership plans</strong> provide
+            individuals, families, and corporate executives with comprehensive,
+            personalised support, offering unlimited access to essential
+            healthcare concierge services in every Asian city where we operate,
+            all at no additional cost.
           </p>
         </div>
 
