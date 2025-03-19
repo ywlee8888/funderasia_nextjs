@@ -18,11 +18,15 @@ import BannerFlag from "@/components/banners/bannerFlag";
 import WhatsApp from "@/components/chat/whatsapp";
 
 export default function Home() {
-  const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(true);
+  const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
 
   const toggleSpecialistConnect = () => {
     setIsSpecialistConnectOpen(!isSpecialistConnectOpen);
   };
+
+  useEffect(() => {
+    toggleSpecialistConnect();
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
