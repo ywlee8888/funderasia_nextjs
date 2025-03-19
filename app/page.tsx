@@ -21,11 +21,11 @@ export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
 
   const toggleSpecialistConnect = () => {
-    setIsSpecialistConnectOpen((prev) => !prev);
+    setIsSpecialistConnectOpen(!isSpecialistConnectOpen);
   };
 
   useEffect(() => {
-    toggleSpecialistConnect();
+    setIsSpecialistConnectOpen(true);
   }, []);
 
   return (
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="relative w-full">
         <Navbar
           className="absolute top-0 left-0 w-full z-10"
-          toggleSpecialistConnect={toggleSpecialistConnect} 
+          toggleSpecialistConnect={toggleSpecialistConnect}
         />
       </div>
 
