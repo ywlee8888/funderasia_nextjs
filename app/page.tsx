@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar/navbar";
 import FullWidthImage from "@/components/banners/bannerfull";
 import ConciergeImage from "@/components/banners/bannerConcierge";
@@ -20,7 +20,10 @@ import WhatsApp from "@/components/chat/whatsapp";
 export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
 
-  // Function to toggle SpecialistConnect visibility
+  useEffect(() => {
+    setIsSpecialistConnectOpen(true);
+  }, []);
+
   const toggleSpecialistConnect = () => {
     setIsSpecialistConnectOpen(!isSpecialistConnectOpen);
   };
@@ -30,7 +33,7 @@ export default function Home() {
       <div className="relative w-full">
         <Navbar
           className="absolute top-0 left-0 w-full z-10"
-          toggleSpecialistConnect={toggleSpecialistConnect} // Pass down the toggle function
+          toggleSpecialistConnect={toggleSpecialistConnect} 
         />
       </div>
 
