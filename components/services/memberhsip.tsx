@@ -123,10 +123,7 @@ const Membership: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         <h2 className={`text-4xl pb-0 font-bold ${styles.heading}`}>
           Membership Plans
         </h2>
-        <div className={`text-lg ${styles.explain}`}>
-          <div className="max-w-4xl text-black mx-auto p-6 pb-2 h-full flex flex-col justify-center items-center">
-            <strong>Healthcare Concierge Across Asia </strong>
-          </div>
+        <div className={`text-lg ${styles.explain}`}>          
           <p>
             Our <strong>annual and pay-per-use membership plans</strong> provide
             individuals, families, and corporate executives with comprehensive,
