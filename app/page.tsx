@@ -21,7 +21,7 @@ export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
 
   const toggleSpecialistConnect = () => {
-    setIsSpecialistConnectOpen(!isSpecialistConnectOpen);
+    setIsSpecialistConnectOpen((prev) => !prev);
   };
 
   useEffect(() => {
