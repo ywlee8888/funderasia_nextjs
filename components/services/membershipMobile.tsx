@@ -23,10 +23,10 @@ const MembershipMobile: React.FC = () => {
         <h2 className={`text-4xl pb-0 font-bold ${styles.heading}`}>
           Membership Plans
         </h2>
-        <h4 className={`text-2xl pb-0 font-bold ${styles.heading}`}>
-          Healthcare Concierge Across Asia
-        </h4>
         <div className={`text-lg ${styles.explainMobile}`}>
+          <p>
+            <strong>Healthcare Concierge Across Asia </strong>
+          </p>
           <p>
             Our <strong>annual and pay-per-use membership plans</strong> provide
             individuals, families, and corporate executives with comprehensive,
