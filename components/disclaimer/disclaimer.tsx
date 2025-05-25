@@ -27,29 +27,20 @@ const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ onAgree }) => {
           or policy advice, please contact a licensed insurance professional.
         </p>
         <p>
-          Specialist Asia respects your privacy and complies with applicable data
-          protection laws. By engaging with our services or events, you consent
-          to the collection, storage, and sharing of your personal information
-          with trusted healthcare and insurance partners for the purpose of
-          providing concierge services and relevant communications. You may
-          withdraw your consent at any time by contacting us.
-        </p>
-        <p>
-          We partner with selected healthcare providers and licensed insurance
-          companies to offer transparent access to healthcare services. While we
-          list multiple providers for your convenience, only fully onboarded
-          partners participate in our full concierge and education programmes.
-          This enables us to share more detailed, verified information to support
-          your decision-making.
-        </p>
-        <p>
           Our role is to assist expatriates and international patients with
           healthcare navigation and access. Our services do not replace
           professional medical or insurance advice, nor do they guarantee the
           availability or outcome of any healthcare treatment or insurance
           product.
         </p>
-
+        <p>
+          Specialist Asia respects your privacy and complies with applicable data
+          protection laws. By engaging with our services or events, you consent
+          to the collection, storage, and sharing of your personal information
+          with trusted healthcare and insurance partners for the purpose of
+          providing concierge services and relevant communications. You may
+          withdraw your consent at any time by contacting us.
+        </p> 
         <div className="text-center">
           <button
             onClick={onAgree}
