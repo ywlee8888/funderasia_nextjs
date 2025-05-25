@@ -73,7 +73,7 @@ const AboutUsMobile: React.FC = () => {
           </p>
           <p className="text-md sm:text-lg md:text-xl lg:text-xl mb-5">
             Through careful partnership and alignment with healthcare providers
-            and <strong>licensed insurance providers</strong>, Specialist Asia
+            and licensed insurance providers, Specialist Asia
             offers enriched, transparent, and trusted healthcare access,
             maintaining full compliance with medical and insurance regulations,
             and always placing patient needs and interests at the centre of

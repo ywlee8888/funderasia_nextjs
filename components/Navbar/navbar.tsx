@@ -163,29 +163,8 @@ export default function Navbar({
             aria-label="Services"
           >
             SERVICES
-          </button>
-
-          <button
-            onClick={() =>
-              (window.location.href = "https://www.medicina.asia/shop")
-            }
-            className="hover:font-extrabold whitespace-nowrap px-1"
-            aria-label="Services"
-          >
-            SHOP
-          </button>
-
-          <button
-            onClick={() =>
-              (window.location.href =
-                "https://www.medicina.asia/health_journeys")
-            }
-            className="hover:font-extrabold whitespace-nowrap px-1"
-            aria-label="Services"
-          >
-            HEALTH JOURNEYS
-          </button>
-
+          </button>   
+         
           <button
             onClick={() => toggleComponent("aboutUs")}
             className="hover:font-extrabold whitespace-nowrap px-1"
@@ -239,28 +218,7 @@ export default function Navbar({
             >
               SERVICES
             </button>
-
-            <button
-              onClick={() =>
-                (window.location.href = "https://www.medicina.asia/shop")
-              }
-              className="hover:font-extrabold whitespace-nowrap text-left"
-              aria-label="Services"
-            >
-              SHOP
-            </button>
-
-            <button
-              onClick={() =>
-                (window.location.href =
-                  "https://www.medicina.asia/health_journeys")
-              }
-              className="hover:font-extrabold whitespace-nowrap text-left"
-              aria-label="Services"
-            >
-              HEALTH JOURNEYS
-            </button>
-
+            
             <button
               className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={() => toggleComponent("aboutUs")}
