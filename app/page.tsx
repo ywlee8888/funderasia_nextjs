@@ -16,13 +16,31 @@ import KeyServicesDesktop from "@/components/services/keyServicesDesktop";
 import MembershipDesktop from "@/components/services/membershipDesktop";
 import BannerFlag from "@/components/banners/bannerFlag";
 import WhatsApp from "@/components/chat/whatsapp";
+import DisclaimerModal from "@/components/disclaimer/disclaimer";
 
 export default function Home() {
   const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
+  const [hasAgreed, setHasAgreed] = useState<boolean>(false);
 
   const toggleSpecialistConnect = () => {
     setIsSpecialistConnectOpen(!isSpecialistConnectOpen);
   };
+
+  useEffect(() => {
+    const agreed = localStorage.getItem("hasAgreedToDisclaimer");
+    if (agreed === "true") {
+      setHasAgreed(true);
+    }
+  }, []);
+
+  const handleAgree = () => {
+    localStorage.setItem("hasAgreedToDisclaimer", "true");
+    setHasAgreed(true);
+  };
+
+  if (!hasAgreed) {
+    return <DisclaimerModal onAgree={handleAgree} />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
