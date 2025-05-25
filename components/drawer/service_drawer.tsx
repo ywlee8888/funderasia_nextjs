@@ -44,12 +44,15 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Specialist Connect&#8482;:</strong> We connect members with top local and
-                  overseas healthcare specialists for priority access.
+                  <strong>Specialist Connect™:</strong> We facilitate
+                  introductions to top local and overseas healthcare specialists
+                  to assist with priority appointment requests, without
+                  providing medical recommendations.
                 </li>
                 <li className="py-2">
-                  <strong>Expert Guidance:</strong> Your local liaison assists you with
-                  pre-arrival planning and post-treatment follow-ups.
+                  <strong>Expert Support:</strong> Your local liaison helps
+                  coordinate pre-arrival logistics and post-treatment
+                  arrangements to ensure a smooth patient experience.
                 </li>
                 <li className="py-2">
                   <strong>Cultural Expertise:</strong> Our knowledge of local
@@ -67,18 +70,19 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Tele-Consultation Support:</strong> Connect with local and 
-                  overseas healthcare specialists for expert remote consultations ensuring 
-                  informed decisions before treatment.                  
+                  <strong>Tele-Consultation Facilitation:</strong> We assist in
+                  connecting you with local and overseas healthcare specialists
+                  who provide remote consultations directly, supporting you in
+                  making informed healthcare decisions.
                 </li>
                 <li className="py-2">
-                  <strong>Pre-Trip Planning:</strong> Your local liaison
-                  assists you with all trip details, from appointments to travel
-                  logistics.                 
+                  <strong>Pre-Trip Planning:</strong> Your local liaison assists
+                  you with all trip details, from appointments to travel
+                  logistics.
                 </li>
                 <li className="py-2">
                   <strong>Real-Time Problem Solving:</strong> Your local expert
-                  provides immediate solutions to any unexpected issues.                  
+                  provides immediate solutions to any unexpected issues.
                 </li>
               </ul>
             </div>
@@ -90,16 +94,20 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Minimising Stress:</strong> We handle all paperwork,
-                  hospital admissions, and insurance claims.
+                  <strong>Minimising Stress:</strong> We assist with
+                  administrative paperwork, hospital admissions, and liaise with
+                  licensed insurance providers to support insurance claim
+                  processes.
                 </li>
                 <li className="py-2">
-                  <strong>Language Support:</strong> Multi-lingual liaison professionals
-                  available for clear communication ensureing smooth consultations and treatments.                  
+                  <strong>Language Support:</strong> Multi-lingual liaison
+                  professionals available for clear communication ensuring
+                  smooth consultations and treatments.
                 </li>
                 <li className="py-2">
-                  <strong>Recovery Assistance:</strong> We provide aftercare
-                  arrangements and follow-up instructions.
+                  <strong>Recovery Assistance:</strong> We help coordinate
+                  aftercare arrangements and support continuity of care through
+                  liaison with your healthcare providers.
                 </li>
               </ul>
             </div>
@@ -114,16 +122,18 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
                   <strong>Comprehensive Support:</strong> Personalised care,
-                  including accommodation arrangements, recreational activities and support.                  
+                  including accommodation arrangements, recreational activities
+                  and support.
                 </li>
                 <li className="py-2">
-                  <strong>Clear Communication:</strong> We provide regular updates to ensure families are well-informed 
-                  to alleviate any concerns and anxiety.
+                  <strong>Clear Communication:</strong> We provide regular
+                  updates to ensure families are well-informed to alleviate any
+                  concerns and anxiety.
                 </li>
                 <li className="py-2">
                   <strong>Emotional Comfort:</strong> Local liaisons provide
                   support and reassurance throughout the process.
-                </li>                
+                </li>
               </ul>
             </div>
           </div>

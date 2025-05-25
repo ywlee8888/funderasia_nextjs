@@ -81,66 +81,61 @@ const KeyServicesMobile: React.FC = () => {
               <p className="mb-4">
                 Specialist Connect&#8482; offers a{" "}
                 <strong>
-                  personalised and priority pathway to top-tier medical
-                  specialists
+                  facilitated pathway to top-tier medical specialists
                 </strong>
-                , ensuring that you receive expert care without unnecessary
-                delays. Whether you require an immediate{" "}
+                , helping you avoid unnecessary delays in accessing
+                consultations. Whether you seek a{" "}
                 <strong>
-                  second opinion, a tele-consultation for convenience, or an
-                  in-person appointment with a renowned specialist
+                  second opinion, a tele-consultation for convenience, or help
+                  scheduling an in-person consultation
                 </strong>
-                , our service streamlines the process, giving you direct access
-                to the best medical expertise.
+                , our service simplifies the process of connecting with licensed
+                healthcare providers.
               </p>
               <p className="mb-4">
-                Our dedicated concierge team{" "}
-                <strong>matches you with the most suitable specialist</strong>{" "}
-                based on your unique medical history, condition, and
-                preferences. We handle all scheduling logistics, ensuring
-                priority appointments and expedited access, so you receive
-                timely and precise medical guidance.
+                Our concierge team{" "}
+                <strong>assists in identifying suitable specialists</strong>{" "}
+                based on your preferences and relevant background. While we do
+                not provide medical advice or make clinical decisions, we help
+                coordinate appointments and manage scheduling to support a
+                timely healthcare experience.
               </p>
               <p className="mb-4">
                 With{" "}
                 <strong>
-                  Specialist Connect&#8482;, high-quality healthcare is always
-                  within reach
+                  Specialist Connect&#8482;, access to trusted specialists is
+                  simplified
                 </strong>
-                —whether you need a consultation from the comfort of your home
-                or prefer a private, face-to-face experience at a leading
-                medical institution. Take control of your health with
-                confidence, knowing that world-class specialists are just a call
-                away.
+                —whether you're at home or seeking care at a top institution.
+                Please note that all medical decisions remain solely between you
+                and your chosen healthcare provider.
               </p>
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaListOl style={{ marginRight: "8px" }} />
                 <span style={{ flex: "1 1 auto", textAlign: "left" }}>
-                  Dedicated Medical Concierge & Case Management
+                  Dedicated Medical Concierge & Case Support
                 </span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
-              We provide end-to-end support for your healthcare journey,
-              ensuring a seamless and stress-free experience. From the moment
-              you need medical assistance, our expert concierge team takes care
-              of every detail—
+              Our concierge service provides{" "}
               <strong>
-                coordinating appointments, managing medical records,
-                facilitating second opinions, and handling hospital admissions
-              </strong>{" "}
-              with efficiency and discretion. Whether you require assistance
-              with complex treatment plans, insurance navigation, or
-              post-treatment follow-ups, we act as your trusted healthcare
-              liaison, ensuring continuity of care and personalised support at
-              every step. With our dedicated case management, you can focus on
-              your well-being while we handle the rest.
+                non-clinical support throughout your healthcare journey
+              </strong>
+              , ensuring a more convenient experience. From coordinating
+              appointments and helping manage medical records to facilitating
+              second opinions and hospital referrals, we assist with
+              administrative processes. While we do not offer medical or
+              insurance advice, our team helps you navigate care pathways and
+              offers personalised support so you can focus on your well-being.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -151,15 +146,17 @@ const KeyServicesMobile: React.FC = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
-              Specialist Connect&#8482; offers a VIP hospital and clinic
-              experience, providing seamless access to top-tier specialists,
-              expedited admissions, private consultation suites, and
-              personalised care coordination. Whether for in-person
-              consultations, advanced diagnostics, or specialised treatments, we
-              ensure a discreet, stress-free medical journey with priority
-              access and tailored support at every step.
+              Through our partnerships, we help coordinate{" "}
+              <strong>
+                VIP-style experiences at selected healthcare facilities
+              </strong>
+              , including private consultation suites, scheduling support, and
+              care liaison services. All clinical services are provided directly
+              by licensed medical professionals at their respective
+              institutions.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-4">
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -170,21 +167,19 @@ const KeyServicesMobile: React.FC = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
-              Your membership extends beyond individual care to ensure the
-              well-being of your entire family. We provide{" "}
-              <strong>comprehensive support services</strong> designed to ease
-              the stress of medical treatments, offering everything from{" "}
-              <strong>emotional support and counseling</strong> to{" "}
-              <strong>logistical coordination</strong> for family members.
-              Whether it’s arranging comfortable accommodations, organizing
-              transportation, or ensuring entertainment and activities for
-              children, we take care of every detail. Our concierge team is also
-              available to <strong>guide and assist caregivers</strong>,
-              offering practical resources and continuous updates so that
-              families can focus on supporting their loved ones with peace of
-              mind.
+              Your membership also includes{" "}
+              <strong>non-clinical support for your family members</strong>,
+              helping to reduce the burden during medical care. We assist with{" "}
+              <strong>
+                logistics, caregiver coordination, and emotional support
+                referrals
+              </strong>
+              . Our team also helps arrange travel, accommodations, and other
+              services that can make your family’s journey smoother and more
+              manageable.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-5">
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -195,24 +190,20 @@ const KeyServicesMobile: React.FC = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg mb-1">
-              Specialist Connect&#8482; provides seamless{" "}
-              <strong>global healthcare coordination</strong>, ensuring you
-              receive world-class medical care wherever you are. From arranging{" "}
-              <strong>international specialist consultations</strong> to
-              coordinating{" "}
+              Specialist Connect&#8482; facilitates{" "}
               <strong>
-                medical travel, hospital admissions, and post-treatment
-                follow-ups
-              </strong>
-              , we handle every detail. Our team assists with{" "}
+                international healthcare coordination and medical travel
+                planning
+              </strong>{" "}
+              for clients seeking treatment abroad. Our team supports you by
+              arranging{" "}
               <strong>
-                visa support, travel logistics, medical translations, and direct
-                hospital liaising
+                consultations with overseas providers, travel logistics,
+                document preparation, and communication with hospitals
               </strong>
-              , allowing you to focus entirely on your health. Whether you
-              require advanced treatment abroad or a second opinion from a
-              global expert, we ensure a smooth and stress-free experience
-              tailored to your needs.
+              . We do not provide medical advice, clinical care, or act as a
+              travel agency or insurer, but we aim to make your international
+              medical journey as smooth and supported as possible.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

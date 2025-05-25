@@ -103,34 +103,46 @@ const AboutUs: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </h1>
         <div className="text-left w-full">
           <p className="text-md md:text-lg mt-3 mb-5">
-            <strong>Specialist Asia</strong> provides an exclusive,
-            membership-based healthcare concierge service, ensuring seamless
-            access to world-class medical care with personalized support at
-            every step.
+            <strong>Specialist Asia</strong> is an exclusive, membership-based
+            healthcare concierge service that offers seamless access to
+            world-class medical care, providing personalised support throughout
+            the patient journey. We focus on empowering expatriates and
+            international patients by delivering trusted guidance, education,
+            and concierge services—without offering medical advice or insurance
+            policy recommendations, which are regulated activities.
           </p>
           <p className="text-md md:text-lg mb-3">
-            Our <strong>dedicated medical concierge team</strong> offers{" "}
-            <strong>priority access to top specialists</strong>, handling
-            everything from specialist referrals to fast-tracked appointments
-            and hospital admissions.
+            Our <strong>dedicated medical concierge team</strong> facilitates
+            priority access to leading specialists and healthcare providers,
+            coordinating everything from referrals to fast-tracked appointments
+            and hospital admissions. Members benefit from a VIP healthcare
+            experience, including private suites, expedited check-ins, and
+            personalised care coordination designed to ensure comfort,
+            discretion, and peace of mind.
           </p>
           <p className="text-md md:text-lg mb-3">
-            Enjoy a <strong>VIP hospital and clinic experience</strong>, with
-            private suites, expedited check-ins, and personalized care
-            coordination for maximum comfort and discretion.
+            For those seeking treatment overseas, Specialist Asia provides
+            comprehensive <strong>global healthcare coordination</strong>,
+            covering pre-trip consultations, travel arrangements, and
+            post-treatment follow-up, to create a smooth and stress-free medical
+            travel experience.
           </p>
           <p className="text-md md:text-lg mb-3">
-            For those seeking medical care abroad, we provide{" "}
-            <strong>
-              global healthcare coordination and medical travel services
-            </strong>
-            , including pre-trip consultations, travel arrangements, and
-            post-treatment follow-ups, ensuring a stress-free experience.
+            In addition to concierge services, Specialist Asia is committed to
+            educating expatriates and international patients, helping them
+            navigate complex healthcare systems locally and abroad with
+            confidence. Our educational programmes cover essential non-clinical
+            topics such as insurance navigation, healthcare provider
+            environments, patient support, and service logistics—always without
+            providing medical or insurance advice.
           </p>
           <p className="text-md md:text-lg mb-5">
-            Whether for consultation or treatment, our local experts manage all
-            logistics, so you can focus on your health and recovery with
-            complete peace of mind.
+            Through careful partnership and alignment with healthcare providers
+            and licensed insurance providers, Specialist Asia offers enriched,
+            transparent, and trusted healthcare access, maintaining full
+            compliance with medical and insurance regulations, and always
+            placing patient needs and interests at the centre of everything we
+            do.
           </p>
         </div>
       </div>

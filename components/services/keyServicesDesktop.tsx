@@ -43,161 +43,128 @@ const KeyServicesDesktop: React.FC = () => {
           <h2 className="text-4xl font-bold mb-3">Key Member Services</h2>
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-xl font-bold mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaUserMd style={{ marginRight: "8px" }} />
                 <span>Specialist Connect&#8482;</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
               <p className="mb-4">
                 Specialist Connect&#8482; offers a{" "}
                 <strong>
-                  personalised and priority pathway to top-tier medical
-                  specialists
+                  personalised and streamlined pathway to medical specialists
                 </strong>
-                , ensuring that you receive expert care without unnecessary
-                delays. Whether you require an immediate{" "}
+                , helping you navigate care options with greater ease. Whether
+                you're seeking a{" "}
                 <strong>
-                  second opinion, a tele-consultation for convenience, or an
-                  in-person appointment with a renowned specialist
+                  second opinion, a tele-consultation for convenience, or
+                  assistance in securing an in-person appointment
                 </strong>
-                , our service streamlines the process, giving you direct access
-                to the best medical expertise.
+                , our team facilitates the process to support timely access to
+                appropriate medical expertise.
               </p>
               <p className="mb-4">
-                Our dedicated concierge team{" "}
-                <strong>matches you with the most suitable specialist</strong>{" "}
-                based on your unique medical history, condition, and
-                preferences. We handle all scheduling logistics, ensuring
-                priority appointments and expedited access, so you receive
-                timely and precise medical guidance.
+                Our medical concierge team works closely with you to{" "}
+                <strong>identify suitable specialists</strong> based on your
+                condition and preferences. While we do not make clinical
+                decisions, we help coordinate scheduling and documentation to
+                enhance your healthcare experience.
               </p>
               <p className="mb-4">
-                With{" "}
-                <strong>
-                  Specialist Connect&#8482;, high-quality healthcare is always
-                  within reach
-                </strong>
-                —whether you need a consultation from the comfort of your home
-                or prefer a private, face-to-face experience at a leading
-                medical institution. Take control of your health with
-                confidence, knowing that world-class specialists are just a call
-                away.
+                Specialist Connect&#8482; is designed to{" "}
+                <strong>complement your existing care</strong>, whether at home
+                or at a leading institution. We aim to provide logistical
+                support and information so that you can access care confidently
+                and efficiently.
               </p>
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-xl font-bold mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaListOl style={{ marginRight: "8px" }} />
                 <span style={{ flex: "1 1 auto", textAlign: "left" }}>
-                  Dedicated Medical Concierge & Case Management
+                  Dedicated Medical Concierge & Case Coordination
                 </span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
-              We provide end-to-end support for your healthcare journey,
-              ensuring a seamless and stress-free experience. From the moment
-              you need medical assistance, our expert concierge team takes care
-              of every detail—
+              We offer non-clinical assistance to{" "}
+              <strong>support your healthcare journey</strong>. Our concierge
+              team helps with{" "}
               <strong>
-                coordinating appointments, managing medical records,
-                facilitating second opinions, and handling hospital admissions
-              </strong>{" "}
-              with efficiency and discretion. Whether you require assistance
-              with complex treatment plans, insurance navigation, or
-              post-treatment follow-ups, we act as your trusted healthcare
-              liaison, ensuring continuity of care and personalised support at
-              every step. With our dedicated case management, you can focus on
-              your well-being while we handle the rest.
+                appointment scheduling, document preparation, coordination of
+                second opinions, and hospital administrative processes
+              </strong>
+              . While we do not provide medical advice or treatment, we ensure
+              you have logistical support and access to helpful information
+              every step of the way. For those with complex care needs, our case
+              coordination aims to enhance continuity and reduce administrative
+              burden.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-xl font-bold mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaUserAlt style={{ marginRight: "8px" }} />
-                <span>Exclusive VIP Hospital & Clinic Experience</span>
+                <span>Personalised Care Experience</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
-              Specialist Connect&#8482; offers a VIP hospital and clinic
-              experience, providing seamless access to top-tier specialists,
-              expedited admissions, private consultation suites, and
-              personalised care coordination. Whether for in-person
-              consultations, advanced diagnostics, or specialised treatments, we
-              ensure a discreet, stress-free medical journey with priority
-              access and tailored support at every step.
+              Specialist Connect&#8482; enhances your care experience by{" "}
+              <strong>
+                assisting with facility preferences, appointment logistics, and
+                personalised coordination
+              </strong>{" "}
+              based on your individual needs. While medical care is always under
+              the purview of licensed healthcare providers, our goal is to
+              support your experience with discretion, comfort, and efficiency
+              in mind.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-4">
             <AccordionTrigger className="text-xl font-bold mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaHandHoldingHeart style={{ marginRight: "8px" }} />
                 <span>Family Care & Support</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
-              Your membership extends beyond individual care to ensure the
-              well-being of your entire family. We provide{" "}
-              <strong>comprehensive support services</strong> designed to ease
-              the stress of medical treatments, offering everything from{" "}
-              <strong>emotional support and counseling</strong> to{" "}
-              <strong>logistical coordination</strong> for family members.
-              Whether it’s arranging comfortable accommodations, organizing
-              transportation, or ensuring entertainment and activities for
-              children, we take care of every detail. Our concierge team is also
-              available to <strong>guide and assist caregivers</strong>,
-              offering practical resources and continuous updates so that
-              families can focus on supporting their loved ones with peace of
-              mind.
+              Our service includes <strong>family-oriented support</strong> to
+              ease the stress that can accompany medical care. From{" "}
+              <strong>logistical coordination</strong> such as accommodation and
+              transport to{" "}
+              <strong>non-medical emotional support resources</strong>, our team
+              is here to assist caregivers and family members. We help ensure
+              smoother communication, planning, and access to resources—so
+              families can focus on what matters most.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-5">
             <AccordionTrigger className="text-xl font-bold mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <FaPlaneDeparture style={{ marginRight: "8px" }} />
-                <span>Global Healthcare Coordination & Medical Travel</span>
+                <span>International Healthcare Coordination</span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-xl mb-1 p-4">
-              {" "}
-              {/* Added padding here */}
-              Specialist Connect&#8482; provides seamless{" "}
-              <strong>global healthcare coordination</strong>, ensuring you
-              receive world-class medical care wherever you are. From arranging{" "}
-              <strong>international specialist consultations</strong> to
-              coordinating{" "}
+              Specialist Connect&#8482; assists with{" "}
               <strong>
-                medical travel, hospital admissions, and post-treatment
-                follow-ups
+                international healthcare navigation and travel support
               </strong>
-              , we handle every detail. Our team assists with{" "}
+              . We help coordinate non-clinical aspects such as{" "}
               <strong>
-                visa support, travel logistics, medical translations, and direct
-                hospital liaising
+                appointment requests, travel logistics, documentation, language
+                support, and hospital communication
               </strong>
-              , allowing you to focus entirely on your health. Whether you
-              require advanced treatment abroad or a second opinion from a
-              global expert, we ensure a smooth and stress-free experience
-              tailored to your needs.
+              . Our team also offers guidance on available services, allowing
+              you to pursue global care options with reduced stress. All medical
+              services are ultimately provided by licensed professionals and
+              institutions abroad.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
