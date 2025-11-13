@@ -84,7 +84,7 @@ export default function RegisterForm({
         {/* Logo */}
         <div className="flex justify-center">
           <img
-            src="/img/logo_black.png"
+            src="/img/logo.png"
             alt="Logo"
             className="h-12 object-contain"
           />
@@ -94,7 +94,7 @@ export default function RegisterForm({
 
         <div className="flex justify-center mt-2 mb-2">
           <img
-            src="/img/gift_voucher_shipping.png"
+            src="/img/gift_voucher_member.png"
             alt="Member Benefits"
             className="h-12 object-contain"
           />
