@@ -154,8 +154,14 @@ export default function RegisterForm({
             <li>Expiry Date: 31 March 2026</li>
             <li>Redemption: Must be redeemed in full (no partial usage)</li>
             <li>
-              Quantity: Only 100 discounted gift vouchers available on a first-come,
-              first-served basis
+              Usage: Vouchers cannot be exchanged for cash and do not guarantee
+              availability of any specific medication. Medical advice and
+              medication refills are provided solely by licensed healthcare
+              professionals.
+            </li>
+            <li>
+              Quantity: Only 100 discounted gift vouchers available on a
+              first-come, first-served basis
             </li>
           </ul>
         </div>
