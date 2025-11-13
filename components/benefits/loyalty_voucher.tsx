@@ -86,7 +86,7 @@ export default function RegisterForm({
           <img
             src="/img/logo.png"
             alt="Logo"
-            className="h-12 object-contain"
+            className="h-16 sm:h-20 md:h-24 object-contain"
           />
         </div>
 
@@ -96,7 +96,7 @@ export default function RegisterForm({
           <img
             src="/img/gift_voucher_member.png"
             alt="Member Benefits"
-            className="h-12 object-contain"
+            className="h-16 sm:h-20 md:h-24 object-contain"
           />
         </div>
 
