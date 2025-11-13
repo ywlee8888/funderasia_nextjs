@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: "member@specialist.asia",
       to: email,
-      cc: "healtcare@specialist.asia",
+      cc: "healthcare@specialist.asia",
       subject: `🎁 Specialist Asia: ${voucher_name}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
