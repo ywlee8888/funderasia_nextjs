@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
               <img 
                 src="https://www.specialist.asia/img/whatsapp-chat.png" 
                 alt="WhatsApp" 
-                style="width: 18px; height: 18px; vertical-align: middle; margin-right: 4px;" 
+                style="width: 32px; height: auto; vertical-align: middle; margin-right: 6px;" 
               />
               WhatsApp Chat
             </a>.
