@@ -143,14 +143,20 @@ export default function RegisterForm({
 
         {/* Voucher Terms & Conditions */}
         <div className="bg-gray-100 p-3 rounded text-sm text-gray-700 space-y-1">
-          <strong>Member’s Voucher Terms & Conditions</strong>
+          <strong>Member Discounted Gift Vouchers</strong>
+          <p>Terms & Conditions</p>
           <ul className="list-disc ml-5">
-            <li>Redemption Value: RM200</li>
-            <li>Offer Price: RM160 (20% off)</li>
+            <li>
+              <strong>Redemption Value: RM200</strong>
+            </li>
+            <li>Price: RM160 (20% discount)</li>
             <li>Start Date: Immediate</li>
-            <li>Expiry: 31 March 2026</li>
+            <li>Expiry Date: 31 March 2026</li>
             <li>Redemption: Must be redeemed in full (no partial usage)</li>
-            <li>Quantity: Limited to 100 vouchers</li>
+            <li>
+              Quantity: Only 100 discounted gift vouchers available on a first-come,
+              first-served basis
+            </li>
           </ul>
         </div>
 
