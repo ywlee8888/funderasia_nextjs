@@ -26,7 +26,7 @@ export default function RegisterForm({
         name: nameInput?.value || "",
         email,
         qty,
-        voucher_name: "Member’s Special Voucher",
+        voucher_name: "Member Benefits Gift Voucher",
       });
     }
   }, [state?.success]);

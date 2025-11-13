@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
    
     const voucherPath = path.join(
       process.cwd(),
-      "public/img/gift_voucher_shipping.png"
+      "public/img/gift_voucher_member.png"
     );
     const buffer = fs.readFileSync(voucherPath);
 
@@ -40,9 +40,9 @@ export async function POST(req: NextRequest) {
     });
 
     const mailOptions = {
-      from: "orders@vitalis.asia",
+      from: "member@specialist.asia",
       to: email,
-      subject: `🎁 Vitalis Asia: ${voucher_name}`,
+      subject: `🎁 Specialist Asia: ${voucher_name}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           <p>Dear ${name},</p>
@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
             Should you have any queries, feel free to contact us on 
             <a href="https://wa.me/60195811832" style="text-decoration: none;">
               <img 
-                src="https://www.vitalis.asia/img/whatsapp-chat.png" 
+                src="https://www.specialist.asia/img/whatsapp-chat.png" 
                 alt="WhatsApp" 
                 style="width: 18px; height: 18px; vertical-align: middle; margin-right: 4px;" 
               />
@@ -60,11 +60,11 @@ export async function POST(req: NextRequest) {
             </a>.
           </p>
           <img src="cid:voucherimg" alt="Voucher" style="max-width: 100%; height: auto;" />
-          <p>Best regards,<br />Vitalis Asia Team<br /><a href="https://www.vitalis.asia">www.vitalis.asia</a></p>
+          <p>Best regards,<br />Specialist Asia Team<br /><a href="https://www.specialist.asia">www.specialist.asia</a></p>
           <p><em>"Your Health, Your Vitality, Our Priority"</em></p>   
           <img 
-            src="https://www.vitalis.asia/img/vitalis_logo_round.png" 
-            alt="Vitalis Asia Logo" 
+            src="https://www.specialist.asia/img/logo.png" 
+            alt="Specialist Asia Logo" 
             style="width: 150px; height: auto; display: block; margin-top: 20px;" 
           />          
         </div>
