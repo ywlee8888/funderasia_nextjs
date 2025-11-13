@@ -26,7 +26,7 @@ export default function RegisterForm({
         name: nameInput?.value || "",
         email,
         qty,
-        voucher_name: "Member Benefits Gift Voucher",
+        voucher_name: "RM200 DoctorOnCall Gift Voucher for Only RM160",
       });
     }
   }, [state?.success]);

@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-   
+
     const voucherPath = path.join(
       process.cwd(),
       "public/img/gift_voucher_member.png"
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           <p>Dear ${name},</p>
-          <p>We have received your request for ${voucher_name}.</p>         
+          <p>We have received your request to reserve ${qty} x ${voucher_name}.</p>         
           <p>We are currently collating all member's requests on a first-come-first-served basis. Members who are successful will receive an email together with instructions on how to complete the purchase.</p>
           <p>
             Should you have any queries, feel free to contact us on 
@@ -60,8 +60,12 @@ export async function POST(req: NextRequest) {
               WhatsApp Chat
             </a>.
           </p>
-          <img src="cid:voucherimg" alt="Voucher" style="max-width: 100%; height: auto;" />
-          <p>Best regards,<br />Specialist Asia Team<br /><a href="https://www.specialist.asia">www.specialist.asia</a></p>
+         <img 
+            src="cid:voucherimg" 
+            alt="Voucher" 
+            style="width: 300px; height: auto; display: block; margin-top: 10px;" 
+          />
+          <p>Best regards,<br />Concierge Team<br />Specialist Asia<br /><a href="https://www.specialist.asia">www.specialist.asia</a></p>
           <p><em>"Your Health, Your Vitality, Our Priority"</em></p>   
           <img 
             src="https://www.specialist.asia/img/logo.png" 
