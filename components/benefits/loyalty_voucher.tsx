@@ -90,7 +90,7 @@ export default function RegisterForm({
           />
         </div>
 
-        <h2 className="text-xl font-semibold text-center">Employee Benefits</h2>
+        <h2 className="text-xl font-semibold text-center">Redeem Benefits</h2>
 
         <div className="flex justify-center mt-2 mb-2">
           <img
