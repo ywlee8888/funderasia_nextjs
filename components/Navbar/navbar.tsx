@@ -167,7 +167,7 @@ export default function Navbar({
 
           <Link
             href="/shop"
-            className="text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap px-1"
+            className="hover:font-extrabold whitespace-nowrap px-1"
             onClick={handleLinkClick}
             aria-label="Shop"
           >
@@ -230,7 +230,7 @@ export default function Navbar({
 
             <Link
               href="/shop"
-              className="text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap"
+              className="hover:font-extrabold whitespace-nowrap"
               onClick={handleLinkClick}
               aria-label="Shop"
             >
