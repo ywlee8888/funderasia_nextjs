@@ -163,16 +163,7 @@ export default function Navbar({
             aria-label="Services"
           >
             SERVICES
-          </button>
-
-          <Link
-            href="/shop"
-            className="hover:font-extrabold whitespace-nowrap px-1"
-            onClick={handleLinkClick}
-            aria-label="Shop"
-          >
-            SHOP
-          </Link>
+          </button>         
 
           <button
             onClick={() => toggleComponent("aboutUs")}
@@ -227,16 +218,7 @@ export default function Navbar({
             >
               SERVICES
             </button>
-
-            <Link
-              href="/shop"
-              className="hover:font-extrabold whitespace-nowrap"
-              onClick={handleLinkClick}
-              aria-label="Shop"
-            >
-              SHOP
-            </Link>
-
+            
             <button
               className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={() => toggleComponent("aboutUs")}
