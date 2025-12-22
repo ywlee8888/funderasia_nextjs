@@ -163,7 +163,7 @@ export default function Navbar({
             aria-label="Services"
           >
             SERVICES
-          </button>         
+          </button>
 
           <button
             onClick={() => toggleComponent("aboutUs")}
@@ -180,6 +180,15 @@ export default function Navbar({
           >
             CONTACT
           </button>
+
+          <Link
+            href="/health_journeys"
+            className="hover:font-extrabold whitespace-nowrap px-1"
+            onClick={handleLinkClick}
+            aria-label="Health Journeys"
+          >
+            HEALTH JOURNEYS
+          </Link>
 
           <button
             onClick={() => toggleComponent("specialistConnect")}
@@ -218,7 +227,7 @@ export default function Navbar({
             >
               SERVICES
             </button>
-            
+
             <button
               className="hover:font-extrabold whitespace-nowrap text-left"
               onClick={() => toggleComponent("aboutUs")}
@@ -234,6 +243,15 @@ export default function Navbar({
             >
               CONTACT
             </button>
+
+            <Link
+              href="/health_journeys"
+              className="text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap"
+              onClick={handleLinkClick}
+              aria-label="Health Journeys"
+            >
+              HEALTH JOURNEYS
+            </Link>
 
             <button
               onClick={() => toggleComponent("specialistConnect")}
