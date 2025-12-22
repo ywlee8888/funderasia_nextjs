@@ -313,7 +313,7 @@ export default function BlogPage() {
           Health Journeys
         </h1>
         <p className="text-lg text-gray-500 mt-2">
-          Explore insightful articles on health, wellness, and personal growth.
+          Explore insightful articles on health, wellness and personal growth.
         </p>
       </header>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 w-full">
