@@ -5,24 +5,18 @@ import KeyServices from "../services/keyServices";
 import AboutUs from "../services/aboutUs";
 import ContactUs from "../services/contactUs";
 import Membership from "../services/memberhsip";
-import SpecialistConnectNavBar from "../forms/specialistConnectNavBar";
 import styles from "./navbar.module.css";
 
 interface NavbarProps {
   className?: string;
-  toggleSpecialistConnect: () => void;
 }
 
-export default function Navbar({
-  className,
-  toggleSpecialistConnect,
-}: NavbarProps) {
+export default function Navbar({ className }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isKeyServicesOpen, setIsKeyServicesOpen] = useState(false);
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
   const [isMembershipOpen, setIsMembershipOpen] = useState(false);
-  const [isSpecialistConnectOpen, setIsSpecialistConnectOpen] = useState(false);
 
   // State for the contact form
   const [formData, setFormData] = useState({
@@ -54,9 +48,6 @@ export default function Navbar({
       case "membership":
         setIsMembershipOpen(!isMembershipOpen);
         break;
-      case "specialistConnect":
-        setIsSpecialistConnectOpen(!isSpecialistConnectOpen);
-        break;
       default:
         break;
     }
@@ -64,7 +55,7 @@ export default function Navbar({
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -103,12 +94,10 @@ export default function Navbar({
       aria-label="Main Navigation"
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className={`text-lg font-bold ${styles.navlogo}`}>
-          <img
-            src="/img/logo_banner_white.png"
-            alt="Specialist Asia Logo"
-            className="mr-2 w-4/12"
-          />
+        <div
+          className={`text-xs sm:text-sm md:text-base font-semibold tracking-wide text-white leading-tight ${styles.navlogo}`}
+        >
+          Strategic M&A Advisory for Asia’s Middle Market
         </div>
 
         <div className="block lg:hidden">
@@ -150,14 +139,6 @@ export default function Navbar({
           </Link>
 
           <button
-            onClick={() => toggleComponent("membership")}
-            className="hover:font-extrabold whitespace-nowrap px-1"
-            aria-label="Membership"
-          >
-            MEMBERSHIP
-          </button>
-
-          <button
             onClick={() => toggleComponent("keyServices")}
             className="hover:font-extrabold whitespace-nowrap px-1"
             aria-label="Services"
@@ -179,24 +160,7 @@ export default function Navbar({
             aria-label="Contact Us"
           >
             CONTACT
-          </button>
-
-          <Link
-            href="/health_journeys"
-            className="hover:font-extrabold whitespace-nowrap px-1"
-            onClick={handleLinkClick}
-            aria-label="Health Journeys"
-          >
-            HEALTH JOURNEYS
-          </Link>
-
-          <button
-            onClick={() => toggleComponent("specialistConnect")}
-            className="bg-blue-500 hover:bg-blue-600 font-bold text-white px-4 py-4 rounded whitespace-nowrap"
-            aria-label="Specialist Connect"
-          >
-            SPECIALIST CONNECT &#8482;
-          </button>
+          </button>         
         </div>
       </div>
 
@@ -210,15 +174,7 @@ export default function Navbar({
               aria-label="Home"
             >
               HOME
-            </Link>
-
-            <button
-              className="hover:font-extrabold whitespace-nowrap text-left"
-              onClick={() => toggleComponent("membership")}
-              aria-label="Membership"
-            >
-              MEMBERSHIP
-            </button>
+            </Link>           
 
             <button
               className="hover:font-extrabold whitespace-nowrap text-left"
@@ -242,24 +198,7 @@ export default function Navbar({
               aria-label="Contact Us"
             >
               CONTACT
-            </button>
-
-            <Link
-              href="/health_journeys"
-              className="text-blue-200 font-extrabold hover:font-extrabold whitespace-nowrap"
-              onClick={handleLinkClick}
-              aria-label="Health Journeys"
-            >
-              HEALTH JOURNEYS
-            </Link>
-
-            <button
-              onClick={() => toggleComponent("specialistConnect")}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-              aria-label="Specialist Connect"
-            >
-              SPECIALIST CONNECT
-            </button>
+            </button>            
           </div>
         </div>
       )}
@@ -294,19 +233,6 @@ export default function Navbar({
           isOpen={isMembershipOpen}
           toggleSidebar={() => toggleComponent("membership")}
         />
-      )}
-
-      {/* SpecialistConnect Component */}
-      {isSpecialistConnectOpen && (
-        <>
-          {/* Background Mask */}
-          <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-2000"></div>
-
-          <SpecialistConnectNavBar
-            isOpen={isSpecialistConnectOpen}
-            toggleSidebar={() => toggleComponent("specialistConnect")}
-          />
-        </>
       )}
     </nav>
   );

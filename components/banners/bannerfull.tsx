@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import styles from "./bannerfull.module.css";
 import { DrawerDemo } from "../drawer/service_drawer";
 import ContactUs from "../services/contactUs";
-import SpecialistConnectNavBar from "../forms/specialistConnectNavBar";
+import Navbar from "@/components/Navbar/navbar_desktop";
+import Copyright from "@/components/copyright/copyright_desktop";
 
 interface FullWidthImageProps {
   src: string;
@@ -14,82 +14,92 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
   const [openComponents, setOpenComponents] = useState({
     drawer: false,
     contactUs: false,
-    specialistConnect: false,
   });
 
   const handleOpen = (component: keyof typeof openComponents) => {
-    setOpenComponents((prevState) => ({ ...prevState, [component]: true }));
+    setOpenComponents((prev) => ({ ...prev, [component]: true }));
   };
 
   const handleClose = (component: keyof typeof openComponents) => {
-    setOpenComponents((prevState) => ({ ...prevState, [component]: false }));
+    setOpenComponents((prev) => ({ ...prev, [component]: false }));
   };
+
+  const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
 
   return (
     <div className={styles.bannerContainer}>
-      <div className={`${styles.logo_container}`}>
+      {/* Navbar on top of banner */}
+      <div className="absolute top-0 left-0 w-full z-20 hidden sm:block">
+        <Navbar />
+      </div>
+
+      {/* 🔥 Banner media (image or video) */}
+      {isVideo ? (
+        <video
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={styles.bannerImage}
+        />
+      ) : (
         <img
-          src="/img/specialistasia_logo_banner_black.png"
-          alt="About Specialist Asia"
-          className={styles.logo}
+          src={src}
+          alt={alt}
+          width={1920}
+          height={1080}
+          className={styles.bannerImage}
+        />
+      )}
+
+      {/* Mobile floating logo */}
+      <div className={styles.mobileLogoContainer}>
+        <img
+          src="/img/logo.png"
+          alt="About Funder Asia"
+          className={styles.mobileLogo}
         />
       </div>
-      <img
-        src={src}
-        alt={alt}
-        width={1920}
-        height={1800}
-        className={styles.bannerImage}
-      />
-      <div className={styles.specialistConnectContainer}>
-        <h3 className={styles.specialistConnectTitle}></h3>
-        <button
-          onClick={() => handleOpen("specialistConnect")}
-          className={`${styles.specialistConnectButton} bg-blue-500 hover:bg-blue-600 font-bold text-white px-4 py-4 rounded whitespace-nowrap`}
-          aria-label="Specialist Connect"
-        >
-          SPECIALIST CONNECT &#8482;
-        </button>
-      </div>
-      <div className={styles.overlayCard}>
-        <div className="hidden md:flex justify-center">
+
+      {/* Overlay card */}
+      <div className={`overlayCard hidden md:block ${styles.overlayCard}`}>
+        <div className="flex justify-center">
           <div className="scale-70">
-            <img
-              src="/img/specialistasia_logo_banner_black.png"
-              alt="About Specialist Asia"
-              className="mb-3"
-            />
+            <img src="/img/logo.png" alt="About Funder Asia" className="mb-3" />
           </div>
         </div>
+
         <div className={styles.cardTitle}>
-          Your Most Trusted <br />
-          Healthcare Concierge
+          Guiding Founders Through <br />
+          Strategic Exits
         </div>
+
         <p className={styles.cardText}>
-          Need professional assistance for your local and overseas healthcare treatment?{" "}
+          Considering a strategic sale, acquisition or business transition in
+          Asia?
           <br />
-          Contact us to find out how we help make your health journeys across
-          Asia seamless.
+          Speak with us to understand how we guide founders through
+          confidential, well-executed M&A transactions across the region.
         </p>
 
         <div className={styles.buttonContainer}>
           <button
             onClick={() => handleOpen("contactUs")}
             className="bg-blue-600 hover:bg-blue-800 text-white px-5 py-2 rounded me-5"
-            aria-label="Contact Us"
           >
             Contact Us
           </button>
           <button
             onClick={() => handleOpen("drawer")}
             className="bg-white hover:bg-gray-300 text-black px-5 py-2 rounded border border-black"
-            aria-label="Discover Our Services"
           >
             Discover
           </button>
         </div>
       </div>
 
+      {/* Drawers */}
       <DrawerDemo
         isOpen={openComponents.drawer}
         onOpenChange={() => handleClose("drawer")}
@@ -99,17 +109,10 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
         toggleSidebar={() => handleClose("contactUs")}
       />
 
-      {openComponents.specialistConnect && (
-        <>
-          <div
-            className={`${styles.fullScreenOverlay} fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50`}
-          ></div>
-          <SpecialistConnectNavBar
-            isOpen={openComponents.specialistConnect}
-            toggleSidebar={() => handleClose("specialistConnect")}
-          />
-        </>
-      )}
+      {/* Copyright at the bottom of banner, desktop only */}
+      <div className="absolute bottom-0 left-0 w-full z-20 hidden md:block">
+        <Copyright />
+      </div>
     </div>
   );
 };

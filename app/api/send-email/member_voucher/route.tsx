@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
       from: "member@specialist.asia",
       to: email,
       cc: "healthcare@specialist.asia",
-      subject: `🎁 Specialist Asia: ${voucher_name}`,
+      subject: `🎁 Funder Asia: ${voucher_name}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           <p>Dear ${name},</p>
@@ -65,11 +65,11 @@ export async function POST(req: NextRequest) {
             alt="Voucher" 
             style="width: 300px; height: auto; display: block; margin-top: 10px;" 
           />
-          <p>Best regards,<br />Concierge Team<br />Specialist Asia<br /><a href="https://www.specialist.asia">www.specialist.asia</a></p>
+          <p>Best regards,<br />Concierge Team<br />Funder Asia<br /><a href="https://www.specialist.asia">www.specialist.asia</a></p>
           <p><em>"Your Health, Your Vitality, Our Priority"</em></p>   
           <img 
             src="https://www.specialist.asia/img/logo.png" 
-            alt="Specialist Asia Logo" 
+            alt="Funder Asia Logo" 
             style="width: 150px; height: auto; display: block; margin-top: 20px;" 
           />          
         </div>

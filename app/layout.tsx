@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Specialist Asia",
+  title: "Funder Asia",
   description: "Seamless Health Journeys Across Asia",
 };
 

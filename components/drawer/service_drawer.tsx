@@ -6,14 +6,9 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from "@/components/ui/drawer";
-import {
-  HeartFilledIcon,
-  GlobeIcon,
-  CheckCircledIcon,
-  PersonIcon,
-} from "@radix-ui/react-icons";
 import { IoPeople } from "react-icons/io5";
 import { FaClipboardList, FaMapMarkerAlt } from "react-icons/fa";
+import { GlobeIcon, CheckCircledIcon } from "@radix-ui/react-icons";
 
 interface DrawerDemoProps {
   isOpen: boolean;
@@ -25,114 +20,85 @@ export function DrawerDemo({ isOpen, onOpenChange }: DrawerDemoProps) {
     <Drawer open={isOpen} onOpenChange={onOpenChange}>
       <DrawerContent>
         <div className="mx-auto w-full max-w-full px-4">
-          {" "}
-          {/* Added px-4 for side padding */}
           <DrawerHeader>
             <DrawerTitle className="text-center text-2xl">
-              Seamless Health Journeys Across Asia
+              Our Advisory Services
             </DrawerTitle>
           </DrawerHeader>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-            {" "}
-            {/* Card for Navigating Healthcare Systems */}
+            {/* Strategic M&A Advisory */}
             <div className="p-6 border rounded-lg shadow-md bg-white">
               <div className="flex items-center mb-4">
                 <FaMapMarkerAlt className="w-6 h-6 mr-2 text-blue-600" />
-                <h3 className="text-lg font-bold">
-                  Navigating Overseas Healthcare Ecosystems
-                </h3>
+                <h3 className="text-lg font-bold">Strategic M&A Advisory</h3>
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Specialist Connect™:</strong> We facilitate
-                  introductions to top local and overseas healthcare specialists
-                  to assist with priority appointment requests, without
-                  providing medical recommendations.
+                  <strong>Deal Structuring:</strong> Tailored advisory on buy-side and sell-side transactions to maximise value.
                 </li>
                 <li className="py-2">
-                  <strong>Expert Support:</strong> Your local liaison helps
-                  coordinate pre-arrival logistics and post-treatment
-                  arrangements to ensure a smooth patient experience.
+                  <strong>Cross-Border Transactions:</strong> Expert guidance on legal, regulatory, and operational complexities across Asia.
                 </li>
                 <li className="py-2">
-                  <strong>Cultural Expertise:</strong> Our knowledge of local
-                  protocols helps reduce misunderstandings and anxiety.
+                  <strong>Confidential Execution:</strong> Ensuring discretion and professionalism throughout the deal lifecycle.
                 </li>
               </ul>
             </div>
-            {/* Card for Seamless and Hassle-Free Journey */}
+
+            {/* Market & Investor Insights */}
             <div className="p-6 border rounded-lg shadow-md bg-white">
               <div className="flex items-center mb-4">
                 <FaClipboardList className="w-6 h-6 mr-2 text-yellow-600" />
-                <h3 className="text-lg font-bold">
-                  Seamless and Hassle-Free Journey
-                </h3>
+                <h3 className="text-lg font-bold">Market & Investor Insights</h3>
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Tele-Consultation Facilitation:</strong> We assist in
-                  connecting you with local and overseas healthcare specialists
-                  who provide remote consultations directly, supporting you in
-                  making informed healthcare decisions.
+                  <strong>Investor Mapping:</strong> Identify strategic partners and potential investors across industries and regions.
                 </li>
                 <li className="py-2">
-                  <strong>Pre-Trip Planning:</strong> Your local liaison assists
-                  you with all trip details, from appointments to travel
-                  logistics.
+                  <strong>Market Intelligence:</strong> Detailed sector and competitor analysis to support decision-making.
                 </li>
                 <li className="py-2">
-                  <strong>Real-Time Problem Solving:</strong> Your local expert
-                  provides immediate solutions to any unexpected issues.
+                  <strong>Deal Readiness:</strong> Guidance on positioning your company for maximum investor interest.
                 </li>
               </ul>
             </div>
-            {/* Card for Comprehensive Management */}
+
+            {/* Transaction Management */}
             <div className="p-6 border rounded-lg shadow-md bg-white">
               <div className="flex items-center mb-4">
-                <HeartFilledIcon className="w-6 h-6 mr-2 text-red-600" />
-                <h3 className="text-lg font-bold">Comprehensive Management</h3>
+                <CheckCircledIcon className="w-6 h-6 mr-2 text-green-600" />
+                <h3 className="text-lg font-bold">Transaction Management</h3>
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Minimising Stress:</strong> We assist with
-                  administrative paperwork, hospital admissions, and liaise with
-                  licensed insurance providers to support insurance claim
-                  processes.
+                  <strong>End-to-End Coordination:</strong> From due diligence to deal closure, we manage the entire process efficiently.
                 </li>
                 <li className="py-2">
-                  <strong>Language Support:</strong> Multi-lingual liaison
-                  professionals available for clear communication ensuring
-                  smooth consultations and treatments.
+                  <strong>Negotiation Support:</strong> Assist in deal structuring, term negotiation, and stakeholder alignment.
                 </li>
                 <li className="py-2">
-                  <strong>Recovery Assistance:</strong> We help coordinate
-                  aftercare arrangements and support continuity of care through
-                  liaison with your healthcare providers.
+                  <strong>Documentation & Compliance:</strong> Ensuring all legal, financial, and regulatory requirements are met.
                 </li>
               </ul>
             </div>
-            {/* Card for Family Stress Relief */}
+
+            {/* Founder & Business Support */}
             <div className="p-6 border rounded-lg shadow-md bg-white">
               <div className="flex items-center mb-4">
-                <IoPeople className="w-6 h-6 mr-2 text-green-600" />
-                <h3 className="text-lg font-bold">
-                  Stress Relief for Families
-                </h3>
+                <IoPeople className="w-6 h-6 mr-2 text-purple-600" />
+                <h3 className="text-lg font-bold">Founder & Business Support</h3>
               </div>
               <ul className="text-lg list-disc ml-5 mb-6">
                 <li className="py-2">
-                  <strong>Comprehensive Support:</strong> Personalised care,
-                  including accommodation arrangements, recreational activities
-                  and support.
+                  <strong>Strategic Planning:</strong> Helping founders prepare for exits, expansions, or restructuring.
                 </li>
                 <li className="py-2">
-                  <strong>Clear Communication:</strong> We provide regular
-                  updates to ensure families are well-informed to alleviate any
-                  concerns and anxiety.
+                  <strong>Value Optimisation:</strong> Advisory on improving operational efficiency and growth prospects pre-transaction.
                 </li>
                 <li className="py-2">
-                  <strong>Emotional Comfort:</strong> Local liaisons provide
-                  support and reassurance throughout the process.
+                  <strong>Succession & Transition:</strong> Support for smooth shareholder, management, and business transitions.
                 </li>
               </ul>
             </div>

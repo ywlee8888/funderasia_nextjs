@@ -57,7 +57,7 @@ export default function Navbar({ className, toggleSpecialistConnect }: NavbarPro
         <div className="text-lg font-bold">
           <img
             src="/img/logo_banner_white.png"
-            alt="Specialist Asia Logo"
+            alt="Funder Asia Logo"
             className="mr-2 w-4/12"
           />
         </div>

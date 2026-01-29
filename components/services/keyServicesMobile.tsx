@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import {
-  FaUserNurse,
-  FaPlaneDeparture,
+  FaHandshake,
+  FaGlobeAsia,
   FaListOl,
-  FaUserMd,
-  FaUserAlt,
-  FaHandHoldingHeart,
+  FaChartLine,
+  FaUserTie,
+  FaBalanceScale,
 } from "react-icons/fa";
 import {
   Accordion,
@@ -18,19 +18,16 @@ const KeyServicesMobile: React.FC = () => {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const [dragging, setDragging] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
-  const [sidebarPosition, setSidebarPosition] = useState(240); // initial top position
+  const [sidebarPosition, setSidebarPosition] = useState(240);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       if (dragging) {
-        const newPosition = event.clientY - offsetY;
-        setSidebarPosition(newPosition);
+        setSidebarPosition(event.clientY - offsetY);
       }
     };
 
-    const handleMouseUp = () => {
-      setDragging(false);
-    };
+    const handleMouseUp = () => setDragging(false);
 
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
@@ -52,7 +49,6 @@ const KeyServicesMobile: React.FC = () => {
       className="right-0 w-full md:w-[60rem] h-auto z-50 transition-transform duration-300"
       style={{
         top: `${sidebarPosition}px`,
-        height: "auto",
         backgroundImage: "url('/img/specialist_background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -61,149 +57,101 @@ const KeyServicesMobile: React.FC = () => {
       }}
       onMouseDown={handleMouseDown}
     >
-      {/* Overlay to create a mask effect */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: "rgba(129, 216, 208, 0.6)" }}
+        style={{ backgroundColor: "rgba(30, 41, 59, 0.85)" }}
       />
 
-      <div className="relative max-w-4xl text-black mx-auto p-6">
+      <div className="relative max-w-4xl text-white mx-auto p-6">
         <Accordion type="single" collapsible className="w-full">
-          <h2 className="text-2xl font-bold mb-3">Key Member Services</h2>
+          <h2 className="text-2xl font-bold mb-3">
+            Key Advisory Services
+          </h2>
+
+          {/* 1 */}
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-lg font-bold mb-1">
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <FaUserMd style={{ marginRight: "8px" }} />
-                <span>Specialist Connect&#8482;</span>
+              <div className="flex items-center">
+                <FaUserTie className="mr-2" />
+                <span>Sell-Side M&A Advisory</span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-lg mb-1">
+            <AccordionContent className="text-lg">
               <p className="mb-4">
-                Specialist Connect&#8482; offers a{" "}
-                <strong>
-                  facilitated pathway to top-tier medical specialists
-                </strong>
-                , helping you avoid unnecessary delays in accessing
-                consultations. Whether you seek a{" "}
-                <strong>
-                  second opinion, a tele-consultation for convenience, or help
-                  scheduling an in-person consultation
-                </strong>
-                , our service simplifies the process of connecting with licensed
-                healthcare providers.
+                We advise founders and business owners through{" "}
+                <strong>confidential, end-to-end sell-side M&A processes</strong>,
+                from strategic positioning and valuation to buyer outreach,
+                negotiation, and transaction completion.
               </p>
               <p className="mb-4">
-                Our concierge team{" "}
-                <strong>assists in identifying suitable specialists</strong>{" "}
-                based on your preferences and relevant background. While we do
-                not provide medical advice or make clinical decisions, we help
-                coordinate appointments and manage scheduling to support a
-                timely healthcare experience.
-              </p>
-              <p className="mb-4">
-                With{" "}
-                <strong>
-                  Specialist Connect&#8482;, access to trusted specialists is
-                  simplified
-                </strong>
-                —whether you're at home or seeking care at a top institution.
-                Please note that all medical decisions remain solely between you
-                and your chosen healthcare provider.
+                Our mandate-driven approach ensures{" "}
+                <strong>discretion, alignment, and execution certainty</strong>,
+                helping clients maximise value while navigating complex
+                shareholder and stakeholder dynamics.
               </p>
             </AccordionContent>
           </AccordionItem>
 
+          {/* 2 */}
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-lg font-bold mb-1">
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <FaListOl style={{ marginRight: "8px" }} />
-                <span style={{ flex: "1 1 auto", textAlign: "left" }}>
-                  Dedicated Medical Concierge & Case Support
-                </span>
+              <div className="flex items-center">
+                <FaListOl className="mr-2" />
+                <span>Buy-Side Strategic Advisory</span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-lg mb-1">
-              Our concierge service provides{" "}
-              <strong>
-                non-clinical support throughout your healthcare journey
-              </strong>
-              , ensuring a more convenient experience. From coordinating
-              appointments and helping manage medical records to facilitating
-              second opinions and hospital referrals, we assist with
-              administrative processes. While we do not offer medical or
-              insurance advice, our team helps you navigate care pathways and
-              offers personalised support so you can focus on your well-being.
+            <AccordionContent className="text-lg">
+              We support acquirers with{" "}
+              <strong>target identification and strategic fit analysis</strong>,
+              transaction structuring, and disciplined deal execution across
+              Asia’s middle market.
             </AccordionContent>
           </AccordionItem>
 
+          {/* 3 */}
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-lg font-bold mb-1">
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <FaUserAlt style={{ marginRight: "8px" }} />
-                <span style={{ flex: "1 1 auto", textAlign: "left" }}>
-                  Exclusive VIP Hospital & Clinic Experience
-                </span>
+              <div className="flex items-center">
+                <FaChartLine className="mr-2" />
+                <span>Strategic Exit & Value Preparation</span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-lg mb-1">
-              Through our partnerships, we help coordinate{" "}
-              <strong>
-                VIP-style experiences at selected healthcare facilities
-              </strong>
-              , including private consultation suites, scheduling support, and
-              care liaison services. All clinical services are provided directly
-              by licensed medical professionals at their respective
-              institutions.
+            <AccordionContent className="text-lg">
+              We work with founders ahead of a transaction to{" "}
+              <strong>prepare the business for exit</strong>, optimising structure,
+              governance, and positioning to support a successful outcome.
             </AccordionContent>
           </AccordionItem>
 
+          {/* 4 */}
           <AccordionItem value="item-4">
             <AccordionTrigger className="text-lg font-bold mb-1">
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <FaHandHoldingHeart style={{ marginRight: "8px" }} />
-                <span style={{ flex: "1 1 auto", textAlign: "left" }}>
-                  Family Care & Support
-                </span>
+              <div className="flex items-center">
+                <FaBalanceScale className="mr-2" />
+                <span>Shareholder Transition Advisory</span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-lg mb-1">
-              Your membership also includes{" "}
-              <strong>non-clinical support for your family members</strong>,
-              helping to reduce the burden during medical care. We assist with{" "}
-              <strong>
-                logistics, caregiver coordination, and emotional support
-                referrals
-              </strong>
-              . Our team also helps arrange travel, accommodations, and other
-              services that can make your family’s journey smoother and more
-              manageable.
+            <AccordionContent className="text-lg">
+              We advise on{" "}
+              <strong>partial exits, succession planning, and ownership
+              transitions</strong>, balancing founder objectives with long-term
+              business continuity.
             </AccordionContent>
           </AccordionItem>
 
+          {/* 5 */}
           <AccordionItem value="item-5">
             <AccordionTrigger className="text-lg font-bold mb-1">
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <FaPlaneDeparture style={{ marginRight: "8px" }} />
-                <span style={{ flex: "1 1 auto", textAlign: "left" }}>
-                  Global Healthcare Coordination & Medical Travel
-                </span>
+              <div className="flex items-center">
+                <FaGlobeAsia className="mr-2" />
+                <span>Cross-Border M&A Advisory</span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="text-lg mb-1">
-              Specialist Connect&#8482; facilitates{" "}
-              <strong>
-                international healthcare coordination and medical travel
-                planning
-              </strong>{" "}
-              for clients seeking treatment abroad. Our team supports you by
-              arranging{" "}
-              <strong>
-                consultations with overseas providers, travel logistics,
-                document preparation, and communication with hospitals
-              </strong>
-              . We do not provide medical advice, clinical care, or act as a
-              travel agency or insurer, but we aim to make your international
-              medical journey as smooth and supported as possible.
+            <AccordionContent className="text-lg">
+              We execute{" "}
+              <strong>cross-border M&A transactions across Asia</strong>,
+              navigating regulatory, cultural, and structural complexities
+              while maintaining confidentiality and execution focus.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

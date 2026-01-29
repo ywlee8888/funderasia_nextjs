@@ -12,7 +12,7 @@ const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ onAgree }) => {
       <div className="bg-white p-6 max-h-[90vh] overflow-y-auto rounded-xl max-w-2xl shadow-lg text-left space-y-4">
         <h2 className="text-2xl font-bold text-center">Disclaimer</h2>
         <p>
-          <strong>Specialist Asia</strong> provides concierge and educational
+          <strong>Funder Asia</strong> provides concierge and educational
           services exclusively and does not offer medical advice, diagnosis, or
           treatment recommendations. Information shared through our educational
           programmes, events, or communications is for general awareness only and
@@ -21,7 +21,7 @@ const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ onAgree }) => {
         </p>
         <p>
           We are not an insurance broker, agent, or advisor and do not sell,
-          recommend, or provide advice on insurance policies. Specialist Asia
+          recommend, or provide advice on insurance policies. Funder Asia
           collaborates with licensed insurance providers and brokers solely to
           facilitate introductions and education. For specific insurance products
           or policy advice, please contact a licensed insurance professional.
@@ -34,7 +34,7 @@ const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ onAgree }) => {
           product.
         </p>
         <p>
-          Specialist Asia respects your privacy and complies with applicable data
+          Funder Asia respects your privacy and complies with applicable data
           protection laws. By engaging with our services or events, you consent
           to the collection, storage, and sharing of your personal information
           with trusted healthcare and insurance partners for the purpose of
