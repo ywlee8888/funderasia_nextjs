@@ -14,7 +14,7 @@ const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ onAgree }) => {
 
         <p>
           <strong>Funder Asia</strong> is a strategic M&A advisory boutique
-          providing corporate finance, transaction advisory, and strategic
+          providing transaction advisory and strategic
           consulting services. All information shared through this website, our
           materials, events, or communications is provided for general
           informational purposes only.
