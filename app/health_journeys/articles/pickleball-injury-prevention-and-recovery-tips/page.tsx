@@ -82,7 +82,7 @@ export default function ArticlePage() {
       <main className="flex flex-col min-h-screen">
         <Navbar
           className="absolute top-0 left-0 w-full z-10"
-          toggleSpecialistConnect={toggleSpecialistConnect}
+         
         />
 
         <article className="max-w-4xl mx-auto p-6 pt-24">

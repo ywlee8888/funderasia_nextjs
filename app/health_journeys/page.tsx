@@ -306,7 +306,7 @@ export default function BlogPage() {
       {/* Navbar */}
       <Navbar
         className="absolute top-0 left-0 w-full z-10"
-        toggleSpecialistConnect={toggleSpecialistConnect}
+       
       />
       <header className="text-center mb-12 mt-16">
         <h1 className="text-5xl font-extrabold text-teal-600">
