@@ -125,7 +125,7 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
       />
 
       {/* Copyright at the bottom of banner, desktop only */}
-      <div className="absolute bottom-0 left-0 w-full z-20 hidden md:block">
+      <div className="absolute bottom-0 left-0 w-full z-10 hidden md:block">
         <Copyright />
       </div>
     </div>
