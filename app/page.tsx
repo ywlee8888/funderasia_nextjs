@@ -5,7 +5,6 @@ import FullWidthImage from "@/components/banners/bannerfull";
 import KeyServicesMobile from "@/components/services/keyServicesMobile";
 import AboutUsMobile from "@/components/services/aboutUsMobile";
 import ContactUsMobile from "@/components/services/contactUsMobile";
-import WhatsApp from "@/components/chat/whatsapp";
 import DisclaimerModal from "@/components/disclaimer/disclaimer";
 
 export default function Home() {
@@ -50,8 +49,7 @@ export default function Home() {
 
           <div className="relative w-full block sm:hidden">
             <ContactUsMobile />
-          </div>
-          <WhatsApp />
+          </div>          
         </main>
       </div>      
     </div>

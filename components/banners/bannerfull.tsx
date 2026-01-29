@@ -63,19 +63,33 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
       </div>
 
       {/* Overlay card */}
-      <div className={`overlayCard hidden md:block ${styles.overlayCard}`}>
-        <div className="flex justify-center">
-          <div className="scale-70">
-            <img src="/img/logo.png" alt="About Funder Asia" className="mb-3" />
-          </div>
+      <div
+        className={`overlayCard hidden md:flex flex-col items-center ${styles.overlayCard}`}
+        style={{
+          maxWidth: "400px", // smaller width
+          padding: "1.5rem", // reduce padding
+          transform: "translateY(-20%)", // optional: move slightly up
+        }}
+      >
+        {/* Logo */}
+        <div className="flex justify-center mb-3">
+          <img
+            src="/img/logo.png"
+            alt="About Funder Asia"
+            className="w-20 h-auto" // smaller logo
+          />
         </div>
 
-        <div className={styles.cardTitle}>
+        {/* Title */}
+        <div className={`${styles.cardTitle} text-center text-xl md:text-2xl`}>
           Guiding Founders Through <br />
           Strategic Exits
         </div>
 
-        <p className={styles.cardText}>
+        {/* Text */}
+        <p
+          className={`${styles.cardText} text-center text-sm md:text-base mt-2`}
+        >
           Considering a strategic sale, acquisition or business transition in
           Asia?
           <br />
@@ -83,16 +97,17 @@ const FullWidthImage: React.FC<FullWidthImageProps> = ({ src, alt }) => {
           confidential, well-executed M&A transactions across the region.
         </p>
 
-        <div className={styles.buttonContainer}>
+        {/* Buttons */}
+        <div className="flex justify-center gap-3 mt-4">
           <button
             onClick={() => handleOpen("contactUs")}
-            className="bg-blue-600 hover:bg-blue-800 text-white px-5 py-2 rounded me-5"
+            className="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded"
           >
             Contact Us
           </button>
           <button
             onClick={() => handleOpen("drawer")}
-            className="bg-white hover:bg-gray-300 text-black px-5 py-2 rounded border border-black"
+            className="bg-white hover:bg-gray-300 text-black px-4 py-2 rounded border border-black"
           >
             Discover
           </button>
