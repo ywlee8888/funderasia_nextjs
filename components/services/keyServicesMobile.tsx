@@ -6,6 +6,7 @@ import {
   FaChartLine,
   FaUserTie,
   FaBalanceScale,
+  FaClipboardCheck,
 } from "react-icons/fa";
 import {
   Accordion,
@@ -160,7 +161,7 @@ const KeyServicesMobile: React.FC = () => {
           <AccordionItem value="item-6">
             <AccordionTrigger className="text-lg font-bold mb-1">
               <div className="flex items-center">
-                <FaChartLine className="mr-2" />
+                <FaClipboardCheck className="mr-2" />
                 <span>IPO Readiness Assessment & Preparation</span>
               </div>
             </AccordionTrigger>
