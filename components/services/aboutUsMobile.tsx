@@ -55,6 +55,13 @@ const AboutUsMobile: React.FC = () => {
             planning.
           </p>
           <p className="text-md sm:text-lg md:text-xl lg:text-xl mb-3">
+            For companies considering public markets, we provide{" "}
+            <strong>IPO Readiness Preparation</strong>, covering governance
+            assessment, financial reporting alignment (SFRS(I)/IFRS), internal
+            controls, and regulatory compliance mapping for listing readiness on
+            exchanges such as the Singapore Exchange (SGX).
+          </p>
+          <p className="text-md sm:text-lg md:text-xl lg:text-xl mb-3">
             We also specialise in <strong>cross-border M&A</strong>, managing
             regulatory, cultural, and operational complexities to enable
             seamless transactions across Asia. Our advisory ensures clarity,

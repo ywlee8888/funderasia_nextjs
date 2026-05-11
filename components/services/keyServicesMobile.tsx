@@ -64,9 +64,7 @@ const KeyServicesMobile: React.FC = () => {
 
       <div className="relative max-w-4xl text-white mx-auto p-6">
         <Accordion type="single" collapsible className="w-full">
-          <h2 className="text-2xl font-bold mb-3">
-            Key Advisory Services
-          </h2>
+          <h2 className="text-2xl font-bold mb-3">Key Advisory Services</h2>
 
           {/* 1 */}
           <AccordionItem value="item-1">
@@ -79,8 +77,10 @@ const KeyServicesMobile: React.FC = () => {
             <AccordionContent className="text-lg">
               <p className="mb-4">
                 We advise founders and business owners through{" "}
-                <strong>confidential, end-to-end sell-side M&A processes</strong>,
-                from strategic positioning and valuation to buyer outreach,
+                <strong>
+                  confidential, end-to-end sell-side M&A processes
+                </strong>
+                , from strategic positioning and valuation to buyer outreach,
                 negotiation, and transaction completion.
               </p>
               <p className="mb-4">
@@ -118,8 +118,9 @@ const KeyServicesMobile: React.FC = () => {
             </AccordionTrigger>
             <AccordionContent className="text-lg">
               We work with founders ahead of a transaction to{" "}
-              <strong>prepare the business for exit</strong>, optimising structure,
-              governance, and positioning to support a successful outcome.
+              <strong>prepare the business for exit</strong>, optimising
+              structure, governance, and positioning to support a successful
+              outcome.
             </AccordionContent>
           </AccordionItem>
 
@@ -133,9 +134,10 @@ const KeyServicesMobile: React.FC = () => {
             </AccordionTrigger>
             <AccordionContent className="text-lg">
               We advise on{" "}
-              <strong>partial exits, succession planning, and ownership
-              transitions</strong>, balancing founder objectives with long-term
-              business continuity.
+              <strong>
+                partial exits, succession planning, and ownership transitions
+              </strong>
+              , balancing founder objectives with long-term business continuity.
             </AccordionContent>
           </AccordionItem>
 
@@ -150,8 +152,31 @@ const KeyServicesMobile: React.FC = () => {
             <AccordionContent className="text-lg">
               We execute{" "}
               <strong>cross-border M&A transactions across Asia</strong>,
-              navigating regulatory, cultural, and structural complexities
-              while maintaining confidentiality and execution focus.
+              navigating regulatory, cultural, and structural complexities while
+              maintaining confidentiality and execution focus.
+            </AccordionContent>
+          </AccordionItem>
+          {/* 6 - IPO READINESS */}
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-lg font-bold mb-1">
+              <div className="flex items-center">
+                <FaChartLine className="mr-2" />
+                <span>IPO Readiness Assessment & Preparation</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-lg">
+              We support companies considering a public listing with a
+              comprehensive <strong>IPO readiness assessment</strong>,
+              evaluating governance structures, financial reporting standards
+              (SFRS(I)/IFRS), internal controls, and regulatory compliance
+              readiness for exchanges such as the Singapore Exchange (SGX).
+              <br />
+              <br />
+              Following assessment, we provide{" "}
+              <strong>IPO preparation support</strong> including gap
+              remediation, board and governance strengthening, audit readiness,
+              financial systems enhancement, and development of a clear investor
+              equity story to support valuation and market positioning.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -92,9 +92,7 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
       <div className="relative max-w-4xl text-white mx-auto p-6">
         <Accordion type="single" collapsible className="w-full">
-          <h2 className="text-2xl font-bold mb-3">
-            Key Advisory Services
-          </h2>
+          <h2 className="text-2xl font-bold mb-3">Key Advisory Services</h2>
 
           {/* 1 */}
           <AccordionItem value="item-1">
@@ -107,8 +105,10 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             <AccordionContent className="text-lg">
               <p className="mb-4">
                 We advise founders and business owners through{" "}
-                <strong>confidential, end-to-end sell-side M&A processes</strong>,
-                from strategic positioning and valuation to buyer outreach,
+                <strong>
+                  confidential, end-to-end sell-side M&A processes
+                </strong>
+                , from strategic positioning and valuation to buyer outreach,
                 negotiation, and transaction completion.
               </p>
               <p className="mb-4">
@@ -131,8 +131,9 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             <AccordionContent className="text-lg">
               We support acquirers with{" "}
               <strong>target identification, strategic fit analysis</strong>,
-              transaction structuring, and deal execution - ensuring disciplined,
-              well-aligned acquisitions across Asia’s middle market.
+              transaction structuring, and deal execution - ensuring
+              disciplined, well-aligned acquisitions across Asia’s middle
+              market.
             </AccordionContent>
           </AccordionItem>
 
@@ -146,9 +147,9 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             </AccordionTrigger>
             <AccordionContent className="text-lg">
               We work with founders ahead of a transaction to{" "}
-              <strong>prepare the business for exit</strong> - optimising structure,
-              governance, positioning, and equity narratives to support a
-              successful outcome.
+              <strong>prepare the business for exit</strong> - optimising
+              structure, governance, positioning, and equity narratives to
+              support a successful outcome.
             </AccordionContent>
           </AccordionItem>
 
@@ -162,9 +163,11 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             </AccordionTrigger>
             <AccordionContent className="text-lg">
               We advise on{" "}
-              <strong>ownership transitions, partial exits, and succession</strong>,
-              balancing founder objectives, family considerations, and long-term
-              business continuity.
+              <strong>
+                ownership transitions, partial exits, and succession
+              </strong>
+              , balancing founder objectives, family considerations, and
+              long-term business continuity.
             </AccordionContent>
           </AccordionItem>
 
@@ -177,10 +180,33 @@ const KeyServices: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg">
-              We execute{" "}
-              <strong>cross-border transactions across Asia</strong>, managing
-              jurisdictional complexity, cultural alignment, and transaction
-              structuring while maintaining confidentiality and execution focus.
+              We execute <strong>cross-border transactions across Asia</strong>,
+              managing jurisdictional complexity, cultural alignment, and
+              transaction structuring while maintaining confidentiality and
+              execution focus.
+            </AccordionContent>
+          </AccordionItem>
+          {/* 6 - IPO READINESS */}
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-lg font-bold mb-1">
+              <div className="flex items-center">
+                <FaChartLine className="mr-2" />
+                <span>IPO Readiness Assessment & Preparation</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-lg">
+              We support companies considering a public listing with a
+              comprehensive <strong>IPO readiness assessment</strong>,
+              evaluating governance structures, financial reporting standards
+              (SFRS(I)/IFRS), internal controls, and regulatory compliance
+              readiness for exchanges such as the Singapore Exchange (SGX).
+              <br />
+              <br />
+              Following assessment, we provide{" "}
+              <strong>IPO preparation support</strong> including gap
+              remediation, board and governance strengthening, audit readiness,
+              financial systems enhancement, and development of a clear investor
+              equity story to support valuation and market positioning.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
